@@ -1,0 +1,31 @@
+#sanpham{
+	
+	
+	margin-top:138px;
+}
+#sanpham h1{
+	font-size: 35px;
+	letter-spacing: 6px;
+}
+.khungsp{
+
+	padding-top:20px;
+	border: 1px solid black;
+	width:21%;
+	border-radius:20px ;
+	float:left;
+	margin-right:105px;
+	margin-left:65px;
+	margin-top:30px;
+	margin-bottom:54px;
+	overflow: hidden;
+}
+.anhsp{
+	max-width:292px;
+}
+.thongtinsp{
+	text-align: center;
+}
+.khungsp>a:hover{
+	color:red;
+}

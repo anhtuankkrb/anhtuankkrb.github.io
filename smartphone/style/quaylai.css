@@ -1,0 +1,23 @@
+#nut{
+	background: #02293a;
+	text-align:center;
+	width:330px;
+	font-size:28px;
+	letter-spacing: 2px;
+	color:white;
+	border-radius:24px;
+	margin-top:37px;
+	margin-bottom:37px;
+	margin-left:10px;
+	padding-top:7px;
+	padding-bottom: 7px;
+	transition: 1s;
+	opacity: 0.8;
+	
+}
+#nut:hover{
+	opacity: 1;
+}
+#quaylai{
+	text-decoration: none;
+}

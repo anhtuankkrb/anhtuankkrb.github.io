@@ -1,0 +1,22 @@
+#quangcao{
+
+	overflow: auto;
+		
+		}
+#quangcao>p{
+	float:left;
+	width:476px;
+	font-size:20px;
+	padding-left: 53px;
+	padding-top:176px;
+}
+#quangcao>img{
+	float: right;
+}
+#quangcao a{
+	font-size: 29px;
+	text-decoration: none;
+}
+#quangcao a:hover{
+	color:red;
+}

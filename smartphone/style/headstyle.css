@@ -1,0 +1,45 @@
+body{
+	margin: 0px;
+}
+#headweb{
+	
+	
+	padding-bottom: 20px;
+}
+#logo{
+	
+	height:80px;
+	text-align: center;
+	font-family: monospace,Comic Sans MS;
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 18px;
+	margin-top:18px ;
+	margin-bottom:20px;
+	margin-left: 31px;
+	margin-right: 31px;
+	padding-top: 10px;
+    padding-bottom: 20px;
+    color: #431e11;
+    text-shadow: 2px 2px 4px #9764ca;
+	
+}
+#ilogo{
+	width:100px;	
+}
+#gioithieu{
+	border: 1px solid black;
+	width: 477px;
+	margin-left: 67px;
+	padding-left: 34px;
+	font-size: 19px;
+	border-radius: 19px;
+	background: rgba(103, 58, 183, 0.05);
+	
+}
+#bodyweb{
+	margin-left: 50px;
+    margin-right: 50px;
+    margin-top:50px;
+    
+}
