@@ -42,7 +42,10 @@ h1{
 }
 .backtop{
 	position:fixed;
-	right:-58px;
+	right:27px;
 	bottom:30px;
 	z-index:10;
+}
+.backtop>img{
+	max-width:85px;
 }
