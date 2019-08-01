@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>bai 3</title>
+		<style>
+			.container{
+				text-transform: uppercase;
+				font-size: 30px;
+				display:flex;
+				flex-direction: column;
+				align-items: center;
+				font-family: sans-serif;
+				font-weight:bold;
+				margin-top: 47px;
+				}
+			.bao{
+				position:relative;
+				display:flex;
+				flex-direction: column;
+				align-items: center;
+				overflow: hidden;
+				
+			}
+			.learning{
+				padding-top:5px;
+				color:white;
+				background: green;
+				animation: hienlearning 3s ease infinite;
+				
+			}
+			@keyframes hienlearning{
+				24%{
+					visibility:visible;
+				}
+				25%{
+					visibility:hidden;
+				}
+				90%{
+					visibility: hidden;
+				}
+				91%{
+					visibility:visible;
+				}
+			}
+			.coding{
+				padding-top:5px;
+				color:white;
+				background: orange;
+				position:absolute;
+				bottom:40px;
+				animation: hiencoding 3s ease infinite;
+				}
+			@keyframes hiencoding{
+				26%{
+					bottom:40px;
+				}
+				54%{
+					bottom:0px;
+				}
+				57%{
+					bottom:0px;
+					}
+
+				58%{
+					visibility:hidden;
+				}
+			}
+			.teaching{
+				padding-top:5px;
+				color:white;
+				background: Violet;
+				position:absolute;
+				top: 0px;
+    			visibility: hidden;
+    			animation: hienteaching 3s ease infinite;
+			}
+			@keyframes hienteaching{
+				57%{
+					visibility: hidden;
+				}
+				58%{
+					visibility: visible;
+				}
+				89%{
+					visibility: visible;
+				}
+				90%{
+					visibility: hidden;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="start">start</div>
+			<div class="bao">		
+				<div class="learning">learning</div>
+				<div class="coding">coding</div>
+				<div class="teaching">teaching</div>
+			</div>
+			<div class="today">today</div>
+		</div>
+
+	</body>
+</html>
