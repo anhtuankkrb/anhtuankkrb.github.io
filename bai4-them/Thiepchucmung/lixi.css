@@ -33,6 +33,8 @@
 	opacity:0;
 	height:0px;	
 	transition:  2s;
+	top: 158px;
+	left: 0px;
 }
 .item:hover .caudoi{
 	opacity:1;
