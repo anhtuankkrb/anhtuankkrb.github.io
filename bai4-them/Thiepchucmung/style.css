@@ -17,6 +17,7 @@ background-image: linear-gradient(to right, #e8d2d2, #e3baba, #dca2a1, #d48b89, 
 }
 .thiep{
 	max-width:100%;
+	box-shadow: 0px 7px 14px #633a3a;
 }
 .foot{
 	width:100%;
