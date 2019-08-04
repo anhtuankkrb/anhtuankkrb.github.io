@@ -1,0 +1,40 @@
+.container{
+	display:flex;
+	justify-content: space-around;
+	position:sticky;
+	top:10px;
+	background-image: linear-gradient(to bottom, #f7dc4e, #fdad3e, #f77d43, #e44f50, #c3225e);
+	margin-top:32px;
+	margin-bottom:70px;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+.item{
+	position:relative;
+}
+.lixi{
+	max-height:150px;
+	animation: lxdong 4s ease infinite;
+}
+@keyframes lxdong{
+	30%{
+		transform:rotate(15deg);
+	}
+	60%{
+		transform:rotate(-15deg);
+	}
+	100%{
+		transform:rotate(0deg);
+	}
+
+}
+.caudoi{
+	position:absolute;
+	opacity:0;
+	height:0px;	
+	transition:  2s;
+}
+.item:hover .caudoi{
+	opacity:1;
+	height: 400px;
+}

@@ -1,0 +1,50 @@
+.hoadao{
+	position:fixed;
+	width:4%;
+	z-index:3;
+	animation:roi 14s ease infinite;
+	transition: 1s;
+}
+.khac{
+	animation:roi 20s ease infinite;
+}
+.hoadao:hover{
+	width:5%;
+}
+
+.hoadao1{
+	
+	left:1%;
+	
+}
+.hoadao2{
+	left:10%;
+}
+.hoadao3{
+	left:20%;
+}
+.hoadao4{
+	left:40%;
+}
+.hoadao5{
+	left:70%;
+}
+.hoadao6{
+	left:75%;
+}
+.hoadao7{
+	left:85%;
+}
+.hoadao8{
+	left:95%;
+}
+.hoadao9{
+	left:100%;
+}
+
+@keyframes roi{
+
+	100%{
+		transform:translateY(800px);
+	}
+}

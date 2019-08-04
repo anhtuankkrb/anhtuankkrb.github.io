@@ -1,0 +1,25 @@
+*{
+	box-sizing:border-box;
+
+}
+body{
+	margin:0px;
+background-image: linear-gradient(to right, #e8d2d2, #e3baba, #dca2a1, #d48b89, #cb7371, #c96462, #c65553, #c34544, #c63b39, #c92f2d, #cb211f, #cc0a0f);
+	background-repeat:repeat-y;
+}
+.bodyweb{
+	max-width:1000px;
+	margin:auto;
+	margin-top:20px;
+}
+.chucmung{
+	width:100%;
+}
+.thiep{
+	max-width:100%;
+}
+.foot{
+	width:100%;
+	margin-top:90px;
+	margin-bottom:20px;
+}
