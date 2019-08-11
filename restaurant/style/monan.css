@@ -1,0 +1,55 @@
+.bodyweb{
+	max-width:1000px;
+	margin:auto;
+	margin-top:54px;
+}
+.sanpham img{
+	width:50%;
+	float:left;	
+	margin-right:30px;
+}
+
+.sanpham span{
+	color:red;
+	font-size:37px;
+}
+.sanpham strong{
+	font-size:20px;
+}
+.sanpham{
+	overflow:auto;
+	margin-bottom:86px;
+}
+h3{
+	color:red;
+	display:inline;
+}
+.wellcome{
+	font-size:34px;
+	color:red;
+	max-width:1000px;
+	margin:auto;
+	margin-top: 145px;
+	font-weight: bold;
+	overflow:hidden;
+	
+}
+.wellcome>div{
+	animation:welrun 7s linear infinite; 
+}
+
+@keyframes welrun{
+	40%{
+		transform:translateX(0px);
+		opacity:1;
+	}
+	70%{
+		transform:translateX(700px);
+		opacity:0;
+	}
+	
+	85%{
+		transform:translateX(-700px);
+		opacity:0;
+	}
+}

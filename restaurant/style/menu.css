@@ -1,0 +1,80 @@
+.bodyweb{
+	max-width:1000px;
+	margin:auto;
+	margin-top: 82px;
+	
+	
+}
+h1{
+	text-align:center;
+	font-size: 58px;
+	color: #ffe501;
+    text-shadow: 0px 0px 12px;
+}
+.wellcome{
+	font-size:34px;
+	color:#ffffff;
+	max-width:1000px;
+	margin:auto;
+	margin-top: 211px;
+	font-weight: bold;
+	overflow:hidden;
+	
+}
+.wellcome>div{
+	animation:welrun 7s linear infinite; 
+	text-shadow: 0px 0px 12px;
+}
+
+@keyframes welrun{
+	40%{
+		transform:translateX(0px);
+		opacity:1;
+	}
+	70%{
+		transform:translateX(700px);
+		opacity:0;
+	}
+	
+	85%{
+		transform:translateX(-700px);
+		opacity:0;
+	}
+}
+
+.container{
+	margin-top: 54px;
+	display:grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	grid-gap: 54px;
+	
+}
+
+img{
+	width:100%;
+	transition: 1s;
+	
+}
+.container>a{
+	overflow: hidden;
+	position:relative;
+}
+
+.container>a:hover img{
+	transform:scale(1.2);
+	
+}
+.ten{
+	position:absolute;
+	bottom:18%;
+	left:10%;
+	color:white;
+	font-size:50px;
+	text-shadow: 3px 3px 3px black;
+	display:none;
+
+}
+.container>a:hover .ten{
+	display:block;
+}
