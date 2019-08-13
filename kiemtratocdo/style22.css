@@ -1,10 +1,8 @@
 *{
 	box-sizing:border-box;
 }
-html{
-	background-image: url("http://lacviettravel.com.vn/wp-content/uploads/2015/12/h---giang.jpg");
-	background-size: cover; 
-}
+
+
 body{
 	max-width: 1000px;
 	margin: auto;
