@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Viết hoa chữ cái đầu</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			function chuoi(chuoi)
+			{
+				var chudau;
+				chuoi=chuoi.toLowerCase();
+				chudau=chuoi.charAt(0).toUpperCase();
+				chuoi=chuoi.slice(1);
+				chuoi=chudau+chuoi;
+				return chuoi;
+
+			}
+			document.write(chuoi("my name is Tuấn"))
+		</script>
+	</body>
+</html>

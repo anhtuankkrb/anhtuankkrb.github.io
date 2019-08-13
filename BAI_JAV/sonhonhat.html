@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <title>Tìm số nhỏ nhất</title>
+	 	<meta charset="utf-8">
+	</head>
+	<body>
+		<p id="mang"></p>
+		<p id="soNhoNhat"></p>
+		<script type="text/javascript">
+			var m=[23,9,10,54,90];
+			function minNumber(array){
+				array=array.sort(function(a, b){return a - b});
+				return array[0]
+			}
+			document.getElementById("mang").innerHTML="Mảng "+m;
+			document.getElementById("soNhoNhat").innerHTML="Số nhỏ nhất là:"+minNumber(m);
+		</script>
+	</body>
+</html>
