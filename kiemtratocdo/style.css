@@ -1,0 +1,50 @@
+*{
+	box-sizing:border-box;
+
+}
+html{
+	background-image: url("http://lacviettravel.com.vn/wp-content/uploads/2015/12/h---giang.jpg");
+	background-size: cover; 
+}
+h1{
+	text-align: center;
+	    font-size: 49px;
+	        color: cornsilk;
+}
+h2{
+	font-size: 36px;
+	color: white;
+}
+body{
+	max-width: 1000px;
+	margin: auto;
+	margin-top:20px;
+}
+.thucvat{
+	display: flex;
+}
+.dongvat{
+	display:flex;
+}
+img{
+	width: 300px;
+	overflow: hidden;
+}
+a{
+	text-align: center;
+	text-decoration: none;
+	color:#48420a;
+	padding:10px;
+	margin: 25px;
+	background: #4caf50;
+	border-radius: 15px;
+	transition: 1s;
+}
+a:hover{
+	color: red;
+	transform: scale(1.1);
+}
+
+p{
+	font-size: 27px;
+}
