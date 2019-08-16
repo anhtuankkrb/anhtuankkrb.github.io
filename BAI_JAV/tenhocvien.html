@@ -14,8 +14,8 @@ Kết quả: In ra màn hình danh sách các học viên theo thứ tự bảng
 		<script type="text/javascript">
 			function sapXep(array){
 				array=array.sort();
-				var string=array.join();
-				string=string.replace(/,/g,"<br>");
+				var string=array.join("<br>");
+				
 				return string;
 			}
 			var hv=[
