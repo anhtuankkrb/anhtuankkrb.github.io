@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<!-- Bài 6. Chỉ dùng vòng lặp for hoặc while, viết function in ra màn hình các số từ 1 đến 100 sao cho những giá trị là chẵn sẽ có màu xanh, những giá trị là lẻ có màu đỏ. -->
+		<script>
+			function so(){
+				for(var i = 1; i < 100; i += 2){
+					document.write("<span style='color:red'>" + i + "</span> ");
+					document.write("<span style='color:green'>"+ (i+1) + "</span> ")
+				}
+			}
+			so();
+		</script>
+	</body>
+</html>

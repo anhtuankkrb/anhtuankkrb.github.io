@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<!-- Bài 5. Cho 1 mảng các số. Viết function tạo ra 1 mảng mới với các số là số dư tương ứng khi chia các số trong mảng cũ cho 2. Gợi ý: Để lấy số dư của 1 số cho 2 ta dùng toán tử %. Ví dụ: 5 % 2 = 1 (5 chia 2 dư 1). -->
+		<script>
+			var arr = [5,12,54,13,57,98,74,11,7];
+			function laydu(array){
+				var x;
+				var newarr = [];
+				for(x in array){
+					newarr.push(array[x]%2);
+				}
+				return newarr;
+			}
+			document.write(laydu(arr));
+			
+		</script>
+	</body>
+</html>

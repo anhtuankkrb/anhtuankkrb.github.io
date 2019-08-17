@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>	
+		<!-- Bài 4. Cho 1 mảng tên của n học viên. Viết function sắp xếp lại thứ tự các học viên theo bảng chữ cái và in ra màn hình danh sách học viên kèm theo số thứ tự (sử dụng document.write()). -->
+		<script>
+			var hocvien=["Trang","Hồng","Tuấn","Mai","Yến","Đào","Mơ","Mận","Bưởi","Na"];
+				
+				function sapxep(array) {
+					var x;
+					array = array.sort();
+					for (x in array){
+						var tt=(+x)+1;
+						document.write("STT: " + tt + "  Học viên: " + array[x] + "<br>");
+					}
+				}
+			sapxep(hocvien);
+		</script>
+	</body>
+</html>

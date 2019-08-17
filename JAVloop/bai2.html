@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		 <!-- Bai 2:Cho 1 số nguyên dương n. Viết hàm tính n giai thừa (n!). Ví dụ: n = 5, kết quả trả về là 5! = 1 * 2 * 3 * 4 * 5 = 120. -->
+		<script>
+			function tinhGiaiThua(){
+  				var n = prompt("Tính giai thừa với số nguyên dương n=");
+				n=(+n);
+				var ketqua=n;
+				var i=1;
+				if(!Number.isInteger(n) || (n < 0)){
+					return "Bạn phải nhập 1 số nguyên dương";
+				}
+				else if(n==0){
+					return (n+"!"+" = 1");
+				}
+				else{
+					var chuoiketqua= (n + "! = ");
+					while(i<n){
+						ketqua*=(n-i);
+						chuoiketqua += (i + " * ");
+						i++;
+					}
+					return chuoiketqua += (i+" = "+ketqua);
+
+				}
+			}
+
+			 tinhGiaiThua();
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<!-- Bài 3. Cho 1 chuỗi, hãy viết hàm đảo ngược chuỗi đó. Ví dụ cho chuỗi "hello" thì kết quả trả về sẽ là "olleh". Gợi ý: 1 chuỗi tương tự 1 mảng với mỗi phần tử là 1 ký tự trong chuỗi. -->
+		<script>
+			var string = "Hello world!";
+			function reverseString(str){
+				var newstr=new String();
+  				for(var i = 1; i <= str.length; i++){
+					newstr += (str[str.length - i]);
+				}
+				return newstr;
+			}
+			document.write(reverseString(string));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<!-- Bài 1. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép chuỗi đó lên 10 lần, ngăn cách nhau bởi ký tự "-". Ví dụ cho chuỗi "123" thì kết quả sẽ là "123-123-123-123-123-123-123-123-123-123". -->
+		<script>
+			var str = "abc";
+
+			function multiplyString(string){
+				var newString=string+"-";
+  				for(var i=1;i<=9;i++){
+					newString += string;
+					if (i<9){
+						newString += "-";
+				}
+			}
+			return newString;
+		}
+			document.write(multiplyString(str));
+		</script>
+
+	</body>
+</html>
