@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var obj = {
+  							username:"username",
+  							password: "secret",
+  							confirm: "secret"
+						};
+			function check(sign){
+				if(sign.username !== "" && sign.username.length <= 20){
+					if(sign.password.length >= 6 && sign.password.length <= 20){
+						if(sign.confirm === sign.password){
+							return "Pass"
+						}
+						else{
+							return "confirm Fail"
+						}
+					}
+					else{
+						return "password Fail"
+					}
+
+				}
+				else{
+					return "username Fail";
+				}
+			}
+
+		</script>
+	</body>
+</html>

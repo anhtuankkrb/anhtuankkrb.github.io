@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function printTriangle(height){
+				str='';
+				for(var i=0; i<height; i++){
+					for(var j=0; j<=i; j++){
+							str+=' * &nbsp;';
+					}
+					str+='<br>';
+				}
+				document.write(str);
+			}
+
+			printTriangle(30);
+
+		</script>
+	</body>
+</html>

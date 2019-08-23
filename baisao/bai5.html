@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function printX(height){
+				var str='<pre>';
+				var dem=0;
+				var tru=0;
+				for (var i = 1; i <= height; i ++){
+					for(var j = 1; j <= height; j++){
+						if(j <= (1+dem-tru) || j >= (height-dem+tru)){
+							str+='*';
+						}
+						else{
+							str+='&#160;';
+						}
+					}
+						if((1+dem) >= (height-dem)){
+							tru+=2;
+						}
+					dem++;
+					str+='<br>'
+				}
+				str+='</pre>'
+				return str;
+			}
+			document.write(printX(41));
+		</script>
+	</body>
+</html>

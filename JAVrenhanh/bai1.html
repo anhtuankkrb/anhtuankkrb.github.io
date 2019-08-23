@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function maxNumber(a,b){
+				if (typeof a == "number" && typeof b == "number"){  //if (Number.isFinite(a) && Number.isFinite (b))
+					if (a-b >= 0){
+						return "Số lớn nhất là " + a; 
+					}
+					else{
+						return "Số lớn nhất là " + b;
+					}
+				}
+				else{
+					return "Sai định dạng";
+				}
+
+			}
+		</script>
+
+	</body>
+</html>

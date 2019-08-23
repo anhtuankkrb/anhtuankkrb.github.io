@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function season(){
+				var now = new Date();
+				var date = now.getDate();
+				var month = now.getMonth() + 1;
+				var year = now.getFullYear();
+				var season;
+				document.write("Hôm nay là ngày "+date+" tháng "+month+" năm "+year+"<br>");
+				switch (month){
+					case 2:
+					case 3:
+					case 4:
+						season = "Mùa xuân";
+						break;
+					case 5:
+					case 6:
+					case 7:
+						season = "Mùa hè";
+						break;
+					case 8:
+					case 9:
+					case 10:
+						season = "Mùa thu";
+						break;
+					case 11:
+					case 12:
+					case 1:
+						season = "Mùa đông";
+						break;
+				}
+				document.write("Bây giờ là mùa " + season);
+				document.write("<br> (Cách tính mùa trên chỉ là tương đối do có sự khác nhau giữa các vị trí địa lý)")
+
+			}
+			season();
+		</script>
+	</body>
+</html>

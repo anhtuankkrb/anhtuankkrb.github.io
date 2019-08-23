@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function printSpecialTriangle(height){
+				var str='<p style="display:inline-block; text-align:center; transform:rotate(180deg)">';
+				var y=1;
+				var x=1;
+				for (var i = 1; i <= height; i ++){
+					y=1;
+					while(y<=x){
+						str+=' * ';
+						y++;
+					}
+					
+					x+=2;
+				str+='<br>';		
+				}
+				str+='</p>'
+				return str;
+			}
+			document.write(printSpecialTriangle(20));
+		</script>
+	</body>
+</html>

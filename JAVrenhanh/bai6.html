@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function result(scores){
+				var kind;
+				if(scores >= 0 && scores <= 10){
+					if(scores >= 8.5){
+						kind = "A";
+					}
+					else if (scores >= 7 && scores < 8.5){
+						kind = "B";
+					}
+					else if (scores >= 5.5 && scores < 7){
+						kind = "C";
+					}
+					else if (scores >= 5.5 && scores < 7){
+						kind = "D";
+					}
+					else{
+						kind = "F";
+					}
+					return "Điểm " + kind;
+				}
+				else{
+					return "Số điểm không hợp lệ.";
+				}
+			}
+		</script>
+	</body>
+</html>

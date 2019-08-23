@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function printEmptyRectangle(width, height){
+				var str='<pre>';
+				for (var i = 1; i <= height; i++){
+					if(i==1 || i==height){
+						for (var j = 0; j < width; j++){
+							str+=' * ';
+						}
+					}
+					else{
+						for(var e = 1; e <= width; e++){
+							if(e==1 || e==width){
+								str+=' * ';
+							}
+							else{
+								str+='&nbsp;&nbsp; ';
+							}
+						}
+					}
+
+					str+='<br>';
+				}
+				str+='</pre>'
+				document.write(str);
+			}
+
+			printEmptyRectangle(15,9);
+		</script>
+	
+	</body>
+</html>

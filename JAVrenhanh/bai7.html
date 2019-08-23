@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function translate(country="VN"){
+				var result = "";
+				switch (country){
+					case "VN": //Việt Nam
+						result="Xin chào";
+						break;
+					case "PL":  //Ba Lan
+						result="cześć";
+						break;
+					case "SE": //Thụy Điển
+						result="Hej";
+						break;
+					case "FR": //Pháp
+						result="Bonjour";
+						break;
+					case "JP": //Nhật Bản
+						result="こんにちは";
+						break; 
+					default:
+						result="Mã không hợp lệ hoặc không hỗ trợ";
+				}
+				return result;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var m =[false,false,false,true,false,true,true,true];
+			function kiemtra(array){
+				//return array.indexOf(true);
+				for(var x in array){
+					if(array[x] == true){
+						return x;
+					}
+				}
+				return 'khong co gia tri true';
+			}
+			console.log(kiemtra(m));
+		</script>
+	</body>
+</html>

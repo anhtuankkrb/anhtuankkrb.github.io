@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var num = [3,5,4,34,32,6,33,87,90];
+
+			function evenNumber(array){
+				var i;
+				var newarr=[];
+				for(i in array){
+					if (array[i]%2 == 0){
+						newarr.push(array[i]);
+					}
+				}
+				newarr.sort(function(a,b){return b-a});
+				return newarr;
+			}
+
+			document.write(evenNumber(num));
+		</script>
+	</body>
+</html>
