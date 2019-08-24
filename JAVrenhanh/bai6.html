@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<script>
-			function result(scores){
+			function setResult(scores){
 				var kind;
 				if(scores >= 0 && scores <= 10){
 					if(scores >= 8.5){
@@ -17,7 +17,7 @@
 					else if (scores >= 5.5 && scores < 7){
 						kind = "C";
 					}
-					else if (scores >= 5.5 && scores < 7){
+					else if (scores >= 4 && scores < 5.5){
 						kind = "D";
 					}
 					else{

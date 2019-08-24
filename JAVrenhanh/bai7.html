@@ -6,27 +6,20 @@
 	<body>
 		<script>
 			function translate(country="VN"){
-				var result = "";
 				switch (country){
 					case "VN": //Việt Nam
-						result="Xin chào";
-						break;
+						return "Xin chào";
 					case "PL":  //Ba Lan
-						result="cześć";
-						break;
+						return "cześć";
 					case "SE": //Thụy Điển
-						result="Hej";
-						break;
+						return "Hej";
 					case "FR": //Pháp
-						result="Bonjour";
-						break;
+						return "Bonjour";
 					case "JP": //Nhật Bản
-						result="こんにちは";
-						break; 
+						return "こんにちは";
 					default:
-						result="Mã không hợp lệ hoặc không hỗ trợ";
+						return "Mã không hợp lệ hoặc không hỗ trợ";
 				}
-				return result;
 			}
 		</script>
 	</body>
