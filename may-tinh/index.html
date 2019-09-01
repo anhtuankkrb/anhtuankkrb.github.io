@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			button{
+				width: 53px;
+				font-size: 18px;
+				font-weight: 700;
+			}
+			button:hover{
+				opacity:0.9;
+				
+			}
+			.maytinh{
+				border:1px solid #5e2121;
+				width:424px;
+				padding: 10px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border-radius: 50px;
+				box-shadow: 2px 2px 33px grey;
+				background: antiquewhite;
+				z-index:10;
+			}
+			#mh{
+				width: 400px;
+				height: 90px;
+				line-height: 75px;
+				font-size: 39px;
+				border-bottom: 1px solid gray;
+				margin-bottom: 31px;
+				text-align: right;
+				overflow: auto;
+				
+			}
+			.nang-cao{
+				display: flex;
+				margin-bottom: 34px;
+			}
+			.nang-cao > button{
+				margin-right:5px;
+				height:40px;
+			} 
+			.xoa{
+				background: #350404;
+				border:#350404;
+				color: white;
+				margin-left: 62px;
+				width: 84px;
+			}
+			.so{
+				display:inline-flex;
+				flex-wrap: wrap;
+				width: 60%;
+			}
+			.so > button{
+				width:30%;
+				height: 42px;
+				margin-right: 6px;
+				margin-bottom: 6px;
+			}
+			.toan-tu{
+				display:inline-flex;
+				flex-wrap: wrap;
+				width: 39%;
+				padding-left: 5%;
+				
+			}
+			.toan-tu > button{
+				width: 40%;
+				height: 40px;
+				margin-right: 6px;
+				margin-bottom: 10px;
+				
+			} 
+			.ngoac{
+				display: flex;
+				margin-top:10px;
+			} 
+			.ngoac > button{
+				width: 70px;
+				height: 30px;
+				margin-right: 6px;
+			}
+			.reset{
+				text-align:center;
+				margin-top: 24px;
+				margin-bottom: 14px;
+			}
+			.reset > button{
+				width:190px;
+				height:40px;
+				background: #b84421;
+				border: #b84421;
+				font-size: 19px;
+				border-radius: 10px;
+			}
+			#bang{
+				width: 52px;
+    			height: 79px;
+			}
+			.hello{
+				position: absolute;
+				top: 28px;
+				left: 0px;
+				max-width: 30%;
+			}
+			.tieude{
+				font-size:40px;
+				text-transform: uppercase;
+				color:#a52450;
+				text-align: center;
+			}
+			#anhdong{
+				position: absolute;
+				top: 114px;
+    			left: 458px;
+			}
+			#nhac{
+				position: absolute;
+				bottom:38px;
+			}
+
+			#cho{
+				position: absolute;
+    			width: 17%;
+    			bottom: 137px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="tieude">calculator</h1>
+		<img src="hello.png" alt="Xin chao" class="hello">
+		<img src="djgif.gif" alt="Cho" id="cho">
+		
+		<audio controls id="nhac" loop>
+			<source src="NhacSan-DJ_qdw3.mp3" >
+		</audio>
+		
+		<div class="maytinh">
+			
+			<img src="A.gif" alt="anh dong" id="anhdong">
+			<div id="mh"></div>
+			<div class="nang-cao">
+				<button onclick="setToanHang();binhPhuong(bieuThuc[bieuThuc.length-1]);">x<sup>2</sup></button>
+				<button onclick="setToanHang();lapPhuong(bieuThuc[bieuThuc.length-1]);">x<sup>3</sup></button>
+				<button onclick="setToanHang();canBacHai(bieuThuc[bieuThuc.length-1]);">&radic;</button>
+				<button onclick="setToanHang();giaiThua();">!</button>
+				<button onclick="xoa();" class="xoa"><<</button>
+			</div>
+			<div class="so">
+				<button onclick="toanHang.push(1); mh.innerHTML += 1;">1</button>
+				<button onclick="toanHang.push(2); mh.innerHTML += 2;">2</button>
+				<button onclick="toanHang.push(3); mh.innerHTML += 3;">3</button>
+				<button onclick="toanHang.push(4); mh.innerHTML += 4;">4</button>
+				<button onclick="toanHang.push(5); mh.innerHTML += 5;">5</button>
+				<button onclick="toanHang.push(6); mh.innerHTML += 6;">6</button>
+				<button onclick="toanHang.push(7); mh.innerHTML += 7;">7</button>
+				<button onclick="toanHang.push(8); mh.innerHTML += 8;">8</button>
+				<button onclick="toanHang.push(9); mh.innerHTML += 9;">9</button>
+				<button onclick="toanHang.push(0); mh.innerHTML += 0;">0</button>
+				<button onclick="testCham()">.</button>
+			</div>
+			<div class="toan-tu">
+				<button onclick="testDau('+')">+</button>
+				<button onclick="setDauTru(); ">-</button>
+				<button onclick="testDau('*', 'x')">x</button>
+				<button onclick="testDau('/')">/</button>
+				<button onclick="setToanHang(); var result = getKetQua(bieuThuc); toanHang[0] = result; mh.innerHTML = '= ' + result; ketQua();" id="bang">=</button>
+			</div>
+			<div class="ngoac">
+				<button onclick="testDauNgoacMO()">(</button>
+				<button onclick="tesetDauNgoacDong();">)</button>
+			</div>
+			<div class="reset">
+				<button onclick="toanHang = []; bieuThuc = []; mh.innerHTML = '';document.getElementById('anhdong').src='A.gif';">Reset</button>
+			</div>
+		</div>
+
+
+		<script>
+			var mh = document.getElementById('mh');
+			var toanHang = [];
+			var bieuThuc = [];
+
+			function setToanHang(){    //Ham dat toan hang vao mang bieu thuc
+				let stringTH = toanHang.join('');
+				
+				if(toanHang.length == 0){   //Su ly truong hop dau ()
+					return;
+				}
+				else if(bieuThuc.length == 1){     //Su ly de tinh voi ket qua  phai ket hop voi trong b
+					bieuThuc[0] = Number(stringTH);
+					toanHang = [];
+				}
+				else{
+					bieuThuc.push(Number(stringTH));
+					toanHang = [];
+				}
+				
+			}
+
+			function testDauNgoacMO(){
+				if(toanHang.length == 0){
+					mh.innerHTML += '('; 
+					bieuThuc.push('(');
+				}
+				else{
+					return;
+				}
+			}
+
+			function tesetDauNgoacDong(){
+				let m = 0;
+				let d = 0;	
+				for (let x of bieuThuc){
+					if(x === '('){
+						m ++;
+					}
+					else if(x === ')'){
+						d ++;
+					}
+				}
+				if(d + 1 <= m){
+					setToanHang(); 
+					bieuThuc.push(')');
+					mh.innerHTML += ')';
+				}
+				else{
+					return;
+				}
+			}
+
+			function testCham(){
+				let d = 0;
+				for(let x of toanHang){
+					if(x === '.'){
+						d++;
+					}
+				}
+				if(d < 1){
+					toanHang.push('.');
+					mh.innerHTML += '.';
+				}
+				else{
+					return;
+				}
+			}
+			function testDau(dau, kyTu){
+				if (toanHang.length != 0 || bieuThuc[bieuThuc.length-1] === ')'){
+					setToanHang();
+					 bieuThuc.push(dau);
+					 if(kyTu == undefined){
+					 	kyTu = dau;
+					 }
+					 mh.innerHTML += kyTu;
+					 suyNghi();
+				}
+			}
+
+			function setDauTru(){  // Su ly truong hop voi so am va dau tru
+				if (toanHang[0] === '-'){
+					return;
+				}
+				if(toanHang.length != 0 || bieuThuc[bieuThuc.length-1] === ')'){
+					setToanHang();
+					bieuThuc.push('-');
+					mh.innerHTML += '-';
+					suyNghi();
+				}
+				else{
+					toanHang.push('-');
+					mh.innerHTML += '-';
+				}
+			}
+
+
+
+			function getKetQua(array){   //Ham tinh ket qua bieu thuc 
+				let i=0;
+				while(i<2){           //Vong lap tinh theo thu tu uu tien
+					let dauNgoacMo = -1;
+					let dauNgoacDong = array.indexOf(')');
+					let dauNhan = array.indexOf('*');
+					let dauChia = array.indexOf('/');
+					let dauCong = array.indexOf('+');
+					let dauTru = array.indexOf('-');
+				
+					if(dauNgoacDong != -1){     //truong hop dau ngoac, uu tien dau ngoac ben trong
+						let mangCon = [];
+						dauNgoacMo = array.lastIndexOf('(', dauNgoacDong);
+						mangCon = array.slice(dauNgoacMo, dauNgoacDong + 1);
+						mangCon.shift();
+						mangCon.pop();
+						array.splice(dauNgoacMo, dauNgoacDong + 1 - dauNgoacMo, getKetQua(mangCon)); //Su dung de quy
+						
+					}
+					else if(dauNhan != -1 || dauChia != -1){  //truong hop * /
+						if(dauNhan < dauChia && dauNhan != -1 || dauChia == -1){
+							array.splice(dauNhan - 1, 3, array[dauNhan - 1] * array[dauNhan + 1]);
+						}
+						if(dauChia < dauNhan && dauChia != -1 || dauNhan == -1){
+							array.splice(dauChia - 1, 3, array[dauChia - 1] / array[dauChia + 1]);
+						}
+					}
+					else if(dauCong != -1 || dauTru != -1){  // truong hop + -
+						if(dauCong < dauTru && dauCong != -1 || dauTru == -1){
+							array.splice(dauCong - 1, 3, array[dauCong - 1] + array[dauCong + 1]);
+						}
+						if(dauTru < dauCong && dauTru != -1 || dauCong == -1){
+							array.splice(dauTru - 1, 3, array[dauTru - 1] - array[dauTru + 1]);
+							
+						}
+					}
+					else{         // tra ket qua khi khong con gi de tinh
+						i = array.length;  // ket thuc vong lap
+						return array[0];
+					}
+				}
+			}
+
+
+			function binhPhuong(a){
+				let b = a * a;
+				if(bieuThuc.length == 1){
+					mh.innerHTML = a + '<sup>2</sup> = ' + b;
+					bieuThuc = [];
+					toanHang[0] = b;
+				}
+				else{
+					mh.innerHTML +='<sup>2</sup>';
+					bieuThuc.pop();
+					toanHang[0] = b;
+				}
+			}
+
+			function lapPhuong(a){
+				let b = a * a * a;
+				if(bieuThuc.length == 1){
+					mh.innerHTML = a + '<sup>3</sup> = ' + b;
+					bieuThuc = [];
+					toanHang[0] = b;
+				}
+				else{
+					mh.innerHTML +='<sup>3</sup>';
+					bieuThuc.pop();
+					toanHang[0] = b;
+				}
+			}
+
+
+			function canBacHai(a){
+				let b = Math.sqrt(a);
+				if(bieuThuc.length == 1){
+					mh.innerHTML = '&radic;' + a + ' = ' + b;
+					bieuThuc = [];
+					toanHang[0] = b;
+				}
+				else{
+					bieuThuc.pop();
+					mh.innerHTML =bieuThuc.join('') + '&radic;' + a;
+					
+					toanHang[0] = b;
+				}
+			}
+
+
+			function giaiThua(){
+				let n = bieuThuc[bieuThuc.length-1];
+				let a = n;
+				mh.innerHTML = '';
+				bieuThuc = [];
+				if(!Number.isInteger(n) || (n < 0)){
+					mh.innerHTML = "Bạn phải nhập 1 số nguyên dương";
+				}
+				else if(n == 0){
+					mh.innerHTML = n + "!" + " = 1";
+				}
+				else{
+					var i = 1;
+					while(i<a){
+						n*=(a-i);
+						i++;
+					}
+					mh.innerHTML = a + "! = " + n;
+					toanHang[0] = n;
+				}
+			}
+
+			function xoa(){
+				mh.innerHTML = mh.innerHTML.slice(0, mh.innerHTML.length - 1);
+				if(bieuThuc.length == 1 && bieuThuc[0] == toanHang[0]){
+						let y = toanHang[0].toString();
+						y = y.split('');
+						y.pop();
+						toanHang = y;
+						bieuThuc = [];
+				}
+
+				else if(toanHang.length != 0){
+					toanHang.pop();
+
+				}
+				
+				else{
+					if(bieuThuc.length == 0){
+						return;
+					}
+					if(typeof bieuThuc[bieuThuc.length-1] == 'string' && typeof bieuThuc[bieuThuc.length-2] != 'string'){  //truong hop binh thuong
+						let m;
+						bieuThuc.pop();
+						m = bieuThuc[bieuThuc.length-1].toString();
+						m = m.split('');
+						toanHang = m;
+						bieuThuc.pop();
+ 					}
+					else if(typeof bieuThuc[bieuThuc.length-1] == 'string' && typeof bieuThuc[bieuThuc.length-2] == 'string'){
+						bieuThuc.pop();
+					}
+					
+				}
+			}
+
+			function suyNghi(){
+				document.getElementById("anhdong").src="suy-nghi.gif";
+			}
+
+			function ketQua(){
+				document.getElementById("anhdong").src="bang.gif";
+				setTimeout(function(){
+					document.getElementById("anhdong").src="A.gif";
+				},2500);
+
+			}
+		</script>
+	</body>
+</html>
