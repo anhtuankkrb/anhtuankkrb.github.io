@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+	<script>
+		var x=0;
+		function printSpecialTriangle(row) {
+  			let result = "";
+  			let countStar = row * 2 - 1;
+  			let countSpace = 0;
+  
+  			for (let i = 0; i < row; i++) {
+    			result += ' '.repeat(countSpace) + '*'.repeat(countStar)+ '<br/>';
+    			countSpace++;
+    			countStar -= 2;
+  			}
+  			x++;
+  			if(x <= 5){
+  			var ketqua =("<pre style='position:absolute; top:-90%; left:-119%; transform: rotate(72deg); display:inline-block'>" + result +printSpecialTriangle(row) +"</pre>");
+
+			}
+			else{
+				return "<pre style='display:none'></pre>";
+			}
+  			return ketqua;
+
+		}
+		function callStar(size){
+			var result = "<div style='position:absolute; top:50%; left:50%;transform: rotate(180deg); '>" + printSpecialTriangle(size) + "</div>";
+			document.write(result);
+		}
+
+		callStar(8);
+	</script>
+</body>
+</html>
