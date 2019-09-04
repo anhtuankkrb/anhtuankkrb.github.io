@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body{
+			    color: #ffffff;
+    			background: #3935b3;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		let x=0;
+		function printSpecialTriangle(row) {
+  			let result = "";
+  			let countStar = row * 2 - 1;
+  			let countSpace = 0;
+  			
+  			for (let i = 0; i < row; i++) {
+    			result += ' '.repeat(countSpace) + '*'.repeat(countStar)+ '<br/>';
+    			countSpace++;
+    			countStar -= 2;
+  			}
+  			x++;
+  			if(x <= 5){
+  			var ketqua =("<pre style='position:absolute; top:-90%; left:-119%; transform: rotate(72.15deg); display:inline-block'>" + result +printSpecialTriangle(row) +"</pre>");
+
+			}
+			else{
+				return "<pre style='display:none'></pre>";
+			}
+  			return ketqua;
+
+		}
+		function callStar(size, a , b, c, d){
+			x=0;
+			var result = "<div style='position:absolute; top:" + a + "; left:" + b + ";transform: rotate(" + c  + "); color:" + d + " '>" + printSpecialTriangle(size) + "</div>";
+			document.write(result);
+		}
+
+		callStar(5, '55%' ,'50%','180deg','#fffa04');
+		callStar(6, '80%' ,'70%','180deg','#9E9E9E');
+		callStar(5, '20%' ,'40%','150deg','#ff8a00');
+		callStar(6, '30%' ,'20%','180deg','#9E9E9E');
+		callStar(5, '30%' ,'70%','160deg','#4bffff');
+		callStar(7, '75%' ,'30%','160deg','#ffffff');
+		callStar(6, '25%' ,'90%','180deg','#ffffff');
+		callStar(5, '80%' ,'95%','160deg','#E91E63');
+	</script>
+</body>
+</html>
