@@ -138,11 +138,11 @@
 	<body>
 		<h1 class="tieude">calculator</h1>
 		<img src="hello.png" alt="Xin chao" class="hello">
-		<img src="djgif.gif" alt="Cho" id="cho">
+		<!-- <img src="djgif.gif" alt="Cho" id="cho"> -->
 		
-		<audio controls id="nhac" loop>
+		<!-- <audio controls id="nhac" loop>
 			<source src="NhacSan-DJ_qdw3.mp3" >
-		</audio>
+		</audio> -->
 		
 		<div class="maytinh">
 			
@@ -212,7 +212,7 @@
 					mh.innerHTML += '('; 
 					bieuThuc.push('(');
 				}
-				else{
+				else{                //Cho de doc
 					return;
 				}
 			}
@@ -233,7 +233,7 @@
 					bieuThuc.push(')');
 					mh.innerHTML += ')';
 				}
-				else{
+				else{                  //Cho de doc
 					return;
 				}
 			}
@@ -249,7 +249,7 @@
 					toanHang.push('.');
 					mh.innerHTML += '.';
 				}
-				else{
+				else{              //Cho de doc
 					return;
 				}
 			}
