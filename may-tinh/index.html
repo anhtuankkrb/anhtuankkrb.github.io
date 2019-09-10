@@ -31,9 +31,9 @@
 			}
 			#mh{
 				width: 400px;
-				height: 90px;
+				height: 95px;
 				line-height: 75px;
-				font-size: 39px;
+				font-size: 30px;
 				border-bottom: 1px solid gray;
 				margin-bottom: 31px;
 				text-align: right;
@@ -138,11 +138,11 @@
 	<body>
 		<h1 class="tieude">calculator</h1>
 		<img src="hello.png" alt="Xin chao" class="hello">
-		<!-- <img src="djgif.gif" alt="Cho" id="cho"> -->
+		<img src="djgif.gif" alt="Cho" id="cho">
 		
-		<!-- <audio controls id="nhac" loop>
+		<audio controls id="nhac" loop>
 			<source src="NhacSan-DJ_qdw3.mp3" >
-		</audio> -->
+		</audio>
 		
 		<div class="maytinh">
 			
@@ -172,7 +172,7 @@
 				<button onclick="testDau('+')">+</button>
 				<button onclick="setDauTru(); ">-</button>
 				<button onclick="testDau('*', 'x')">x</button>
-				<button onclick="testDau('/')">/</button>
+				<button onclick="testDau('/','&divide;')">&divide;</button>
 				<button onclick="setToanHang(); var result = getKetQua(bieuThuc); toanHang[0] = result; mh.innerHTML = '= ' + result; ketQua();" id="bang">=</button>
 			</div>
 			<div class="ngoac">
