@@ -1,0 +1,33 @@
+.dark{
+	background: #000000;
+	border-radius: 14px;
+}
+.dark #screen{
+	background: #003302;
+	color: #ffffff;
+}
+.dark .reset button{
+	background: #fae84d;
+	color: black;
+}
+.dark .nang-cao button{
+	border: 0px;
+    background: #8beee6;
+}
+.dark #xoa{
+	background: #e74b4b;
+	color: black;
+}
+.dark .toan-tu button{
+	border: 0px;
+    background: #f896b7;
+    font-size: 23px;
+}
+.dark #bang{
+	background: #ac8be5;
+    border: 0px;
+}
+.dark .ngoac button{
+	border: 0px;
+    background: #cae5fc;
+}

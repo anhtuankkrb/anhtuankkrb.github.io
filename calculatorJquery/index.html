@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="utf-8">		
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="dark-style.css">
+	</head>
+	<body>
+		<div class="maytinh">
+			
+			<div id="changeDark">Dark</div>
+			<div id="changeLight">Light</div>
+
+			<div class="history">
+				<div class="buttonHistory">History</div>
+				<div class="historyScreen"></div>
+			</div>
+			
+			
+			<div id="screen"></div>
+			<div class="nang-cao">
+				<button onclick="setToanHang();binhPhuong(bieuThuc[bieuThuc.length-1]);">x<sup>2</sup></button>
+				<button onclick="setToanHang();lapPhuong(bieuThuc[bieuThuc.length-1]);">x<sup>3</sup></button>
+				<button onclick="setToanHang();canBacHai(bieuThuc[bieuThuc.length-1]);">&radic;</button>
+				<button onclick="setToanHang();giaiThua();">!</button>
+				<button onclick="xoa();" id="xoa"><<</button>
+			</div>
+			<div class="so">
+				<button onclick="toanHang.push(1); screen.append(1);">1</button>
+				<button onclick="toanHang.push(2); screen.append(2);">2</button>
+				<button onclick="toanHang.push(3); screen.append(3);">3</button>
+				<button onclick="toanHang.push(4); screen.append(4);">4</button>
+				<button onclick="toanHang.push(5); screen.append(5);">5</button>
+				<button onclick="toanHang.push(6); screen.append(6);">6</button>
+				<button onclick="toanHang.push(7); screen.append(7);">7</button>
+				<button onclick="toanHang.push(8); screen.append(8);">8</button>
+				<button onclick="toanHang.push(9); screen.append(9);">9</button>
+				<button onclick="toanHang.push(0); screen.append(0);">0</button>
+				<button onclick="testCham()">.</button>
+			</div>
+			<div class="toan-tu">
+				<button onclick="testDau('+')">+</button>
+				<button onclick="setDauTru(); ">-</button>
+				<button onclick="testDau('*', 'x')">x</button>
+				<button onclick="testDau('/','&divide;')">&divide;</button>
+				<button onclick="setToanHang(); var result = getresult(bieuThuc); toanHang[0] = result; $('.historyScreen').append(screen.html() + ' =' + result + '<hr>'); screen.html(result);" id="bang">=</button>
+			</div>
+			<div class="ngoac">
+				<button onclick="testDauNgoacMO()">(</button>
+				<button onclick="tesetDauNgoacDong();">)</button>
+			</div>
+			<div class="reset">
+				<button onclick="toanHang = []; bieuThuc = []; screen.empty();$('#gif').attr('src','A.gif');">Reset</button>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

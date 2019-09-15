@@ -1,0 +1,156 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background: url('https://previews.123rf.com/images/uniyok/uniyok1608/uniyok160800019/63113915-seamless-avec-des-fruits-des-l%C3%A9gumes-des-noix-et-des-herbes-fond-d-%C3%A9cran-v%C3%A9g%C3%A9tarien-arri%C3%A8re-plan-avec-une.jpg');
+}
+button{
+	width: 53px;
+	font-size: 18px;
+	font-weight: 700;
+}
+button:hover{
+	opacity:0.9;
+	
+}
+.maytinh{
+	border:1px solid #5e2121;
+	width:424px;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 14px;
+	box-shadow: 2px 2px 33px grey;
+	background: antiquewhite;
+	z-index:10;
+}
+#screen{
+	width: 400px;
+	height: 95px;
+	line-height: 75px;
+	font-size: 30px;
+	border-bottom: 1px solid gray;
+	margin-bottom: 31px;
+	text-align: right;
+	overflow: auto;
+	
+}
+.nang-cao{
+	display: flex;
+	margin-bottom: 34px;
+}
+.nang-cao > button{
+	margin-right:5px;
+	height:40px;
+} 
+#xoa{
+	background: #350404;
+	border:#350404;
+	color: white;
+	margin-left: 62px;
+	width: 84px;
+}
+.so{
+	display:inline-flex;
+	flex-wrap: wrap;
+	width: 60%;
+}
+.so > button{
+	width:30%;
+	height: 42px;
+	margin-right: 6px;
+	margin-bottom: 6px;
+}
+.toan-tu{
+	display:inline-flex;
+	flex-wrap: wrap;
+	width: 39%;
+	padding-left: 5%;
+	
+}
+.toan-tu > button{
+	width: 40%;
+	height: 40px;
+	margin-right: 6px;
+	margin-bottom: 10px;
+	
+} 
+.ngoac{
+	display: flex;
+	margin-top:10px;
+} 
+.ngoac > button{
+	width: 70px;
+	height: 30px;
+	margin-right: 6px;
+}
+.reset{
+	text-align:center;
+	margin-top: 24px;
+	margin-bottom: 14px;
+}
+.reset > button{
+	width:190px;
+	height:40px;
+	background: #ef564c;
+	border: 0px;
+	font-size: 19px;
+	border-radius: 10px;
+	color: aliceblue;
+}
+#bang{
+	width: 52px;
+	height: 79px;
+}
+
+
+#changeDark{
+	position:absolute;
+	background: #250c03;
+	left: 101%;
+	bottom:8%;
+	color: white;
+	font-size: 22px;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#changeLight{
+	position:absolute;
+	background: #CDDC39;
+	font-size: 22px;
+    padding: 6px;
+    bottom:16%;
+    left: 101%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.history{
+	position:absolute;
+	background: #b1adad;
+	font-size: 22px;
+    padding: 6px;
+    bottom:0%;
+    left: 101%;
+    border-radius: 3px;
+    letter-spacing:10px;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+.historyScreen{
+	position:absolute;
+	bottom:0px;
+	left:101%;
+	border: 1px solid black;
+	width:262px;
+	height: 325px;
+	letter-spacing: 0px;
+	 overflow: auto;
+	 background:#ece8e8;
+	 padding: 7px;
+	 border-radius: 5px;
+	 display:none;
+}
