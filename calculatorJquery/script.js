@@ -138,81 +138,81 @@ function getresult(array){   //Ham tinh ket qua bieu thuc
 }
 
 
-function binhPhuong(a){
-	let b = a * a;
-	if(bieuThuc.length == 1){
+function binhPhuong(){
+	
+	if(bieuThuc.length == 0 && toanHang.length != 0){
+		setToanHang();
+		let a = bieuThuc[bieuThuc.length-1];
+		let b = a * a;
 		screen.html(a + '<sup>2</sup> = ' + b);
 		bieuThuc = [];
 		toanHang[0] = b;
 		$('.historyScreen').append(screen.html() + '<hr>');
 	}
-	else{
-		bieuThuc.pop();
-		screen.html(bieuThuc.join('') + b);
-		toanHang[0] = b;
-	}
+
 }
 
 function lapPhuong(a){
-	let b = a * a * a;
-	if(bieuThuc.length == 1){
+	
+	if(bieuThuc.length == 0 && toanHang.length != 0){
+		setToanHang();
+		let a = bieuThuc[bieuThuc.length-1];
+		let b = a * a * a;
 		screen.html(a + '<sup>3</sup> = ' + b);
 		bieuThuc = [];
 		toanHang[0] = b;
 		$('.historyScreen').append(screen.html() + '<hr>');
 
 	}
-	else{
-		bieuThuc.pop();
-		screen.html(bieuThuc.join('') + b);
-		toanHang[0] = b;
-	}
+
 }
 
 
-function canBacHai(a){
-	let b = Math.sqrt(a);
-	if(bieuThuc.length == 1){
+function canBacHai(){
+	
+	if(bieuThuc.length == 0 && toanHang.length != 0){
+		setToanHang();
+		let a = bieuThuc[bieuThuc.length-1];
+		let b = Math.sqrt(a);
 		screen.html('&radic;' + a + ' = ' + b);
 		bieuThuc = [];
 		toanHang[0] = b;
 		$('.historyScreen').append(screen.html() + '<hr>');
 
 	}
-	else{
-		bieuThuc.pop();
-		screen.html(bieuThuc.join('') + b);
-		
-		toanHang[0] = b;
-	}
+
 }
 
 
 function giaiThua(){
-	let n = bieuThuc[bieuThuc.length-1];
-	let a = n;
-	screen.empty();
-	bieuThuc = [];
-	if(!Number.isInteger(n) || (n < 0)){
-		screen.html("Bạn phải nhập 1 số nguyên dương");
-	}
-	else if(n == 0){
-		screen.html(n + "!" + " = 1");
-		$('.historyScreen').append(screen.html() + '<hr>');
-
-	}
-	else{
-		var i = 1;
-		while(i<a){
-			n*=(a-i);
-			i++;
+	if(bieuThuc.length == 0 && toanHang.length != 0){
+		setToanHang();	
+		let n = bieuThuc[bieuThuc.length-1];
+		let a = n;
+		screen.empty();
+		bieuThuc = [];
+		if(!Number.isInteger(n) || (n < 0)){
+			screen.html("Bạn phải nhập 1 số nguyên dương");
 		}
-		screen.html(a + "! = " + n);
-		toanHang[0] = n;
-		$('.historyScreen').append(screen.html() + '<hr>');
+		else if(n == 0){
+			screen.html(n + "!" + " = 1");
+			$('.historyScreen').append(screen.html() + '<hr>');
 
+		}
+		else{
+			var i = 1;
+			while(i<a){
+				n*=(a-i);
+				i++;
+			}
+			screen.html(a + "! = " + n);
+			toanHang[0] = n;
+			$('.historyScreen').append(screen.html() + '<hr>');
+
+		}	
 	}
 }
+
 
 function xoa(){
 	screen.html(screen.html().slice(0, screen.html().length - 1));
