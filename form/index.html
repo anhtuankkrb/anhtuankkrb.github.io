@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		body{
+			padding-left: 10%;
+			background: url("https://i.pinimg.com/originals/fc/b1/43/fcb143a833c3d9a63b7bede3b1e34320.jpg");
+		}
+		h1{
+			font-size: 35px;
+		    padding: 13px 12px;
+
+		}
+
+		form{
+			display: inline-block;
+    		background: rgba(255, 255, 255, 0.6);
+		}
+		input{
+			    padding: 6px;
+    			font-size: 17px;
+    			margin-bottom: 18px;
+		}
+		input:focus{
+			background: #90d4f2;
+		}
+		label{
+			font-size: 18px;
+		}
+		legend{
+			font-size: 21px;
+		}
+		fieldset{
+			margin-bottom: 16px;
+		}
+		select{
+			font-size: 17px;
+		}
+		.date{
+			margin-bottom: 25px;
+			margin-top: 20px;
+		}
+		button{
+		    border: 0px;
+		    font-size: 20px;
+		    padding: 10px;
+		    border-radius: 10px;
+		    width: 232px;
+		    margin-top: 17px;
+		    box-shadow: 3px 4px 8px #4d4444;
+		}
+		button:hover{
+			opacity: 0.8;
+		}
+		.submit{
+			background: #46c54c;
+			margin-right: 25px;
+		}
+		.reset{
+			background: #e63e32;
+		}
+		form > input{
+			width: 96%;
+		}
+	</style>
+</head>
+<body>
+	<form action="result.html" method="get">
+		<h1>Đăng ký:</h1>
+		<input type="text" placeholder="Họ tên" name="name">
+		<br />
+		<input type="email" placeholder="Email" name="email">
+		<br />
+		<input type="password" placeholder="password" name="password">
+
+		
+			
+		<fieldset>
+			<legend>Giới tính:</legend>
+			<input type="radio" name="gender" value="Nam" id="male" />   <label for="male">Nam</label>
+			<br />
+			<input type="radio" name="gender" value="Nữ" id="female" />   <label for="female">Nữ</label>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Thông tin cá nhân</legend>
+			<div class="date">
+				<label for="day">Ngày sinh: </label>
+				<select name="birthday" id="day"></select>
+				
+				<label for="month">Tháng sinh: </label>
+				<select name="birthmonth" id="month"></select>
+				
+				<label for="year">Năm sinh: </label>
+				<select name="birthyear" id="year"></select>
+				<br />
+			</div>
+			<label for="address">Địa chỉ:</label>
+			<input type="text" name="address" id="address" />
+			<br />
+			<label for="telephone">Điện thoại:</label>
+			<input type="text" name="telephone" id="telephone" />
+		</fieldset>
+
+		<button type="submit" class="submit">Đăng ký</button>
+		<button type="reset" class="reset">Xóa</button>
+
+	</form>
+
+	<script>
+		for(let number = 1; number <= 31; number++){
+			$('<option value="' + number + '">' + number + '</option>').appendTo('#day');
+		}
+		for(let number = 1; number <= 12; number++){
+			$('<option value="' + number + '">' + number + '</option>').appendTo('#month');
+		}
+		for(let number = 1970; number <= 2019; number++){
+			if(number == 2000){
+				$('<option value="' + number + '" selected>' + number + '</option>').appendTo('#year');
+			}
+			$('<option value="' + number + '">' + number + '</option>').appendTo('#year');
+		}
+	</script>
+</body>
+</html>

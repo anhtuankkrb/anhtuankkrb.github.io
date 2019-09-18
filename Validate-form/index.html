@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		body{
+			padding-right: 10%;
+			background: url("https://khohinhdep.com/wp-content/uploads/2017/10/tai-ve-mien-phi-30-hinh-nen-mau-xanh-018.jpg");
+			display: flex;
+    		justify-content: flex-end;
+		}
+		
+		h1{
+			font-size: 38px;
+		    padding-left: 12px;
+
+		}
+
+		form{
+			display: inline-block;
+    		background: rgba(255, 255, 255, 0.9);
+			padding: 15px;
+    		border-radius: 15px;
+		}
+				
+		input{
+			    padding: 6px;
+    			font-size: 17px;
+		}
+		input:focus{
+			background: #90d4f2;
+		}
+		form > .input > input{
+			width: 96%;
+		}
+		.input{
+   			margin-bottom: 18px;
+			position: relative;			
+		}		
+		.tooltit{
+			position: absolute;
+			background:rgba(255, 0, 0, 0.5);
+			right: 104%;
+			top: 35%;
+			white-space: nowrap;
+			font-size: 17px;
+			padding: 7px;
+			border-radius: 9px;
+			color: yellow;
+			display: none;
+		}
+		.tooltit::after{
+			content: "";
+			position: absolute;
+			left:100%;
+			top: 35%;
+			border: 6px solid;
+			border-color: transparent transparent transparent rgba(255, 0, 0, 0.5);
+		}		
+
+		label{
+			font-size: 18px;
+		}
+		
+		legend{
+			font-size: 21px;
+		}
+		fieldset{
+			margin-bottom: 16px;
+		}
+
+		select{
+			font-size: 17px;
+		}
+		.date{
+			margin-bottom: 25px;
+			margin-top: 20px;
+		}
+
+		button{
+		    border: 0px;
+		    font-size: 20px;
+		    padding: 10px;
+		    border-radius: 10px;
+		    width: 232px;
+		    margin-top: 4px;
+		    box-shadow: 3px 4px 8px #4d4444;
+		}
+		button:hover{
+			opacity: 0.8;
+		}
+		.submit{
+			background: #46c54c;
+		}
+		.reset{
+			background: #e63e32;
+			width: 114px;
+    		margin-left: 73px;
+		}
+
+		.gender{
+			margin-top: 10px;
+			font-size: 21px;
+    		color: #411e81;
+		}
+	</style>
+</head>
+<body>
+	<form action="result.html" method="get" id="testForm">
+		<h1>Đăng ký:</h1>
+		<div class="input">
+			<input type="text" placeholder="Họ tên" name="name" id="name"/>
+			<div class="tooltit"></div>
+		</div>
+		<div class="input">
+			<input type="password" placeholder="password" name="password" id="password"/>
+			<div class="tooltit"></div>
+		</div>
+		<div class="input">
+			<input type="password" placeholder="Kiểm tra lại password" name="passwordTest" id="passwordTest" />
+			<div class="tooltit"></div>
+		</div>
+		
+		<fieldset>
+			<legend>Thông tin cá nhân</legend>
+			<div class="gender input">
+				Giới tính:
+				<input type="radio" name="gender" value="Nam" id="male" />   <label for="male">Nam</label>			
+				<input type="radio" name="gender" value="Nữ" id="female" />   <label for="female">Nữ</label>
+				<input type="radio" name="gender" value="Ohaha" id="ohaha" />   <label for="ohaha">Khác</label>
+				<div class="tooltit"></div>
+			</div>
+			<div class="date">
+				<label for="day">Ngày sinh: </label>
+				<select name="birthday" id="day"></select>
+				
+				<label for="month">Tháng sinh: </label>
+				<select name="birthmonth" id="month"></select>
+				
+				<label for="year">Năm sinh: </label>
+				<select name="birthyear" id="year"></select>
+				<br />
+			</div>
+			
+			<label for="email">Email:</label>
+			<div class="input">
+				<input type="text" name="email" id="email" />
+				<div class="tooltit"></div>
+			</div>
+			<label for="address">Địa chỉ:</label>
+			<div class="input">
+				<input type="text" name="address" id="address" />
+				<div class="tooltit"></div>
+			</div>
+			<label for="telephone">Điện thoại: (10 số)</label>
+			<div class="input">
+				<input type="text" name="telephone" id="telephone" />
+				<div class="tooltit"></div>
+			</div>
+			
+		</fieldset>
+
+		<button type="submit" class="submit">Đăng ký</button>
+		<button type="reset" class="reset">Xóa</button>
+
+	</form>
+
+	<script>
+		for(let number = 1; number <= 31; number++){
+			$('<option value="' + number + '">' + number + '</option>').appendTo('#day');
+		}
+		for(let number = 1; number <= 12; number++){
+			$('<option value="' + number + '">' + number + '</option>').appendTo('#month');
+		}
+		for(let number = 1970; number <= 2019; number++){
+			if(number == 2000){
+				$('<option value="' + number + '" selected>' + number + '</option>').appendTo('#year');
+			}
+			$('<option value="' + number + '">' + number + '</option>').appendTo('#year');
+		}
+	</script>
+	<script src="test-form.js"></script>
+</body>
+</html>

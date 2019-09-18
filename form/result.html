@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<style>
+			html{
+				background:url("https://thumbs.dreamstime.com/z/vector-succulent-garden-seamless-pattern-background-graphic-design-54126995.jpg");
+			}
+			body{
+				max-width: 1000px;
+				margin: auto;
+				padding: 20px 67px;
+				text-align: center;
+				background: rgba(255, 255, 255, 0.7);
+    			padding-bottom: 204px;
+			}
+			h1{
+			    margin-bottom: 52px;
+			    font-size: 40px;
+			    border-radius: 19px;
+			    background: rgba(65, 205, 70, 0.5);
+			    padding: 15px;
+			}
+			#name{
+				font-size: 32px;
+			    font-style: italic;
+			    font-weight: bold;
+			    margin-bottom: 33px;
+			    color: #554f47;
+			}
+			#personalProfile{
+				display: inline-block;
+				text-align: left;
+				font-size: 20px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Đăng ký thành công</h1>
+		<div class="hello">
+			<div id="name">Xin chào </div>
+			<div id="personalProfile">
+				<h3>Thông tin cá nhân của bạn:</h3>
+				<div class="day">
+					<span id="birthday">Sinh ngày </span>
+					<span id="birthmonth"> Tháng </span>
+					<span id="birthyear"> Năm </span>
+				</div>
+				<p id="gender">Giới tính: </p>
+				<p id="email">Email: </p>
+				<p id="address">Địa chỉ: </p>
+				<p id="telephone">Điện thoại: </p>
+			</div>
+		</div>
+		<script>
+			let inf = decodeURIComponent(location.href);
+			inf = inf.slice(inf.indexOf('?') + 1).replace(/\+/g," ");;
+			let array = inf.split("&");
+			let result = {};
+			array.forEach(function(value){
+				let arr = value.split("=");
+				result[arr[0]] = arr[1];
+			});
+
+
+			$("#name").append(result.name);
+			$("#birthday").append(result.birthday);
+			$("#birthmonth").append(result.birthmonth);
+			$("#birthyear").append(result.birthyear);
+			$("#gender").append(result.gender);
+			$("#email").append(result.email);
+			$("#address").append(result.address);
+			$("#telephone").append(result.telephone);
+
+		</script>
+	</body>
+</html>
