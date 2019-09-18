@@ -28,7 +28,7 @@ $("#testForm").on("submit", function(){
         $("#email+.tooltit").text("Email không hợp lệ").show();
     }
 
-    if(isNaN($("#telephone").val())){
+    if(!Number.isInteger(+$("#telephone").val()) || $("#telephone").val().indexOf(".") != -1 ){
         tester = false;
         $("#telephone+.tooltit").text("Số điện thoại không hợp lệ").show();
     }else if($("#telephone").val().length != 10){
