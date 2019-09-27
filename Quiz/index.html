@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="q.png" type="image/x-icon">
+        <title>Quiz</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>QUIZ</h1>
+        
+        <img src="avata1.jpg" alt="avata" id="avata">
+        
+        <div id="selectAvata">
+            <img src="avata1.jpg" alt="avata" />
+            <img src="avata2.jpg" alt="avata" />
+            <img src="avata3.jpg" alt="avata" />
+            <img src="avata4.jpg" alt="avata" />
+            <img src="avata5.jpg" alt="avata" />
+            <img src="avata6.jpg" alt="avata" />
+            <img src="avata7.jpg" alt="avata" />
+            <img src="avata8.png" alt="avata" />
+        </div>
+
+        <div id="start">START</div>
+
+        <div id="ready"></div>
+
+        <div id="result">Kết quả: 5/7</div>
+
+        <div id="replay">replay</div>
+
+        <div id="progress">
+            <div id="runProgress">
+            </div>
+        </div>
+
+        <div id="tableQuestion"></div>
+        <div id="choose"></div>
+
+        <audio style="display: none" id="clickSound">
+            <source src="click.mp3" type="audio/mpeg" />
+        </audio>
+        <audio style="display: none" id="tickSound" loop>
+            <source src="tick.mp3" type="audio/mpeg" />
+        </audio>
+        <audio style="display: none" id="music" loop>
+            <source src="muisc.mp3" type="audio/mpeg" />
+        </audio>
+        <script src="quiz.js"></script>
+    </body>
+</html>
