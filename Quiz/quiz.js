@@ -106,7 +106,8 @@ function endQuiz(){
     let scores = count() - 1;
     if(scores == quizAmount){
         let url = location.href;
-        url = url.replace("index.html", "win.html");
+        url = url.replace("index.html", "");
+        url += "/win.html"
         location.assign(url);
     }else{
         result(scores);
