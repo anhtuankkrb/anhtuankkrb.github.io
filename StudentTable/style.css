@@ -1,0 +1,94 @@
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 34px;
+}
+
+table{
+    width: 1000px;
+    border-collapse: collapse;
+    font-size: 18px;
+    margin: auto;
+    white-space: nowrap;
+    box-shadow: 1px 6px 26px #000;
+}
+thead{
+    text-align: left;
+     color: white;
+     background: rgb(12, 145, 19);
+}
+th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+td,th{
+ padding-left: 14px;
+}
+tr:nth-child(even){
+    background: #e6e5e5;
+}
+
+tbody tr:hover{
+    background: #f1e791; 
+}
+
+td{
+ padding-top: 10px;
+ padding-bottom: 10px;
+
+}
+
+.repair,.delete,.done,#add,#quit{
+    font-size:17px;
+    text-align: center;
+    cursor: pointer;
+}
+.done,#add{
+    color: green;
+    display: none;
+}
+.repair{
+    color: blue;
+}
+.delete,#quit{
+    color: red;
+}
+
+
+
+#sortByName:hover,#sortByYear:hover{
+    background: #4CAF50;
+    cursor: pointer;
+}
+.wrap-create{
+    text-align: center;
+    margin-top: 42px;
+}
+#create{
+    color: white;
+    background-image: linear-gradient(to right top, #18d523, #12b31b, #0c9113, #07710c, #035306);
+    padding:10px;
+    font-size: 19px;
+    border-radius: 20px;
+    box-shadow: 1px 6px 26px #000;
+    cursor: pointer;
+}
+#create:active{
+    background-image: linear-gradient(to left bottom, #18d523, #12b31b, #0c9113, #07710c, #035306);
+    box-shadow: 0px 0px 0px #000;
+}
+#create:hover{
+    opacity: 0.8;
+}
+input{
+     width: 70%;
+    font-size: 15px;
+     padding: 3px;
+}
+
+td:last-child{
+    text-align: right;
+    padding-right: 5px;
+}

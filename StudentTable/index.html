@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script src="https://kit.fontawesome.com/0f1a2ee87e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Danh sách học viên</h1>
+    <table id="table">
+        <thead>
+            <tr>
+                <th id="sortByName" onclick="sortByName()">Họ tên &nbsp; <i class="fas fa-sort-down"></i></th>
+                <th id="sortByYear" onclick="sortByYear()">Năm sinh &nbsp; <i class="fas fa-sort-down"></i></th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th></th>
+            </tr>
+        </thead>    
+        <tbody>
+
+        </tbody>
+        
+    </table>
+   <div class="wrap-create"> 
+       <span id="create" onclick="createStudent(this)"><i class="fas fa-plus"></i> Thêm</span> 
+    </div>
+
+<script src="js.js"></script>
+</body>
+</html>
