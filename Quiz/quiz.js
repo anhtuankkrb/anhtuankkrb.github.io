@@ -105,7 +105,9 @@ function nextQuiz(feedback){
 function endQuiz(){
     let scores = count() - 1;
     if(scores == quizAmount){
-        location.assign(location.hostname + "win.html")
+        let url = location.href;
+        url = url.replace("index.html", "win.html");
+        location.assign(url);
     }else{
         result(scores);
     }
