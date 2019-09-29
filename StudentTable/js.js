@@ -185,6 +185,8 @@ function searchStudents(){
         }
         else if(obj.email.search(match) == 0){
             result.push(obj);
+        }else if(obj.phone.search(match) == 0){
+            result.push(obj);
         }
     });
   return result;
