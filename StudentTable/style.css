@@ -31,7 +31,7 @@ tr:nth-child(even){
 }
 
 tbody tr:hover{
-    background: #f1e791; 
+    background: #82ef86; 
 }
 
 td{
@@ -40,7 +40,7 @@ td{
 
 }
 
-.repair,.delete,.done,#add,#quit{
+.repair,.delete,.done,#add,#quit,.cance{
     font-size:17px;
     text-align: center;
     cursor: pointer;
@@ -55,10 +55,13 @@ td{
 .delete,#quit{
     color: red;
 }
+.cance{
+    display: none;
+    color: red;
+}
 
 
-
-#sortByName:hover,#sortByYear:hover{
+.sort:hover{
     background: #4CAF50;
     cursor: pointer;
 }
@@ -91,4 +94,70 @@ input{
 td:last-child{
     text-align: right;
     padding-right: 5px;
+    
+}
+#submit{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    margin-left: 4px;
+}
+#reset{
+    width: 70px;
+    height: 30px;
+    margin-left: 4px;
+}
+#warning{
+    position: absolute;
+    background: #dd3a3a;
+    white-space: nowrap;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 13px;
+    top: 202%;
+    right: -114%;
+    display: none;
+
+}
+#warning::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color:  transparent transparent #dd3a3a  transparent;
+
+}
+#search{
+    width: 286px;
+    font-size: 16px;
+    padding: 6px;
+}
+.searchWrap{
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+#find{
+    position: absolute;
+    background: #efdc82;
+    white-space: nowrap;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 13px;
+    top: 115%;
+    right: 50%;
+    font-style: italic;
+    display: none;
+}
+#find::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left:50%;
+    border-width: 7px;
+    border-style: solid;
+    border-color:  transparent transparent #efdc82 transparent ;
 }

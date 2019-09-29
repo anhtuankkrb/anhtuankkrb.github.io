@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Table</title>
+    <title>Student List</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  	<script src="https://kit.fontawesome.com/0f1a2ee87e.js" crossorigin="anonymous"></script>
@@ -10,13 +10,26 @@
 </head>
 <body>
     <h1>Danh sách học viên</h1>
+    <div class="searchWrap">
+        <span id="find"></span>
+        <input type="text" id="search" 
+                            placeholder="Search name, birth year, email or phone" 
+                            oninput="findTable()" 
+                            onblur="$('#find').hide();$('#table tbody tr').css('background', '')"/>
+        <button type="button" onclick="searchTable()" id="submit">
+            Search    
+            <div id='warning'>Bạn chưa hoàn thành<br>thao tác</div>     
+        </button>
+        <button type="button" onclick="$('#table tbody tr').show()" id="reset">Return</button>
+
+    </div>
     <table id="table">
         <thead>
             <tr>
-                <th id="sortByName" onclick="sortByName()">Họ tên &nbsp; <i class="fas fa-sort-down"></i></th>
-                <th id="sortByYear" onclick="sortByYear()">Năm sinh &nbsp; <i class="fas fa-sort-down"></i></th>
-                <th>Email</th>
-                <th>Số điện thoại</th>
+                <th class="sort" onclick="sortTable('name');">Họ tên &nbsp; <i class="fas fa-sort"></i></i></th>
+                <th class="sort" onclick="sortTable('birthYear');">Năm sinh &nbsp; <i class="fas fa-sort"></i></i></th>
+                <th class="sort" onclick="sortTable('email');">Email &nbsp; <i class="fas fa-sort"></i></i></th>
+                <th class="sort" onclick="sortTable('phone');">Số điện thoại &nbsp; <i class="fas fa-sort"></i></i></th>
                 <th></th>
             </tr>
         </thead>    
@@ -28,7 +41,7 @@
    <div class="wrap-create"> 
        <span id="create" onclick="createStudent(this)"><i class="fas fa-plus"></i> Thêm</span> 
     </div>
-
+   
 <script src="js.js"></script>
 </body>
 </html>
