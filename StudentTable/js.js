@@ -38,6 +38,7 @@ function deleteStudent(me){
     }
 }
 function repair(me){
+    currentRepair = [];
     let info = $(me).parents("td").siblings();
     for(let item of info){
         let value = item.innerHTML;
@@ -62,7 +63,7 @@ function done(me){
     $(".repair").show();
     $("#create").show();
     updateStudentList();
-    currentRepair = [];
+   
 }
 function cance(me){
     let info = $(me).parents("td").siblings();
@@ -75,7 +76,7 @@ function cance(me){
     $(".repair").show();
     $("#create").show();
     updateStudentList();
-    currentRepair = [];
+ 
 }
 function createStudent(me){
     $(".delete").hide();
