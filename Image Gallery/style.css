@@ -60,8 +60,17 @@ body{
 	background: #e1cdcd;
 }
 .button{
-	color:white;
-	background: green;
+	color: black;
+    background: #f5eda8;
+    text-align: center;
+    width: 100px;
+    margin: auto;
+    padding: 6px;
+    margin-top: 24px;
+	border-radius: 7px;
+	font-size: 26px;
+	display: none;
+	color: blue;
 	
 }
 @media screen and (max-width: 800px){
@@ -70,15 +79,20 @@ body{
 	}
 	.anh{
 		width: 100%;
+		margin-top: 37px;
 	}
 	.menu{
 		flex-direction: column;
 		display: none;
-		transition: 1s;
+		
 	}
 	.menu a{
 		border-bottom: 1px solid gray;
 	}
-
-	
+	.lienket{
+		font-size: 19px;
+	}
+	.button{
+		display: block;
+	}
 }

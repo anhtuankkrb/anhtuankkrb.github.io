@@ -1,7 +1,7 @@
 let studentList = [];
 studentList.push(new Student("Hưng", "2001","hung@gmail.com","0123456789"));
 studentList.push(new Student("Tuấn", "1995","tuan@gmail.com","0123456789"));
-studentList.push(new Student("Khanh", "1996","khanh@gmail.com","0123456789"));
+studentList.push(new Student("Khanh", "1996","khanh@gmail.com","9876543210"));
 studentList.push(new Student("Tâm", "1996","tam@gmail.com","0123456789"));
 studentList.push(new Student("Khánh", "1993","khanh@gmail.com","0123456789"));
 createNewTable(studentList);
@@ -41,7 +41,7 @@ function repair(me){
     currentRepair = [];
     let info = $(me).parents("td").siblings();
     for(let item of info){
-        let value = item.innerHTML;
+        let value = $(item).text();
         currentRepair.push(value);
         $(item).empty().append(`<input type="text" value="${value}" />`)
     }
@@ -88,7 +88,7 @@ function createStudent(me){
             <td><input type="text" placeholder="Email" /></td>
             <td><input type="text" placeholder="Số điện thoại" /></td>
             <td>
-                <span id="add" style="display:inline"><i class="fas fa-plus"></i> Thêm</span> | 
+                <span id="add" style="display:inline"><i class="fas fa-plus"></i> Thêm</span> &nbsp; 
                 <span id="quit"><i class="fas fa-times-circle"></i> Bỏ</span>
             </td>
         </tr>`
@@ -142,7 +142,7 @@ function updateStudentList(){
 }
 
 function sortTable(by, me){
-    $("i").removeClass().addClass("fas fa-sort");
+    $("#table i").removeClass().addClass("fas fa-sort");
     let tester = false;
     for(let i = 0; i < studentList.length; i++){
         if(i + 1 == studentList.length){
@@ -201,7 +201,7 @@ function searchStudents(){
 }
 
 function searchTable(){
-    createNewTable(studentList);
+    
     let test = $("#table tbody tr").find("input")
     if(test.length != 0){
         $(test).parents("tr").css("background", "#f68c8c");
@@ -211,7 +211,8 @@ function searchTable(){
             $("#warning").hide();
         },2000);
         return ;
-    }   
+    }  
+    createNewTable(studentList); 
     let result =searchStudents();
        
     let tds = $("#table tbody td:first-child");
@@ -229,6 +230,17 @@ function searchTable(){
 }
 
 function findTable(){
+    let test = $("#table tbody tr").find("input")
+    if(test.length != 0){
+        $(test).parents("tr").css("background", "#f68c8c");
+        $("#warning").show();
+        setTimeout(function(){
+            $(test).parents("tr").css("background", "");
+            $("#warning").hide();
+        },2000);
+        $("#search").val("")
+        return ;
+    }   
     let result = searchStudents();
     let match = $("#search").val();
     let matchi = new RegExp(match, "i");
@@ -252,34 +264,58 @@ function findTable(){
                $(tds[i]).next().next().next().text() == value.phone ){
              
                 $(tds[i]).parent().css("background", "#efdc82");
-             try{   
-                var a = $(tds[i]);
-              var b = $(tds[i]).text();
-              var c = b.match(matchi);
-             $(a).empty().append(b.replace(matchi, `<span style="color:red">${c[0]}</span>`));
-             }
-             catch(err){}
-             try{
+               
+            var a = $(tds[i]);
+            var b = $(tds[i]).text();
+            var c = b.match(matchi);
+            var d;
+            try{ 
+                 d = `<span style="color:red">${c[0]}</span>`
+            } 
+            catch(err){
+                d = '';
+            }
+             $(a).empty().append(b.replace(matchi, d));
+            
+            
+             
              a =$(tds[i]).next();
              b = $(tds[i]).next().text(); 
              c = b.match(matchi);
-             $(a).empty().append(b.replace(matchi, `<span style="color:red">${c[0]}</span>`));
-             }
-             catch(err){}
-             try{
+            try{
+                d = `<span style="color:red">${c[0]}</span>`;
+            }catch(err){
+                d = '';
+            }
+             $(a).empty().append(b.replace(matchi, d));
+            
+             
+             
              a =$(tds[i]).next().next();
              b = $(tds[i]).next().next().text();
              c = b.match(matchi);
-             $(a).empty().append(b.replace(matchi, `<span style="color:red">${c[0]}</span>`));
-             }
-             catch(err){}
              try{
+                 d = `<span style="color:red">${c[0]}</span>`;
+            }  
+            catch(err){
+                d = "";
+            }
+             $(a).empty().append(b.replace(matchi, d));
+             
+             
+             
              a =$(tds[i]).next().next().next();
              b = $(tds[i]).next().next().next().text();
              c = b.match(matchi);
-             $(a).empty().append(b.replace(matchi, `<span style="color:red">${c[0]}</span>`));
-             }
-             catch(err){}
+             try{
+                 d = `<span style="color:red">${c[0]}</span>`;
+             } 
+               catch(err){
+                   d = '';
+               }  
+             $(a).empty().append(b.replace(matchi, d));
+             
+            
             }
         }
         

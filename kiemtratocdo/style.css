@@ -48,3 +48,19 @@ a:hover{
 p{
 	font-size: 27px;
 }
+
+@media (max-width: 800px){
+	.thucvat,.dongvat{
+		flex-direction: column;
+	}
+	img{
+		width:100%;
+	}
+	h1{
+		font-size: 34px;
+	}
+	h2{
+		font-size: 29px;
+		text-align: center;
+	}
+}
