@@ -2,12 +2,15 @@
 <html>
 	<head>
 		<title>Image Gallery</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div class="bodyweb">
-			<img src="landscape-photography_1645.jpg" alt="logo">
+			<img src="landscape-photography_1645.jpg" alt="logo" class="pic">
+			
+			<div class="button" onclick="show()">+</div>
 			<div class="menu">
 				<a href="" class="lienket">Trang chủ</a>
 				<a href="" class="lienket">Nổi bật</a>
@@ -65,5 +68,16 @@
 			</div>
 
 		</div>
+
+		<script>
+			function show(){
+				let a =document.getElementsByClassName("menu")[0]
+				if(getComputedStyle(a).getPropertyValue("display") == "flex"){
+					a.style.display = "none";
+				}else{
+					a.style.display="flex";
+				}
+			}
+		</script>
 	</body>
 </html>

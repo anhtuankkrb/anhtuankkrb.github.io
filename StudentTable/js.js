@@ -141,8 +141,8 @@ function updateStudentList(){
     }
 }
 
-function sortTable(by){
-    
+function sortTable(by, me){
+    $("i").removeClass().addClass("fas fa-sort");
     let tester = false;
     for(let i = 0; i < studentList.length; i++){
         if(i + 1 == studentList.length){
@@ -159,7 +159,11 @@ function sortTable(by){
         b = b[by].toLowerCase();
         let c = tester ? a : b;
         let d = tester ? b : a;
-        
+        if( c == a ){
+            $(me).find("i").addClass("fa-sort-down").removeClass("fa-sort");
+        }else{
+            $(me).find("i").addClass("fa-sort-up").removeClass("fa-sort");
+        }
         if(c < d){
             return -1;
         }else if(c > d){
@@ -169,6 +173,9 @@ function sortTable(by){
         }
         
     });
+   
+
+
     createNewTable(studentList);
     $("#create").show();
 }
@@ -178,15 +185,15 @@ function searchStudents(){
     let match = $("#search").val().toLowerCase();
     let result = [];
     studentList.forEach(function(obj){
-        if(obj.name.toLowerCase().search(match) == 0){
+        if(obj.name.toLowerCase().search(match) != -1){
             result.push(obj);
         }
-        else if(obj.birthYear.search(match) == 0){
+        else if(obj.birthYear.search(match) != -1){
             result.push(obj);
         }
-        else if(obj.email.search(match) == 0){
+        else if(obj.email.search(match) != -1){
             result.push(obj);
-        }else if(obj.phone.search(match) == 0){
+        }else if(obj.phone.search(match) != -1){
             result.push(obj);
         }
     });
@@ -194,6 +201,7 @@ function searchStudents(){
 }
 
 function searchTable(){
+    createNewTable(studentList);
     let test = $("#table tbody tr").find("input")
     if(test.length != 0){
         $(test).parents("tr").css("background", "#f68c8c");
@@ -222,25 +230,62 @@ function searchTable(){
 
 function findTable(){
     let result = searchStudents();
+    let match = $("#search").val();
+    let matchi = new RegExp(match, "i");
     $("#table tbody tr").css("background", "");
     if($("#search").val() == ""){
         $("#find").hide();
         $("#table tbody tr").css("background", "");
+        createNewTable(studentList);
         return; 
     }
     $("#find").show();
     $("#find").text(`Tìm thấy ${result.length} học viên`);
-
+    createNewTable(studentList);
     let tds = $("#table tbody td:first-child");
     result.forEach(function(value){
         for(let i = 0; i < tds.length; i++){
+            
             if($(tds[i]).text() == value.name &&
                $(tds[i]).next().text() == value.birthYear &&
                $(tds[i]).next().next().text() == value.email &&
                $(tds[i]).next().next().next().text() == value.phone ){
+             
                 $(tds[i]).parent().css("background", "#efdc82");
+             try{   
+                var a = $(tds[i]);
+              var b = $(tds[i]).text();
+              var c = b.match(matchi);
+             $(a).empty().append(b.replace(matchi, `<span style="color:red">${c[0]}</span>`));
+             }
+             catch(err){}
+             try{
+             a =$(tds[i]).next();
+             b = $(tds[i]).next().text(); 
+             c = b.match(matchi);
+             $(a).empty().append(b.replace(matchi, `<span style="color:red">${c[0]}</span>`));
+             }
+             catch(err){}
+             try{
+             a =$(tds[i]).next().next();
+             b = $(tds[i]).next().next().text();
+             c = b.match(matchi);
+             $(a).empty().append(b.replace(matchi, `<span style="color:red">${c[0]}</span>`));
+             }
+             catch(err){}
+             try{
+             a =$(tds[i]).next().next().next();
+             b = $(tds[i]).next().next().next().text();
+             c = b.match(matchi);
+             $(a).empty().append(b.replace(matchi, `<span style="color:red">${c[0]}</span>`));
+             }
+             catch(err){}
             }
         }
+        
     });
 
+    
+    
 }
+

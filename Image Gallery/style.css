@@ -7,17 +7,19 @@ body{
 }
 .bodyweb{
 	margin: auto;
-	width: 1000px;
+	max-width: 1000px;
 	background: white;
 	
 }
-
+.pic{
+	max-width:100%;
+}
 .menu{
 	background: #f5eda8;
     margin-top: 43px;
     display: flex;
     justify-content:center;
-    width: 847px;
+    max-width: 847px;
     margin-left:auto;
     margin-right:auto;
 }
@@ -47,14 +49,36 @@ body{
 
 .image{
 	width:30%;
-	margin:11px;
-	opacity:0.8;
+	padding:11px;
 }
 .image:hover{
-	opacity:1;
+	opacity:0.9;
 }
 
 .foot{
 	height: 90px;
 	background: #e1cdcd;
+}
+.button{
+	color:white;
+	background: green;
+	
+}
+@media screen and (max-width: 800px){
+	.image{
+		width: 100%;
+	}
+	.anh{
+		width: 100%;
+	}
+	.menu{
+		flex-direction: column;
+		display: none;
+		transition: 1s;
+	}
+	.menu a{
+		border-bottom: 1px solid gray;
+	}
+
+	
 }
