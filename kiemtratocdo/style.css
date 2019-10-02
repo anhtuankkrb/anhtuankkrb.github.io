@@ -27,7 +27,7 @@ body{
 	display:flex;
 }
 img{
-	width: 300px;
+	width: 100%;
 	overflow: hidden;
 }
 a{
@@ -39,6 +39,7 @@ a{
 	background: #4caf50;
 	border-radius: 15px;
 	transition: 1s;
+	width: 33.3333%;
 }
 a:hover{
 	color: red;
@@ -52,6 +53,7 @@ p{
 @media (max-width: 800px){
 	.thucvat,.dongvat{
 		flex-direction: column;
+		padding:55px 35px;
 	}
 	img{
 		width:100%;
@@ -62,5 +64,11 @@ p{
 	h2{
 		font-size: 29px;
 		text-align: center;
+	}
+	a{
+		width:100%;
+		margin: 25px;
+		margin: 0px;
+		margin-top:20px;
 	}
 }
