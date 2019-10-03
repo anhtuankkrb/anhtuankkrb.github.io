@@ -9,8 +9,8 @@ body{
     font-size: 1.5em;
 }
 .wrap{
+    display: flex;
     font-size: 0.7em;
-    overflow: hidden;
 }
 .tab{
     padding: 10px;
@@ -18,7 +18,7 @@ body{
     border-radius: 4px 4px 0 0;
     color: #337ab7;
     cursor: pointer;
-    float: left;
+
 }
 .tab:hover{
     color: #777;
