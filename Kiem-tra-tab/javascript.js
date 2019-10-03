@@ -1,0 +1,18 @@
+$("#tabKengan").click(function(){
+    $(".tab").removeClass("active");
+    $(this).addClass("active");
+    $(".content").hide()
+    $("#kengan").show();
+});
+$("#tabShinkalion").click(function(){
+    $(".tab").removeClass("active");
+    $(this).addClass("active");
+    $(".content").hide()
+    $("#shinkalion").show();
+});
+$("#tabInvaded").click(function(){
+    $(".tab").removeClass("active");
+    $(this).addClass("active");
+    $(".content").hide()
+    $("#invaded").show();
+});
