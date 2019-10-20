@@ -1,4 +1,15 @@
-﻿*{
+﻿@font-face{
+    font-family: "Playfair DisplayIB";
+    src: url("./Playfair_Display/PlayfairDisplay-BoldItalic.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face{
+    font-family: "Playfair DisplayI";
+    src: url("./Playfair_Display/PlayfairDisplay-Italic.ttf");
+    font-style: italic;
+}
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -128,7 +139,7 @@ header .bar{
 }
 .menu{
     font-size: 18px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair DisplayI', serif;
     width: 297px;
     display: flex;
     justify-content: space-between;
@@ -366,7 +377,7 @@ header .bar{
     align-items: center;
 }
 .title-featured .text{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair DisplayIB', serif;
     font-weight: bold;
     font-style: italic;
     font-size: 29.58px;
@@ -596,14 +607,14 @@ header .bar{
 
 .content-say .tell{
     color: #fff;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair DisplayI', serif;
     font-size: 18.1px;
     font-style: italic;
     line-height: 30.16px;
     margin-top: 92px;
 }
 .content-say .name{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair DisplayIB', serif;
     font-style: italic;
     font-weight: bold;
     font-size: 29.95px;
