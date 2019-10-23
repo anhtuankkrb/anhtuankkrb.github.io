@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai 5</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+           
+        }
+        .menu{
+            display: flex;
+            height: 50px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+        .button{
+            width: 90px;
+            height: 30px;
+            background: blue;
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            margin-right:15px;
+        }
+        .content{
+                display: flex;
+               margin: 15px 15px 0 15px;
+        }
+        .content div{
+             background: cornflowerblue;
+             height: 600px;
+             width: 100%;
+        }
+        .content div:first-child{
+            margin-right:7.5px;
+        }
+        .content div:last-child{
+            margin-left:7.5px;
+        }
+        @media (max-width: 500px){
+            .menu{
+                display: flex;
+                justify-content: space-between;
+                margin: 0  15px 0 15px;
+                padding: 15px 0 15px 0;
+            }
+            .button{
+                width: 60px;
+                float: none;
+            }
+            .right{
+                margin-right:0; 
+            }
+            .content{
+                flex-wrap: wrap;
+                margin: 0 15px 0 15px;
+            }
+            .content div:first-child{
+            margin-right:0;
+            margin-bottom: 15px;
+            }
+            .content div:last-child{
+                margin-left:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+
+            <div class="button left">Click</div>
+            <div class="button left">Click</div>
+    
+ 
+            <div class="button right">Click</div>
+      
+    </div>
+    <div class="content">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

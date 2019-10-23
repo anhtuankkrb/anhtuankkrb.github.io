@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai 4</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .menu{
+ 
+            overflow: hidden;
+            padding: 15px 0 15px 15px;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .button{
+            width: 90px;
+            height: 30px;
+            background: blue;
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            margin-right:15px;
+        }
+        .content{
+            background: cornflowerblue;
+            height: 100vh;
+            margin: 15px 15px 0 15px;
+        }
+        @media (max-width: 500px){
+            .menu{
+                display: flex;
+                justify-content: space-between;
+                margin: 0  15px 0 15px;
+                padding: 15px 0 15px 0;
+            }
+            .button{
+                width: 60px;
+                float: none;
+            }
+            .right{
+                margin-right:0; 
+            }
+            .content{
+                 margin: 0 15px 0 15px;
+            }
+   
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+
+            <div class="button left">Click</div>
+            <div class="button left">Click</div>
+    
+ 
+            <div class="button right">Click</div>
+      
+    </div>
+    <div class="content"></div>
+</body>
+</html>

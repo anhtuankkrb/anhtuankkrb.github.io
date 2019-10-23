@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai 1</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            padding: 15px 15px 0 15px;
+   
+        }
+        .row{
+            display: flex;
+            margin-right: -15px;
+            margin-bottom: 15px;
+        }
+        .box{
+            width: calc(100% / 3);
+            padding-right: 15px;
+
+        }
+        .box .content{
+            width: 100%;
+            height: 300px;
+            background:steelblue ;
+        }
+        @media (max-width: 500px){
+            .row{
+                flex-wrap: wrap;
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+            .box{
+                width: 100%;
+                padding-right: 0;
+                padding-bottom: 15px;
+            }
+            .wrap{
+                padding: 20px 20px 5px 20px;
+   
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="row">
+            <div class="box">
+                <div class="content"></div>
+            </div>
+            <div class="box">
+                <div class="content"></div>
+            </div>
+            <div class="box">
+                <div class="content"></div>
+            </div>
+        </div>
+        <div class="row">    
+            <div class="box">
+                <div class="content"></div>
+            </div>
+            <div class="box">
+                <div class="content"></div>
+            </div>
+            <div class="box">
+                <div class="content"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
