@@ -1,0 +1,286 @@
+.deals,.tips{
+    text-align: center;
+}
+.title h2{
+    font-family: 'Poppins-blod', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.06px;
+    color: #333333;
+}
+.title p{
+    font-family: 'Poppins-Medium', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #B4B4B4;
+    margin-top: 14px;
+}
+@media (max-width: 680px){
+    .title h2{
+        font-size: 22px;
+    }
+    .title p{
+        font-size: 14px;
+    }
+}
+.deals .product{
+    margin-top: 62px;
+    padding: 0 84px;
+}
+.deals .product .row{
+    display: flex;
+    justify-content: center;
+    margin: 0 -12px;
+    margin-top: 32px;
+}
+.deals .product .row:first-child{
+    margin-top: 0;
+}
+.deals .product .row .item{
+    padding: 0 12px;
+   
+}
+
+.deals .product .row .item .image{
+    background: #EAEAEA;
+    padding: 21px 20px 20px 39px;
+    position: relative;
+    
+}
+.deals .product .row .item .image .price{
+    position: absolute;
+    width: 87px;
+    height: 36px;
+    background: url("./cars/ground.png");
+    background-repeat: no-repeat;
+    top: 26px;
+    right: -8px;
+    padding: 8px 18px 5px 21px;
+    font-family: 'Poppins-blod', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.03px;
+    line-height: 23px;
+    color: #fff;
+}
+.deals .product .row .item .image .price::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: url("./cars/tiny.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+.deals .product .row .item .image img{
+    width: 100%;
+    transition: transform 0.5s;
+}
+.deals .product .row .item p{
+    font-family: 'Poppins-blod', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.05px;
+    color: #333333;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.deals .product .row .item:hover .image img{
+    transform: scale(1.15);
+}
+.deals .product .row .item:hover p{
+    color: #763c3c
+}
+@media (max-width: 1220px) and (min-width: 950px){
+    .deals .product .row .item .image .price{
+        top: 0;
+    }
+}
+@media (max-width: 700px) and (min-width: 580px){
+    .deals .product .row .item .image .price{
+        top: 0;
+    }
+}
+@media (max-width: 450px){
+    .deals .product{
+        padding: 0 15px;
+    }
+}
+@media (max-width: 950px){
+    .deals .product .row {
+        flex-wrap: wrap;;
+    }
+    .deals .product .row .item{
+        width: 50%;
+    }
+}
+@media (max-width: 580px){
+    .deals .product .row .item{
+        width: 100%;
+    }
+}
+
+.all{
+    display: inline-block;
+    font-family: 'Poppins-Medium', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.06px;
+    line-height: 60px;
+    color: #fff;
+    background: #F5A623;
+    margin-top: 50px;
+    width: 228px;
+    height: 60px;
+}
+.all:hover{
+    background: #f2dc1c;
+    color: #763c3c;
+}
+
+.tips{
+    margin-top: 84px;  
+}
+.tips .top{
+    display: flex;
+    justify-content: center;
+    padding: 0 84px;
+    margin-top: 51px;
+}
+.tips .top a{
+    position: relative;
+    margin: 0 14px;
+    overflow: hidden;
+}
+.tips a img{
+    width:100%;
+    transition: transform 0.5s, filter 0.5s;
+}
+.tips a div{
+    position: absolute;
+    bottom: 19px;
+    left: 0;
+    font-family: 'Poppins-blod', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.05px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 5px #000;
+}
+.tips a:hover img{
+    transform: scale(1.2);
+    filter: blur(1px);
+}
+@media (max-width: 1025px) and (min-width:860px){
+    .tips a div{
+        font-size: 17px;   
+    }
+
+}
+@media (max-width: 860px){
+    .tips .top{
+        flex-wrap: wrap;
+    }
+    .tips .top a{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .tips .top a:last-child{
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 530px){
+    .tips .top{
+        padding: 0 15px;
+        
+    }
+}
+@media (max-width: 390px){
+    .tips a div{
+        font-size: 17px;
+    }
+}
+
+.email{
+    background: url("./email-ground.png");
+    background-size: cover;
+    margin-top: 82px;
+    padding: 70px 0 80px 0;
+    text-align: center;
+}
+.email h2{
+    font-family: 'Poppins-blod', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0.09px;
+    color: #FFF3CE;
+    text-shadow: 0 0 14px #f9a11d;
+}
+.email p{
+    font-family: 'Poppins-Medium', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FDDC87;
+    padding-top: 11px;
+    text-shadow: 0 0 14px #f9a11d;
+}
+.email form{
+   margin-top: 39px; 
+   display: flex;
+   justify-content: center;
+   padding: 0 42px;
+}
+.email form input{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.05px;
+    line-height: 20px;
+    padding: 18px 24px;
+    border: none;
+    color: #757575;
+}
+.email form input[type="email"]{
+    width: 449px
+}
+.email form input[type="submit"]{
+    background: #DEFF06;
+    padding-left: 35px;
+    padding-right: 34px;
+    cursor: pointer;
+}
+.email form input[type="submit"]:hover{
+    background: #763c3c;
+    color: #fff;
+}
+@media (max-width: 700px){
+    .email h2{
+        font-size: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .email p{
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 540px){
+    .email form{
+        flex-direction: column;
+        align-items: center;
+    }
+    .email form input{
+        width: 100% !important; 
+        border-bottom: 1px solid rgba(151, 151, 151, 0.29);
+        margin-bottom: 10px;
+    }
+    .email form input[type="submit"]{
+        width: 50% !important;
+    }
+}
