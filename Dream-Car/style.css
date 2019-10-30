@@ -282,5 +282,7 @@
     }
     .email form input[type="submit"]{
         width: 50% !important;
+        padding-left: 0;
+    	padding-right: 0;
     }
 }
