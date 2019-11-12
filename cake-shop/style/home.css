@@ -10,7 +10,7 @@ header{
     position: relative;
 }
 .carousel .slick-dots{
-    bottom: 7%;
+    bottom: 10%;
     display: none;
 }
 .slick-next{
@@ -74,6 +74,10 @@ header{
     }
     .slick-next, .slick-prev{
         display: none !important;
+    }
+    .carousel-caption{
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 @media (max-width: 640px){
