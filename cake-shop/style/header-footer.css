@@ -136,7 +136,7 @@ header .media a{
         position: absolute;     
         z-index: 999;
         flex-direction: column;      
-        width: 30%;
+        width: 250px;
         align-items: center;
         justify-content: space-around;
         background: #110101;
@@ -144,12 +144,12 @@ header .media a{
     }
     header .nav-bar nav{
          top: 100%;
-        left:-30%;
+        left:-250px;
         height: calc(100vh - 77px);
     }
     header .nav-bar .account{
         top: 100%;
-        right: -30%;
+        right: -250px;
         height: calc(50vh - 77px);
     }
 
@@ -182,7 +182,17 @@ header .media a{
     }
 }
 
-
+@media (max-width: 760px){
+    header .logo img{
+        width: 90px;
+        height: 90px;       
+    } 
+    header .media{
+        bottom: -95px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
 
 footer{
     margin-top: 160px;
