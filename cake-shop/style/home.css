@@ -308,12 +308,19 @@ a.detail{
         margin-bottom: 0;
     }
     .product .row > div{
-        margin-bottom: 30px;
+        margin-bottom: 80px;
+    }
+    .product .row div .info{
+        height: calc(100% + 40px);
+    }
+    .product .row  div:nth-child(even) .info{
+        left: 0;
     }
 }
 @media (max-width: 430px){
     .product .row div .info{
-        width: 120px;
+        width: 110px;
+        height: calc(100% + 40px);
     }
     .product .row div .info .name{
         font-size: 1.2rem;
