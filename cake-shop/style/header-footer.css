@@ -109,25 +109,61 @@ header .media a{
     margin: 5px;
 
 }
+.repo-account{
+    display: none;
+    cursor: pointer;
+    padding: 24px 0;
+}
+
 @media (max-width: 1000px){
+
     header .media{
         right: 30px;
+    }
+    .repo-account{
+        display: block;
+        font-size: 25px;
+        color: #fff;
     }
     .burger{
         display: block;
     }
     header .nav-bar{
-        position: absolute;
-        top: 100%;
-        left:-30%;
+        margin: 0;
+    }
+
+    header .nav-bar nav, header .nav-bar .account{
+        position: absolute;     
         z-index: 999;
-        flex-direction: column;
-        height: calc(100vh - 77px);
+        flex-direction: column;      
         width: 30%;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         background: #110101;
-        transition: 1s;
+        transition: 0.5s;
+    }
+    header .nav-bar nav{
+         top: 100%;
+        left:-30%;
+        height: calc(100vh - 77px);
+    }
+    header .nav-bar .account{
+        top: 100%;
+        right: -30%;
+        height: calc(50vh - 77px);
+    }
+
+    header .nav-bar .address{
+        display: inline-block;
+    }
+    header .nav-bar .address-repo{
+        display: none;
+    }
+    header .nav-bar nav a{
+        padding: 0;
+    }
+    .toggle-account{
+        right: 0 !important;
     }
     .toggle{
         left: 0 !important;
@@ -143,21 +179,6 @@ header .media a{
     }
     .x .line3{
         transform: rotate(45deg) translate(-5px, -6px);
-    }
-    header .nav-bar .account{
-        display: none;
-    }
-    header .nav-bar .address{
-        display: inline-block;
-    }
-    header .nav-bar nav{
-        flex-direction: column;
-        width: auto;
-        height: 100%;
-        justify-content: space-around;
-    }
-    header .nav-bar nav a{
-        padding: 0;
     }
 }
 

@@ -16,13 +16,12 @@
 </head>
 <body>
     <header>
-        <div class="burger">
+        <div class="nav-bar">
+            <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
-        <div class="nav-bar">
-            
             <nav>
                 <a href="#">Trang chủ</a>
                 <a href="#">Giới thiệu</a>
@@ -31,9 +30,12 @@
                 <a href="#" class="address">Liên hệ</a>
             </nav>
             <div class="account">
-                <a href="#">Liên hệ</a>
+                <a href="#" class="address-repo">Liên hệ</a>
                 <a href="#">Đăng nhập</a>
                 <a href="#">Đăng ký</a>
+            </div>
+            <div class="repo-account">
+                <i class="fas fa-user"></i>
             </div>
         </div>    
         <div class="logo">
@@ -349,10 +351,17 @@
         });
 
         const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav-bar')
+        const nav = document.querySelector('nav')
         burger.addEventListener('click',function(){
             nav.classList.toggle("toggle");
             burger.classList.toggle("x");
+        });
+
+
+        const iconAccount = document.querySelector('.repo-account');
+        const account = document.querySelector('.account')
+        iconAccount.addEventListener('click',function(){
+            account.classList.toggle("toggle-account");
         });
     </script>
 </body>
