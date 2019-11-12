@@ -76,7 +76,7 @@ header{
         display: none !important;
     }
     .carousel-caption{
-        top: 50%;
+        top: 52%;
         transform: translateY(-50%);
     }
 }
