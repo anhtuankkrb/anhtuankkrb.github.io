@@ -319,20 +319,20 @@ a.detail{
 }
 @media (max-width: 430px){
     .product .row div .info{
-        width: 110px;
+        width: 120px;
         height: calc(100% + 40px);
     }
     .product .row div .info .name{
         font-size: 1.2rem;
-        margin-bottom: 4px;
+        margin-bottom: 9px;
     }
     .product .row div .info .price{
         font-size: 0.8rem;
-        margin-bottom: 12px;
+        margin-bottom: 20px;
     }
     a.detail{
         padding: 6px 11px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         font-size: 0.78rem;
     }
     .product .row div .info .icon{
