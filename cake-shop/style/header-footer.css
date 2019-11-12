@@ -286,3 +286,25 @@ footer .copy-right p{
     font-family: "Roboto-Italic", sans-serif;
     padding: 24px 0;
 }
+@media (max-width: 900px){
+    footer .content{
+        display: table;
+    }
+
+    footer .content .info{
+        margin-top: 60px;
+        padding: 0;
+    }
+    footer .content .help{
+        margin-top: 60px;
+    }
+    footer .content .help .online-card .card{
+        width: 250px;
+    }
+    footer p, footer a{
+        font-size: 1rem;
+    }
+    footer .content .shop .media{
+        margin-top: 15px;
+    }
+}

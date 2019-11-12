@@ -9,6 +9,10 @@ header{
     height: 100vh;
     position: relative;
 }
+.carousel .slick-dots{
+    bottom: 7%;
+    display: none;
+}
 .slick-next{
     right: 4%;
     z-index: 99;
@@ -59,11 +63,19 @@ header{
     border-radius: 5px;
     font-style: italic;
 }
-/* @media (max-width: 1100px){
+@media (max-width: 1100px){
     .carousel .item{
-        height: 50vh;
+        height: 70vh;
     }
-} */
+}
+@media (max-width: 920px){
+    .carousel .slick-dots{
+        display: block;
+    }
+    .slick-next, .slick-prev{
+        display: none;
+    }
+}
 
 .body-web{
     padding: 0 30px;
