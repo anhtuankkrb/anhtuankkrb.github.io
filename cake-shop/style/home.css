@@ -11,7 +11,7 @@ header{
 }
 .carousel .slick-dots{
     bottom: 10%;
-    display: none;
+    display: none !important;
 }
 .slick-next{
     right: 4%;
@@ -63,14 +63,9 @@ header{
     border-radius: 5px;
     font-style: italic;
 }
-/* @media (max-width: 1100px){
-    .carousel .item{
-        height: 70vh;
-    }
-} */
 @media (max-width: 920px){
     .carousel .slick-dots{
-        display: block;
+        display: block !important;
     }
     .slick-next, .slick-prev{
         display: none !important;
@@ -111,10 +106,15 @@ header{
 
 .service{
     margin-top: 120px;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.service .wrap-content{
+    max-width: 45%;
+    float: left;
 }
 .service .content{
-    display: inline-block;
-    max-width: 580px;
+    display: inline-block;  
 }
 .service h2{
     margin-bottom: 40px;
@@ -140,18 +140,44 @@ header{
 .service .content div p a{
     color: #F35106;
     text-decoration: underline;
+    white-space: nowrap;
 }
-.service .service-carousel{
-    float: right;
-    max-width: 499px;
+.service .wrap-carousel{
+    float: right; 
+    max-width: 40%;
+}
+.service .wrap-carousel .service-carousel{ 
+    width: 100%;
     padding-top: 35px;
 }
-.service .service-carousel div{
+.service .wrap-carousel .service-carousel div{
     border-radius: 25px; 
     overflow: hidden;
 }
-.service .service-carousel div img{
+.service .wrap-carousel .service-carousel div img{
     width: 100%;     
+}
+@media(max-width: 1100px) and (min-width: 870px){
+    .service .wrap-content{
+        max-width: 54%;
+    }
+    .service .content div{
+        margin-bottom: 16px;
+    }
+}
+@media(max-width: 870px){
+    .service .wrap-content{
+        float: none !important;
+        max-width: 566px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .service .wrap-carousel{
+        float: none !important;
+        max-width: 500px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .slick-dots{
@@ -171,7 +197,7 @@ header{
 }
 
 .product{
-    margin-top: 148px;
+    margin-top: 98px;
 }
 .product .row{
     display: flex;
@@ -243,17 +269,85 @@ a.detail{
     border-radius: 5px;
     padding: 11px 44px;
 }
+@media (max-width: 1050px){
+    .product .row{
+        margin-bottom: 30px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .product .row > div{
+        margin: 0 15px;
+    }
+}
+@media (max-width: 950px) and (min-width: 840px){
+    .product .row div .info{
+        width: 150px;
+    }
+    .product .row div .info .name{
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+    }
+    .product .row div .info .price{
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+    }
+    a.detail{
+        padding: 7px 10px;
+        margin-bottom: 22px;
+    }
+    .product .row div .info .icon{
+        font-size: 1.3rem;
+        width: 88px;
+    }
+}
 
+@media (max-width: 840px){
+    .product .row{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .product .row > div{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 430px){
+    .product .row div .info{
+        width: 120px;
+    }
+    .product .row div .info .name{
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+    }
+    .product .row div .info .price{
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
+    a.detail{
+        padding: 6px 11px;
+        margin-bottom: 15px;
+        font-size: 0.78rem;
+    }
+    .product .row div .info .icon{
+        font-size: 1.1rem;
+        width: 72px;
+    }
+}
 .member{
-    display: flex;
-    justify-content: space-between;
     margin-top: 140px;
+}
+.member .wrap-carousel{
+    float: left;
+}
+.member .wrap-content{
+    float: right;
 }
 .member h2{
     margin-bottom: 40px;
 }
 .member > div > img{
     margin-top: 25px;
+    width: 100%;
 }
 .member .content .sign-in{
     justify-content: center;
@@ -266,6 +360,18 @@ a.detail{
     font-weight: bold;
     border-radius: 5px;
     padding: 11px 50px;
+}
+@media(max-width: 870px){
+    .member{
+        display: flex;
+        flex-direction: column;
+    }
+    .member .wrap-content{
+        order: 1;
+    }
+    .member .wrap-carousel{
+        order: 2;
+    }
 }
 
 .gallery{

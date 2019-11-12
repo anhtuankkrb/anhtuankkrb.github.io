@@ -149,10 +149,12 @@ header .media a{
     }
     header .nav-bar .account{
         top: 100%;
-        right: -250px;
-        height: calc(50vh - 77px);
+        right: 0;
+        height: 0;
     }
-
+    header .nav-bar .account a{
+        font-size: 0;
+    }
     header .nav-bar .address{
         display: inline-block;
     }
@@ -163,7 +165,12 @@ header .media a{
         padding: 0;
     }
     .toggle-account{
-        right: 0 !important;
+        height: calc(50vh - 77px) !important;
+    }
+    .toggle-account a{
+        transition-delay: 0.3s;
+        transition-duration: 0.2s;
+        font-size: 0.95rem !important;
     }
     .toggle{
         left: 0 !important;
