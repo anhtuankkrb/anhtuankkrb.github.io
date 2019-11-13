@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css"> 
     <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.css">
-    <script src="./fontawesome-free-5.11.2-web/js/all.js"></script>
 
     <link rel="stylesheet" href="./style/header-footer.css">
     <link rel="stylesheet" href="./style/home.css">
@@ -24,7 +23,7 @@
             </div>
             <nav>
                 <a href="#">Trang chủ</a>
-                <a href="#">Giới thiệu</a>
+                <a href="./Gioi-thieu.html">Giới thiệu</a>
                 <a href="#">Menu</a>
                 <a href="#">Chia sẻ</a>
                 <a href="#" class="address">Liên hệ</a>
@@ -259,34 +258,40 @@
                     <div class="image">
                         <img src="./blog-image/hat-luu.jpg" alt=" Sôcôla trắng cộng hạt lựu">
                     </div>
-                    <p class="tip">
-                        Sôcôla trắng cộng hạt lựu
-                    </p>
-                    <p class="author">
-                        Tác giả: Michael
-                    </p>
+                    <div class="content">
+                        <p class="tip">
+                            Sôcôla trắng cộng hạt lựu
+                        </p>
+                        <p class="author">
+                            Tác giả: Michael
+                        </p>
+                    </div>                   
                 </div>  
                 <div>
                     <div class="image">
                         <img src="./blog-image/kem.jpg" alt="Kem sô cô la sữa dừa">
                     </div>
-                    <p class="tip">
-                        Kem sô cô la <span style="white-space: nowrap;">sữa dừa</span>
-                    </p>
-                    <p class="author">
-                        Tác giả: Michael
-                    </p>
+                    <div class="content">
+                        <p class="tip">
+                            Kem sô cô la <span style="white-space: nowrap;">sữa dừa</span>
+                        </p>
+                        <p class="author">
+                            Tác giả: Michael
+                        </p>
+                    </div>                  
                 </div>
                 <div>
                     <div class="image">
                         <img src="./blog-image/nuoc-chanh.jpg" alt="Nước chanh">
                     </div>
-                    <p class="tip">
-                        Nước chanh
-                    </p>
-                    <p class="author">
-                        Tác giả: Michael
-                    </p>
+                    <div class="content">
+                        <p class="tip">
+                            Nước chanh
+                        </p>
+                        <p class="author">
+                            Tác giả: Michael
+                        </p> 
+                    </div>                  
                 </div>    
             </div>
             <div class="add">
@@ -341,8 +346,10 @@
         </div>
     </footer>
 
+    <script src="./fontawesome-free-5.11.2-web/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./slick-1.8.1/slick/slick.js"></script>
+    <script src="./script/header.js"></script>
     <script>
         $('.carousel').slick({
             autoplay: true,
@@ -358,24 +365,6 @@
             pauseOnHover: false,
             arrows: false,
             dots: true,         
-        });
-
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('nav')
-        const iconAccount = document.querySelector('.repo-account');
-        const account = document.querySelector('.account')
-       
-       
-        burger.addEventListener('click',function(){
-            nav.classList.toggle("toggle");
-            burger.classList.toggle("x");
-            account.classList.remove("toggle-account");
-        });
-
-        iconAccount.addEventListener('click',function(){
-            account.classList.toggle("toggle-account");
-            nav.classList.remove("toggle");
-            burger.classList.remove("x");
         });
     </script>
 </body>

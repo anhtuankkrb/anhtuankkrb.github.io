@@ -56,6 +56,7 @@ header .logo{
     top: 15px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 9999;
 }
 header .logo img{
     width: 130px;
@@ -84,6 +85,7 @@ header .media{
     position: absolute;
     right: 90px;
     bottom: -75px;
+    z-index: 9999;
 }
 header .media a{
     width: 45px;
@@ -134,7 +136,7 @@ header .media a{
 
     header .nav-bar nav, header .nav-bar .account{
         position: absolute;     
-        z-index: 999;
+        z-index: 99999;
         flex-direction: column;      
         width: 250px;
         align-items: center;
