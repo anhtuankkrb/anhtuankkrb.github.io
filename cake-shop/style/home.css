@@ -67,6 +67,11 @@ header{
     padding: 7px 25px;
     border-radius: 5px;
     font-style: italic;
+    transition: 0.2s;
+}
+.carousel-caption a:hover{
+    background: #481115;
+    box-shadow: 0 0 10px #fff;
 }
 @media (max-width: 920px){
     .carousel .slick-dots{
@@ -146,6 +151,7 @@ header{
     color: #F35106;
     text-decoration: underline;
     white-space: nowrap;
+    transition: 0.2s;
 }
 .service .wrap-carousel{
     float: right; 
@@ -219,13 +225,17 @@ header{
 .product .row > div{
     max-width: 605px;   
     position: relative;
-}
-.product .row > div{
     margin: 0 30px;
+    overflow: hidden;
 }
+
+    
+
 .product .row div img{
     width: 100%;
     height: 100%;
+    transition: 1s;
+    transform-origin: 100% 50%;
 }
 .product .row div .info{
     position: absolute;
@@ -233,7 +243,7 @@ header{
     right: 0;
     width: 182px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -251,22 +261,40 @@ header{
     font-size: 1rem;
     margin-bottom: 34px;
 }
-a.detail{
+.product .row > div a.detail{
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0;
     color: #fff;
     background: #F35106;
-    padding: 8px 14px;
-    margin-bottom: 30px;
     border-radius: 5px;
+    transition: 0.5s;
 }
 .product .row div .info .icon{
     color: #BEB9B9;
-    font-size: 1.35rem;
+    font-size: 0;
     width: 105px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
+
+.product .row > div:hover img{
+    transform: scale(1.1);
+}
+.product .row > div:hover .info{
+    background: rgba(0, 0, 0, 0.8);
+}
+.product .row > div:hover a.detail{
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    margin-bottom: 30px;
+}
+.product .row > div:hover .icon{
+    font-size: 1.35rem;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
 .product .add{
     text-align: center;
     margin-top: 59px;
@@ -287,6 +315,19 @@ a.detail{
     }
     .product .row > div{
         margin: 0 15px;
+    }
+}
+@media (max-width: 950px){
+    .product .row > div .info{
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .product .row > div a.detail{
+        font-size: 0.9rem;
+        padding: 8px 14px;
+        margin-bottom: 30px;
+    }
+    .product .row > div .icon{
+        font-size: 1.35rem !important;
     }
 }
 @media (max-width: 950px) and (min-width: 840px){
@@ -319,18 +360,19 @@ a.detail{
     }
     .product .row > div{
         margin-bottom: 80px;
+        overflow: unset;
     }
     .product .row div .info{
-        height: calc(100% + 40px);
+        height: calc(100% + 50px);
     }
     .product .row  div:nth-child(even) .info{
         left: 0;
     }
 }
 @media (max-width: 430px){
+   
     .product .row div .info{
         width: 120px;
-        height: calc(100% + 40px);
     }
     .product .row div .info .name{
         font-size: 1.2rem;

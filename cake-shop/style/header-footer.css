@@ -73,7 +73,25 @@ header .nav-bar a{
     color: #fff;
     font-size: 0.95rem;
     display: inline-block;
-    padding: 35px 0; 
+    padding: 35px 0;
+    position: relative;
+    overflow: hidden;
+}
+header .nav-bar a::after{
+    content: "";
+    width: 100%;
+    border-bottom: 3px solid #f3530b;
+    position: absolute;
+    left: 100%;
+    bottom: 30px;
+    transition: 0.5s;
+}
+header .nav-bar a:hover::after{
+    left: 0;
+} 
+header .nav-bar a:hover{
+    color: #f3530b;
+    transition: color 0.1s; 
 }
 header .nav-bar .address{
     display: none;
@@ -98,6 +116,12 @@ header .media a{
     align-items: center;
     color: #CB6100;
     font-size: 27px;
+    transition: 0.5s;
+}
+header .media a:hover{
+    color: #fff;
+    background: #CB6100;
+    transform: scale(1.15);
 }
 .burger{
     display: none;
@@ -165,9 +189,6 @@ header .media a{
     }
     header .nav-bar .address-repo{
         display: none;
-    }
-    header .nav-bar nav a{
-        padding: 0;
     }
     .toggle-account{
         height: 250px !important;
@@ -239,12 +260,15 @@ footer .content h3{
 footer .content .shop h3{
     font-size: 2.1rem;
 }
-footer p, footer a{
+footer p, footer .info a{
     font-family: "Roboto-Regular", sans-serif;
     color: #737373;
     display: block;
     line-height: 40px;
     font-size: 0.9rem;
+}
+footer .info a:hover{
+    text-decoration: underline;
 }
 footer .content .shop{
     display: flex;
@@ -266,6 +290,12 @@ footer .content .shop .media a{
     align-items: center;
     color: #fff;
     font-size: 27px;
+    transition: 0.5s;
+}
+footer .content .shop .media a:hover{
+    color: #4F4E4E;
+    background: #fff;
+    transform: scale(1.15);
 }
 footer .content .help .online-card{
     margin-top: 15px;

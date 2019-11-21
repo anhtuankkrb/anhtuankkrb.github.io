@@ -1,0 +1,95 @@
+.banner{
+    position: relative;
+    height: 445px;
+    background: url("../banner/938b0238c4d144122c54956f7a551167.jpg");
+    background-size:cover; 
+    background-position: center;
+}
+
+.banner h1{
+    position: absolute;
+    bottom: 20%;
+    padding-left: 80px;
+    font-family: "Lemonada-SemiBold",  cursive;
+    color: #fff;
+    font-size: 2.6rem;
+    text-shadow: 0 0 8px black, 0 0 24px black, 0 0 56px black,0 0 74px black;
+}
+@media(max-width: 690px){
+    .banner h1{
+        padding-left: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+}
+.body-page{
+    padding: 0 30px;
+}
+
+.address-map, .phone{
+    max-width: 1250px;
+    margin: auto;
+    margin-top: 130px;
+}
+.address-map h2, .phone h2{
+    font-family: "Lemonada-Bold", cursive;
+    font-size: 1.6rem;
+    color: #280909;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.address-map p, .phone p{
+    text-align: center;
+    margin-bottom: 55px;
+    font-family: "Roboto-Italic", sans-serif;
+    font-size: 1.1rem;
+}
+
+.phone p{
+    max-width: 520px;
+    margin: auto;
+}
+.phone .phone-row{
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-around;
+}
+.phone .phone-row .item{
+    display: flex;
+    flex-direction: column;
+}
+.phone .phone-row .item img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+.phone .phone-row .item h3{
+    font-family: "Lemonada-SemiBold",  cursive;
+    font-size: 1.15rem;
+    margin-top: 33px;
+    text-align: center;
+}
+.phone .phone-row .item .text{
+    font-family: "Roboto-Italic", sans-serif;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    max-width: 250px;
+}
+.phone .phone-row .item .info{
+    margin-top: 35px;
+    width: 100%;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 1rem;
+    color: #737373;
+}
+@media(max-width: 730px){
+    .phone .phone-row{
+        flex-direction: column;
+    }
+    .phone .phone-row .item:last-child{
+        margin-top: 70px;
+    }
+}

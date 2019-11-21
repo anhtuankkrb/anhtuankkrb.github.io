@@ -1,0 +1,115 @@
+.banner{
+    position: relative;
+    height: 445px;
+    background: url("../banner/938b0238c4d144122c54956f7a551167.jpg");
+    background-size:cover; 
+    background-position: center;
+}
+.banner p{
+    position: absolute;
+    bottom: 20%;
+    padding-left: 80px;
+    font-family: "Lemonada-SemiBold",  cursive;
+    color: #fff;
+    font-size: 2.6rem;
+    text-shadow: 0 0 8px black, 0 0 24px black, 0 0 56px black,0 0 74px black;
+}
+@media(max-width: 690px){
+    .banner p{
+        padding-left: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+}
+
+h1{
+    font-family: "Lemonada-Bold", cursive;
+    font-size: 1.6rem;
+    color: #280909;
+    text-align: center;
+    margin-bottom: 65px;
+    margin-top: 130px;
+}
+.wrap{
+    max-width: 1250px;
+    margin: auto;
+    padding: 100px 150px 0 150px;
+    background: #E6E6E6;
+    border-radius: 36px;
+}
+.wrap .row{
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.wrap .row .text{
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 1.09rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.wrap .row .text-right{
+    padding-left: 90px;
+}
+.wrap .row .text-left{
+    padding-right: 90px;
+}
+.wrap .row .text .info{
+    width: 100%;
+}
+.wrap .row .text .info p{
+    margin-bottom: 37px;
+}
+.wrap .row .text > p{
+    margin-bottom: 20px;
+}
+.wrap .row .text h3{
+    font-weight: bold;
+    font-size: 1.35rem;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 1000px){
+    .wrap{
+        padding: 100px 30px 0 30px;
+    }
+    .wrap .row .image img{
+        width: 260px;
+    }
+    .wrap .row .text-right{
+        padding-left: 30px;
+    }
+    .wrap .row .text-left{
+        padding-right: 30px;
+    }
+    .wrap .row .text{
+        font-size: 1rem;
+    }
+}
+@media(max-width: 640px){
+    .wrap .row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .row .text-right{
+        padding-left: 0;
+    }
+    .wrap .row .text-left{
+        padding-right: 0;
+    }
+    .wrap .row .text{
+        order: 1;
+    }
+    .wrap .row .image{
+        order: 2;
+    }
+    .wrap .row .text ul{
+        margin-bottom: 20px;
+    }
+}
