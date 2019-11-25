@@ -29,6 +29,7 @@
 }
 html{
     font-size: 18px;
+    background: #fefacf;
 }
 @media(max-width: 1100px){
     html{
@@ -79,19 +80,21 @@ header .nav-bar a{
 }
 header .nav-bar a::after{
     content: "";
-    width: 100%;
+    width: 0;
     border-bottom: 3px solid #f3530b;
     position: absolute;
-    left: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 30px;
-    transition: 0.5s;
+    
 }
 header .nav-bar a:hover::after{
-    left: 0;
+    width: 100%;
+    transition: 0.5s;
 } 
 header .nav-bar a:hover{
     color: #f3530b;
-    transition: color 0.1s; 
+    transition: color 0.1s;
 }
 header .nav-bar .address{
     display: none;
@@ -233,7 +236,7 @@ header .media a:hover{
 }
 
 footer{
-    margin-top: 160px;
+    margin-top: 140px;
     background: #0A0102;
     padding: 0 30px;
 }
@@ -353,5 +356,40 @@ footer .copy-right p{
     }
     footer .content .shop .media{
         margin-top: 15px;
+    }
+}
+
+.cart{
+    position: fixed;
+    z-index: 99999; 
+    right: 25px;
+    bottom: 60px;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    border-radius: 50%; 
+    border: 2px solid #737373;
+    color: #737373;
+    background: #fff;
+    font-size: 30px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.cart:hover{
+    border: 2px solid #748E0F;
+    color: #fff;
+    background: #748E0F;
+    opacity: 1; 
+    
+}
+@media (max-width: 700px){
+    .cart{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        bottom: 30px;
     }
 }

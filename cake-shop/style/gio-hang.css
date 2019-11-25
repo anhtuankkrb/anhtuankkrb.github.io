@@ -1,6 +1,6 @@
 .banner{
     position: relative;
-    height: 445px;
+    height: 390px;
     background: url("../banner/938b0238c4d144122c54956f7a551167.jpg");
     background-size:cover; 
     background-position: center;
@@ -30,7 +30,7 @@
 .my-table{
     max-width: 1250px;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 120px;
     
 }
 .my-table .table-head{
@@ -182,13 +182,6 @@
     align-items: center;
     padding-left: 10px;
 }
-.my-table .table-foot .cell-1 .delete-add{
-    font-size: 1rem;
-    padding: 10px 25px;
-    border-radius: 7px;
-    background: #C4C4C4;
-    cursor: pointer;
-}
 .my-table .table-foot .cell-4{
     display: flex;
     text-align: center;
@@ -219,11 +212,11 @@
     justify-content: center;
     max-width: 1200px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 19px;
 }
 .thanh-toan .button{
-    width: 280px;
-    height: 80px;
+    width: 255px;
+    height: 72px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -260,5 +253,65 @@
     .thanh-toan .mua-ngay{
         margin-right: 0;
         margin-bottom: 40px;
+    }
+}
+
+.pay{
+    padding: 55px;
+}
+.pay h3{
+    font-family: "Lemonada-Bold", cursive;
+    font-size: 1.1rem;
+    color: #280909;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.pay form label{
+    display: block;
+    margin-bottom: 7px;
+    font-family: "Roboto-Regular" , sans-serif;
+    font-size: 1.08rem;
+}
+.pay form input{
+    display: block;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+    width: 300px;
+}
+.pay form button{
+    display: block;
+    margin: auto;
+    font-size: 1.2rem;
+    font-family: serif;
+    font-weight: bold;
+    color: #fff;
+    background: #F35106;
+    border: none;
+    padding: 7px 35px;
+    margin-top: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pay form .radio{
+    display: flex;
+    justify-content: space-between;
+}
+.pay form .radio label{
+    display: inline;
+}
+.pay form .radio input{
+    display: inline;
+    width: auto;
+}
+.pay form .radio img{
+    width: 45px;
+}
+@media(max-width: 480px){
+    .pay{
+        padding: 30px;
+    }
+    .pay form input{
+        width: 240px;
     }
 }

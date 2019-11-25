@@ -1,6 +1,6 @@
 .banner{
     position: relative;
-    height: 445px;
+    height: 390px;
     background: url("../banner/938b0238c4d144122c54956f7a551167.jpg");
     background-size:cover; 
     background-position: center;
@@ -29,14 +29,14 @@
 .part{
     max-width: 1250px;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 100px;
 }
 .part h2{
     font-family: "Lemonada-Bold", cursive;
     font-size: 1.6rem;
     color: #280909;
     text-align: center;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
 }
 .part .posts{
     display: flex;
@@ -45,10 +45,18 @@
 .part .posts .item{
     width: calc(33.3333% - 60px);
     margin: 0 30px;
-    background: #FCB2C0;
+    background: #3c1c1c;
+    cursor: pointer;
 }
 .part .posts .image img{
     width: 100%;
+}
+.part .posts .image{
+    overflow: hidden;
+}
+.part .posts .image:hover img{
+    transform: scale(1.1);
+    transition: 0.7s;
 }
 .part .posts .content{
     height: 126px;
@@ -56,7 +64,11 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 15px 20px 5px 20px;
-
+    color: #dbdbdb;
+}
+.part .posts > div:hover .content{
+    text-shadow: 0 0 10px #dbdbdb;
+    transition: 0.5s;
 }
 .part .posts .content .name{
     font-weight: bold;

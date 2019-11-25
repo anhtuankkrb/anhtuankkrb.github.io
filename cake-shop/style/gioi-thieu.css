@@ -1,6 +1,6 @@
 .banner{
     position: relative;
-    height: 445px;
+    height: 390px;
     background: url("../banner/938b0238c4d144122c54956f7a551167.jpg");
     background-size:cover; 
     background-position: center;
@@ -21,7 +21,7 @@
 }
 
 .section{
-    margin-top: 130px;
+    margin-top: 100px;
     max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
@@ -31,12 +31,12 @@
     font-size: 1.6rem;
     color: #280909;
     text-align: center;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
 }
 .section .content .part{
     display: flex;
     align-items: center;
-    margin-bottom: 130px;
+    margin-bottom: 40px;
 }
 .section .content .part .image img{
     width: 434px;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.css">
 
     <link rel="stylesheet" href="./style/header-footer.css">
-    <link rel="stylesheet" href="./style/product-detail.css">
+    <link rel="stylesheet" href="./style/san-pham.css">
 </head>
 <body>
     <header>
@@ -44,7 +44,9 @@
             <a href="#"><i class="fab fa-pinterest"></i></a>
         </div>
     </header>
-  
+    <a href="./Gio-hang.html" class="cart">
+        <i class="fas fa-shopping-cart buy"></i>
+    </a>
     <div class="banner">
         <p>Chi tiết<br/>Sản phẩm</p>
     </div>
@@ -69,7 +71,6 @@
                     <p class="cong">+</p>
                 </div>
                 <div class="buy">
-                    <a href="#" class="mua-ngay">Mua ngay</a>
                     <div class="them-vao-gio">Thêm vào giỏ hàng</div>
                 </div>
             </div>
@@ -81,9 +82,72 @@
                 <div class="line"></div>
                 <div class="binh-luan">Bình luận</div>
             </div>
+
             <div class="mo-ta-content">
                 Khác với các loại bánh kem thông thường, bánh kem bắp Farino được sáng tạo với lớp bắp có vị ngọt tự nhiên mang đến một trải nghiệm vô cùng thú vị. Không chỉ có sự mềm mịn, từng hạt bắp len lỏi trong miếng bánh có vị sần sật, ngọt thanh tạo sự khác lạ độc đáo so với các loại bánh kem truyền thống. Kem bánh có vị ngọt nhẹ, kích thích vị giác nhưng không quá béo khiến ai đã cắn một miếng sẽ muốn thưởng thức ngay đến miếng thứ hai. Hòa quyện với hương vị beo béo của kem, hương thơm vị bắp nhè nhẹ tạo nên một hương vị vô cùng tinh tế lại càng khiến bánh kem bắp Farino thêm hấp dẫn. Đây sẽ là món quà thú vị cho bạn dành tặng những người thân yêu, để cùng sẻ chia những hương vị mới lạ.
             </div>
+
+            <div class="comment">
+                <div class="comment-member">
+                    <div class="avata">
+                        <img src="./avata/avata6.jpg" alt="avata">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                           <p class="name">Nguyễn Thị Nụ</p> 
+                           <p class="time">1 tuần trước</p>
+                        </div>
+                        <p class="text">
+                             Tôi thấy sản phẩm này ổn đấy.
+                        </p>   
+                        <div class="answer">
+                            Trả lời
+                        </div>
+
+                        <div class="comment-member">
+                            <div class="avata">
+                                <img src="./avata/avata5.jpg" alt="avata">
+                            </div>
+                            <div class="content">
+                                <div class="header">
+                                    <p class="name">Đào Thị Mận</p> 
+                                    <p class="time">2 ngày trước</p>
+                                </div>
+                                <p class="text">
+                                        Tôi cũng thấy vậy, nhưng chưa ăn thử bao giờ.
+                                </p>   
+                            </div>
+                        </div>
+                    </div>                                        
+                </div>
+
+                <div class="comment-member">
+                        <div class="avata">
+                            <img src="./avata/avata3.jpg" alt="avata">
+                        </div>
+                        <div class="content">
+                            <div class="header">
+                                <p class="name">Lý Mạc Sầu</p> 
+                                <p class="time">3 tuần trước</p>
+                            </div>
+                            <p class="text">
+                                Bánh này không biết thế nào. Không biết có ngon như loại có sô cô la không nhỉ. Thắc mắc!
+                            </p>   
+                            <div class="answer">
+                                Trả lời
+                            </div>
+                        </div>
+                    </div>
+  
+   <form class="write">
+                <label for="write-commit">Bình luận:</label>
+                <textarea name="commit" id="write-commit" placeholder="Bình luận">                 
+                </textarea>
+                <button type="button">Gửi bình luận</button>
+            </form>
+                </div>
+
+           
         </div>
 
         <div class="lien-quan">
@@ -169,7 +233,23 @@
             <p>@Copyright - 2019</p>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./fontawesome-free-5.11.2-web/js/all.js"></script>
     <script src="./script/header.js"></script>
+    <script>
+        const content =$('.info-comment .mo-ta-content');
+        const comment =$('.info-comment .comment');
+        const mo_ta = $('.info-comment .tab .mo-ta');
+        const binh_luan = $('.info-comment .tab .binh-luan');
+
+        $(mo_ta).click(function(){
+            $(content).fadeIn();
+            $(comment).hide();
+        });
+        $(binh_luan).click(function(){
+            $(content).hide();
+            $(comment).fadeIn();
+        });
+    </script>
 </body>
 </html>

@@ -4,28 +4,28 @@
 h1{
     font-family: "Lemonada-SemiBold",  cursive;
     color: #280909;
-    font-size: 1.85rem;
-    margin-top: 130px;
+    font-size: 1.75rem;
+    margin-top: 114px;
     text-align: center;
 }
 form{
     margin-top: 30px;
 }
 form .input{
-    background: #EFEEEE;
+    background: #fff;
     border: 1px solid #280909;
     border-radius: 10px;
-    padding: 0 40px 30px 40px;
-    max-width: 542px;
+    padding: 0 70px 30px 70px;
+    max-width: 480px;
     margin: auto;
     display: flex;
     flex-direction: column;
 }
 form .input label{
     font-family: "Roboto-Bold", sans-serif;
-    font-size: 1.25rem;
-    margin-bottom: 14px;
-    margin-top: 30px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    margin-top: 28px;
 }
 form .input input{
     font-size: 1rem;

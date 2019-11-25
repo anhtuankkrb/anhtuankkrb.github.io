@@ -1,6 +1,6 @@
 .banner{
     position: relative;
-    height: 445px;
+    height: 390px;
     background: url("../banner/938b0238c4d144122c54956f7a551167.jpg");
     background-size:cover; 
     background-position: center;
@@ -32,7 +32,7 @@ li{
 }
 .wrap{
     max-width: 1250px;
-    margin-top: 120px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -41,12 +41,15 @@ li{
 
 .wrap .menu{
     margin-right: 70px;
-    
+   
 }
 .wrap .menu .stick{
     position: sticky;
-    padding-top: 50px;
-    top: 0;
+    padding: 30px 20px;
+    margin-top: 50px;
+    top: 100px;
+    background: #110101;
+    border-radius: 8px;
 }
 .wrap .menu h3{
     font-family: "Lemonada-Bold", cursive;
@@ -54,24 +57,33 @@ li{
     margin-bottom: 50px;
     width: 250px;
     text-align: center;
+    color: #fff;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-shadow: 0 0 10px #a4a4a4, 0 0 20px #a4a4a4;
 }
 .wrap .menu ul{
     width: 100%;
 }
 .wrap .menu li{
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;     
-    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
 }
 .wrap .menu li a{
     font-family: "Lemonada-Bold", cursive;
-    color: #000;
+    color: #280909;
     font-size: 0.9rem;
+    padding: 11px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #ebb7a8, #cb8f7d, #ab6954, #8a442d, #681f07);
+    border-radius: 7px;
+}
+.wrap .menu li a:hover{
+    background-image: linear-gradient(to bottom, #f4cfc4, #eab7a7, #df9f8c, #d28870, #c57156);
 }
 .wrap .product .section{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 .wrap .product .section:last-child{
     margin-bottom: 0;
@@ -80,7 +92,8 @@ li{
     font-family: "Lemonada-Bold", cursive;
     font-size: 1.5555rem;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 36px;
+    color: #280909;
 }
 
 .wrap .product .cake{
@@ -90,16 +103,57 @@ li{
 }
 .wrap .product .item{
     width: calc(33.333% - 60px);
-    background: #C4C4C4;
+    background-image: linear-gradient(to bottom, #e1968b, #a76e68, #704947, #3d2727, #110101);
     margin: 0 30px;
     margin-bottom: 70px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
 }
+.wrap .product .item:hover .icon{
+    opacity: 1;
+    transition: 0.5s;
+}
+.wrap .product .item .icon{
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    color: #a3a3a3;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+.wrap .product .item .icon > div{
+    margin: 0;
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 15px #fff;
+    cursor: pointer;
+}
+.wrap .product .item .icon > div .like:hover{
+    transition: 0.2s;
+    color: red;
+ 
+}
+.wrap .product .item .icon > div .buy:hover{
+    transition: 0.2s;
+    color: green;
+   
+}
+
 .wrap .product .item .image img{
     width: 100%;
 }
 .wrap .product .item .content{
     text-align: center;
     padding:10px 5px 25px 5px;
+    color: #d1d0d0;
 }
 .wrap .product .item .content .name{
     font-weight: bold;
@@ -117,8 +171,12 @@ li{
     background: #F35106;
     border-radius: 5px;
 }
-
-@media(max-width: 1060px){
+.wrap .product .item .content a:hover{
+    transition: 0.3s;
+    background: #481115;
+    box-shadow: 0 0 10px #fff;
+}
+@media(max-width: 1160px){
     .wrap .product .cake{
         margin: 0 -15px;
     }
@@ -131,7 +189,7 @@ li{
         width: 170px;
     }
 }
-@media(max-width: 880px){
+@media(max-width: 1010px){
     .wrap .product .item{
         width: calc(50% - 30px);
     }
@@ -140,7 +198,7 @@ li{
 
     }
 }
-@media(max-width: 650px){
+@media(max-width: 790px){
     .wrap .product .item{
         width: calc(100% - 30px);
     }
@@ -176,7 +234,7 @@ li{
     cursor: pointer;
     font-size: 19px;
 }
-@media(max-width: 520px){
+@media(max-width: 570px){
     .showList{
         display: block;
     }
@@ -185,7 +243,7 @@ li{
     }
     .wrap .menu .stick{
     position: fixed;
-    background: #fff;
+    background: #110101;
     top: 50%;
     z-index: 99991;
     transform: translateY(-50%);

@@ -111,11 +111,11 @@ header{
     font-size: 1.6rem;
     color: #280909;
     text-align: center;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
 }
 
 .service{
-    margin-top: 120px;
+    margin-top: 107px;
     overflow: hidden;
     padding-bottom: 50px;
 }
@@ -127,12 +127,12 @@ header{
     display: inline-block;  
 }
 .service h2{
-    margin-bottom: 40px;
+    margin-bottom: 29px;
 }
 .service .content div{
     display: flex;
     align-items: center;
-    margin-bottom: 42px;
+    margin-bottom: 35px;
 }
 .service .content div img{
     width: 3.1rem;
@@ -159,7 +159,7 @@ header{
 }
 .service .wrap-carousel .service-carousel{ 
     width: 100%;
-    padding-top: 35px;
+    padding-top: 25px;
 }
 .service .wrap-carousel .service-carousel div{
     border-radius: 25px; 
@@ -213,7 +213,7 @@ header{
 }
 
 .product{
-    margin-top: 98px;
+    margin-top: 58px;
 }
 .product .row{
     display: flex;
@@ -227,6 +227,7 @@ header{
     position: relative;
     margin: 0 30px;
     overflow: hidden;
+    border-radius: 10px;
 }
 
     
@@ -263,11 +264,17 @@ header{
 }
 .product .row > div a.detail{
     font-weight: bold;
-    font-size: 0;
     color: #fff;
     background: #F35106;
     border-radius: 5px;
-    transition: 0.5s;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    margin-bottom: 30px;
+}
+.product .row > div a.detail:hover{
+    transition: 0.3s;
+    background: #481115;
+    box-shadow: 0 0 10px #fff;
 }
 .product .row div .info .icon{
     color: #BEB9B9;
@@ -277,22 +284,23 @@ header{
     justify-content: space-between;
     cursor: pointer;
 }
+.product .row div .info .icon .like:hover{
+    transition: 0.2s;
+    color: red;
 
-.product .row > div:hover img{
-    transform: scale(1.1);
+}
+.product .row div .info .icon .buy:hover{
+    transition: 0.2s;
+    color: green;
 }
 .product .row > div:hover .info{
+    transition: 0.3s;
     background: rgba(0, 0, 0, 0.8);
 }
-.product .row > div:hover a.detail{
-    font-size: 0.9rem;
-    padding: 8px 14px;
-    margin-bottom: 30px;
-}
+
 .product .row > div:hover .icon{
     font-size: 1.35rem;
-    transition: 0.5s;
-    transition-delay: 0.5s;
+    transition: 0.4s;
 }
 
 .product .add{
@@ -306,6 +314,10 @@ header{
     font-weight: bold;
     border-radius: 5px;
     padding: 11px 44px;
+}
+.product .add a:hover{
+    transition: 0.3s;
+    background: #481115;
 }
 @media (max-width: 1050px){
     .product .row{
@@ -382,10 +394,10 @@ header{
         font-size: 0.8rem;
         margin-bottom: 20px;
     }
-    a.detail{
-        padding: 6px 11px;
+    .product .row > div a.detail{
         margin-bottom: 20px;
         font-size: 0.78rem;
+        padding: 5px 7px;
     }
     .product .row div .info .icon{
         font-size: 1.1rem;
@@ -393,7 +405,7 @@ header{
     }
 }
 .member{
-    margin-top: 140px;
+    margin-top: 130px;
 }
 .member .wrap-carousel{
     float: left;
@@ -420,6 +432,10 @@ header{
     border-radius: 5px;
     padding: 11px 50px;
 }
+.member .content .sign-in a:hover{
+    transition: 0.3s;
+    background: #481115;
+}
 @media(max-width: 870px){
     .member{
         display: flex;
@@ -434,7 +450,7 @@ header{
 }
 
 .gallery{
-    margin-top: 130px;
+    margin-top: 87px;
 }
 .gallery .product-image{
     display: flex;
@@ -444,13 +460,95 @@ header{
 .gallery .product-image .col{
     margin: 0 30px;
 }
+.gallery .product-image .col > div{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.gallery .product-image .col > div .icon{
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    color: #a3a3a3;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+.gallery .product-image .col > div .icon > div{
+    margin: 0;
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 15px #fff;
+     cursor: pointer;
+}
+.gallery .product-image .col > div .icon .like:hover{
+    transition: 0.2s;
+    color: red;
+ 
+}
+.gallery .product-image .col > div .icon .buy:hover{
+    transition: 0.2s;
+    color: green;
+   
+}
+.gallery .product-image .col > div:hover .icon{
+    opacity: 1;
+    transition: 0.5s;
+ }
+
+.gallery .product-image .col > div .info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.gallery .product-image .col > div .info .name{
+    color: #280909;
+    font-family: "Lemonada-Bold", cursive;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #fff, 0 0 24px white, 0 0 56px white, 0 0 74px white;
+}
+.gallery .product-image .col > div .info a.detail{
+    font-weight: bold;
+    color: #fff;
+    background: #F35106;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    margin-bottom: 30px;
+}
+.gallery .product-image .col > div:hover .info{
+   opacity: 1;
+   transition: 0.5s;
+}
+.gallery .product-image .col > div .info a.detail:hover{
+    transition: 0.3s;
+    background: #481115;
+    box-shadow: 0 0 10px #fff;
+}
 .gallery .product-image .col div:nth-child(2){
     margin: 60px 0;
 }
 .gallery .product-image .col div img{
     width: 100%;
+    border-radius: 20px;
 }
-@media(max-width: 750px){
+@media(max-width: 1060px){
     .gallery .product-image{
         margin: 0 -15px;
     }
@@ -461,28 +559,70 @@ header{
         margin: 30px 0;
     }
 }
-@media(max-width: 600px){
+@media(max-width: 980px) and (min-width: 800px){
+    .gallery .product-image .col > div .icon{
+        flex-direction: row;
+        font-size: 1.2rem;
+    }
+    .gallery .product-image .col > div .icon > div{
+        margin-left: 10px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    } 
+}
+@media(max-width: 800px){
     .gallery .product-image{
         flex-direction: column;
     }
     .gallery .product-image .col:first-child{
         margin-bottom: 30px;
     }
+    .gallery .product-image .col > div .info{
+        opacity: 1;
+    }
+    .gallery .product-image .col > div .icon{
+        opacity: 1;
+    }
+    .gallery .product-image .col > div{
+        width: 470px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gallery .product-image .col div:nth-child(2){
+        margin: 30px auto
+    }
 }
-
+@media(max-width: 560px){
+    .gallery .product-image .col > div{
+        width: 100%;
+    }
+}
+@media(max-width: 350px){
+    .gallery .product-image .col > div .icon{
+        flex-direction: row;
+        font-size: 1.2rem;
+    }
+    .gallery .product-image .col > div .icon > div{
+        margin-left: 10px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    } 
+}
 .blog{
-    margin-top: 90px;
+    margin-top: 80px;
     
 }
 .blog h2{
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .blog > p{
     max-width: 592px;
     margin: auto;
     padding: 0 10px;
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 39px;
     font-family: "Roboto-Italic", sans-serif;
     font-size: 1.1rem;
 }
@@ -491,18 +631,27 @@ header{
     justify-content: center;
     margin: 0 -30px;
 }
-.blog .page > div{
+.blog .page > a{
     width: 100%;
-    background: #FCB2C0;
+    background: #3c1c1c;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
+    
 }
-.blog .page > div{
+.blog .page > a{
     margin: 0 30px;
+}
+.blog .page > a .image{
+    overflow: hidden;
 }
 .blog .page div img{
     width: 100%;
+}
+.blog .page > a:hover img{
+    transform: scale(1.1);
+    transition: 0.7s;
 }
 .blog .page .content{
     height: 126px;
@@ -510,6 +659,11 @@ header{
     flex-direction: column;
     justify-content: space-between;
     padding: 15px 20px 5px 20px;
+    color: #dbdbdb;
+}
+.blog .page > a:hover .content{
+    text-shadow: 0 0 10px #dbdbdb;
+    transition: 0.5s;
 }
 .blog .page div .tip{
     font-weight: bold;
@@ -534,11 +688,15 @@ header{
     border-radius: 5px;
     padding: 11px 44px;
 }
+.blog .add a:hover{
+    transition: 0.3s;
+    background: #481115;
+}
 @media(max-width: 920px){
     .blog .page{
         margin: 0 -15px;
     }
-    .blog .page > div{
+    .blog .page > a{
         margin: 0 15px;
     }
 }
@@ -555,11 +713,11 @@ header{
     .blog .page{
         flex-wrap: wrap;
     }
-    .blog .page > div{
+    .blog .page > a{
         max-width: 377px;
         margin-bottom: 40px;
     }
-    .blog .page > div:last-child{
+    .blog .page > a:last-child{
         margin-bottom: 0;
     }
 }

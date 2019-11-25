@@ -1,6 +1,6 @@
 .banner{
     position: relative;
-    height: 445px;
+    height: 390px;
     background: url("../banner/938b0238c4d144122c54956f7a551167.jpg");
     background-size:cover; 
     background-position: center;
@@ -31,18 +31,18 @@
 .address-map, .phone{
     max-width: 1250px;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 100px;
 }
 .address-map h2, .phone h2{
     font-family: "Lemonada-Bold", cursive;
     font-size: 1.6rem;
     color: #280909;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .address-map p, .phone p{
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 40px;
     font-family: "Roboto-Italic", sans-serif;
     font-size: 1.1rem;
 }
@@ -53,7 +53,7 @@
 }
 .phone .phone-row{
     display: flex;
-    margin-top: 70px;
+    margin-top: 43px;
     justify-content: space-around;
 }
 .phone .phone-row .item{
@@ -69,17 +69,16 @@
 .phone .phone-row .item h3{
     font-family: "Lemonada-SemiBold",  cursive;
     font-size: 1.15rem;
-    margin-top: 33px;
+    margin-top: 22px;
     text-align: center;
 }
 .phone .phone-row .item .text{
     font-family: "Roboto-Italic", sans-serif;
     font-size: 1.1rem;
-    margin-top: 5px;
     max-width: 250px;
 }
 .phone .phone-row .item .info{
-    margin-top: 35px;
+    margin-top: 15px;
     width: 100%;
     font-family: "Roboto-Regular", sans-serif;
     font-size: 1rem;
