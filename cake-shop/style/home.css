@@ -81,8 +81,7 @@ header{
         display: none !important;
     }
     .carousel-caption{
-        top: 52%;
-        transform: translateY(-50%);
+        top: 42%;
     }
 }
 @media (max-width: 640px){
