@@ -29,7 +29,6 @@
 }
 html{
     font-size: 18px;
-    background: #fefacf;
 }
 @media(max-width: 1100px){
     html{
@@ -68,6 +67,7 @@ header nav, header .account{
     display: flex;
     width: 22.7777rem;
     justify-content: space-between;
+    align-items: center;
 }
 header .nav-bar a{
     font-family: "Lemonada-Regular",  cursive;
@@ -95,6 +95,10 @@ header .nav-bar a:hover::after{
 header .nav-bar a:hover{
     color: #f3530b;
     transition: color 0.1s;
+}
+header .nav-bar .account a.cart{
+    font-size: 1.2rem;
+    line-height: 1.2rem;
 }
 header .nav-bar .address{
     display: none;
@@ -138,9 +142,8 @@ header .media a:hover{
     margin: 5px;
 
 }
-.repo-account{
+.repo-right{
     display: none;
-    cursor: pointer;
     padding: 24px 0;
 }
 
@@ -149,10 +152,20 @@ header .media a:hover{
     header .media{
         right: 30px;
     }
-    .repo-account{
-        display: block;
+    .repo-right{
+        display: flex;
         font-size: 25px;
         color: #fff;
+
+    }
+    .repo-right .repo-cart{
+        padding: 0;
+        margin-right: 30px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .repo-right .repo-account{
+        cursor: pointer;
     }
     .burger{
         display: block;
@@ -359,37 +372,29 @@ footer .copy-right p{
     }
 }
 
-.cart{
-    position: fixed;
-    z-index: 99999; 
-    right: 25px;
-    bottom: 60px;
-    width: 65px;
-    height: 65px;
-    line-height: 65px;
-    text-align: center;
-    border-radius: 50%; 
-    border: 2px solid #737373;
-    color: #737373;
-    background: #fff;
-    font-size: 30px;
-    opacity: 0.7;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.cart:hover{
-    border: 2px solid #748E0F;
-    color: #fff;
-    background: #748E0F;
-    opacity: 1; 
-    
-}
-@media (max-width: 700px){
-    .cart{
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 20px;
-        bottom: 30px;
+@media(max-width: 1000px){
+    header .nav-bar .account a.cart{
+        display: none;
     }
 }
+
+
+#to-top{
+    background-image: url(../logo-icon/back-to-top-button-LG.png);
+    background-repeat: no-repeat;
+    background-size: cover;  
+    display: none;  
+    position: fixed;
+    right: 30px; 
+    bottom: 50px;
+    width: 65px;
+    height: 65px;
+    z-index: 9999;
+    opacity: 0.6;
+    
+}
+#to-top:hover{
+     opacity: 1;
+     transition: 0.5s;
+}
+   

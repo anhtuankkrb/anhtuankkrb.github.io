@@ -21,7 +21,7 @@
 }
 
 .section{
-    margin-top: 100px;
+    margin-top: 120px;
     max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
@@ -47,9 +47,9 @@
     text-align: center;
 }
 .section .content .part .text h3{
-    font-family: "Lemonada-SemiBold",  cursive;
-    font-size: 1.15rem;
-    margin-bottom: 30px;
+    font-family: "Roboto-Bold" , sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
 }
 .section .content .part .text p{
     font-family: "Roboto-Regular" , sans-serif;

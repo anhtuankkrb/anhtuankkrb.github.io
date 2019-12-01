@@ -7,11 +7,13 @@
     <title>Giới thiệu</title>
     <link rel="shortcut icon" href="./logo-icon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.css">
+    <link rel="stylesheet" href="./animate.css-master/animate.css">
 
     <link rel="stylesheet" href="./style/header-footer.css">
     <link rel="stylesheet" href="./style/gioi-thieu.css">
 </head>
 <body>
+        <a href="#" id="to-top"></a>
     <header>
         <div class="nav-bar">
             <div class="burger">
@@ -21,7 +23,7 @@
             </div>
             <nav>
                 <a href="./index.html">Trang chủ</a>
-                <a href="#">Giới thiệu</a>
+                <a href="./Gioi-thieu.html">Giới thiệu</a>
                 <a href="./menu.html">Menu</a>
                 <a href="./blog.html">Chia sẻ</a>
                 <a href="./lien-he.html" class="address">Liên hệ</a>
@@ -30,10 +32,20 @@
                 <a href="./lien-he.html" class="address-repo">Liên hệ</a>
                 <a href="./dang-nhap.html">Đăng nhập</a>
                 <a href="./Dang-ky.html">Đăng ký</a>
+                <a href="./Gio-hang.html" class="cart">
+                    <i class="fas fa-shopping-cart buy"></i>
+                </a>
             </div>
-            <div class="repo-account">
-                <i class="fas fa-user"></i>
+            <div class="repo-right"> 
+                <a href="./Gio-hang.html" class="repo-cart">
+                    <i class="fas fa-shopping-cart buy"></i>
+                </a>
+                <div class="repo-account">
+                    <i class="fas fa-user"></i>
+                </div>
+                
             </div>
+            
         </div>    
         <div class="logo">
             <img src="./logo-icon/logo.jpg" alt="cake shop logo">
@@ -55,11 +67,11 @@
             <h2>Giới thiệu về cake shop</h2>
             <div class="content">
                 <div class="part">
-                    <div class="image">
+                    <div class="image wow animated fadeInUp" style="animation-duration: 0.7s;">
                         <img src="./gioi-thieu-image/1.jpg" alt="Ảnh giới thiệu">
                     </div>
                     
-                    <div class="text">
+                    <div class="text wow animated fadeInUp" style="animation-duration: 0.7s;">
                         <h3>Sự thành lập của chúng tôi</h3>
                         <p>
                             Được thành lập từ năm 2007, cake shop với hơn chục năm kinh nghiệm đã luôn hoàn thiện mịnh để phục vụ quý khách.
@@ -70,7 +82,7 @@
                     </div>
                 </div>
                 <div class="part">                  
-                    <div class="text">
+                    <div class="text wow animated fadeInUp" style="animation-duration: 0.7s;">
                         <h3>Linh hồn của chúng tôi</h3>
                         <p>
                             Được xây dựng từ tình yêu với nghề làm bánh. Chúng tôi luôn giữ vững tình yêu đó. Nó chính là điểm tựa trong công việc
@@ -79,21 +91,21 @@
                             Mục tiêu tối thượng của chúng tôi là sự hài lòng của khách hàng. Sau nhiều năm làm việc, chúng tôi đã nhận thấy  sự thành công được xây dựng từ  những phản hồi tích cực của khách hàng. Đó là tài sản và niềm vui của chúng tôi. 
                         </p>
                     </div>
-                    <div class="image">
+                    <div class="image wow animated fadeInUp" style="animation-duration: 0.7s;">
                         <img src="./gioi-thieu-image/2.jpg" alt="Ảnh giới thiệu">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="ship section">
+        <div class="ship section" id="dich-vu">
             <h2>Giao hàng trực tuyến</h2>
             <div class="content">
                 <div class="part">
-                    <div class="image">
+                    <div class="image wow animated fadeInUp" style="animation-duration: 0.7s;">
                         <img src="./gioi-thieu-image/3.jpg" alt="Ảnh giới thiệu">
                     </div>
                     
-                    <div class="text">
+                    <div class="text wow animated fadeInUp" style="animation-duration: 0.7s;">
                         <h3>Vài nét về dịch vụ</h3>
                         <p>
                             Khách hàng có thể đăng ký thành viên trên website hoặc goi điện trực tiếp đến bộ phận khách hàng.
@@ -105,18 +117,18 @@
                 </div>           
             </div>
         </div>
-        <div class="event section">
+        <div class="event section" id="to-chuc">
             <h2>Tổ chức sự kiện</h2>
             <div class="content">
                 <div class="part">              
-                    <div class="text">
+                    <div class="text wow animated fadeInUp" style="animation-duration: 0.7s;">
                         <h3>Tư vấn, thiết kế sự kiện</h3>
                         <p>
                                 Chưa bao giờ dễ dàng đến thế. Liện hệ với cake shop để tổ chức sự kiện. Với nhiều kinh nghiệm, chúng tôi tự tin giúp quý khách thiết kế và tổ chức. Quý khách sẽ không phải  tốn thời gian và sẽ tận hưởng hạnh phúc trọn vẹn bên gia đình hoặc những người thân.
                         </p>
                     </div> 
     
-                    <div class="image">
+                    <div class="image wow animated fadeInUp" style="animation-duration: 0.7s;">
                         <img src="./gioi-thieu-image/4.jpg" alt="Ảnh giới thiệu">
                     </div>
                 </div>           
@@ -170,7 +182,12 @@
             <p>@Copyright - 2019</p>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./WOW-master/dist/wow.min.js"></script>
     <script src="./fontawesome-free-5.11.2-web/js/all.js"></script>
     <script src="./script/header.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>

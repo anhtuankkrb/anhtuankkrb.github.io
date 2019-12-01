@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./style/menu.css">
 </head>
 <body>
+        <a href="#" id="to-top"></a>
     <header>
         <div class="nav-bar">
             <div class="burger">
@@ -22,7 +23,7 @@
             <nav>
                 <a href="./index.html">Trang chủ</a>
                 <a href="./Gioi-thieu.html">Giới thiệu</a>
-                <a href="#">Menu</a>
+                <a href="./menu.html">Menu</a>
                 <a href="./blog.html">Chia sẻ</a>
                 <a href="./lien-he.html" class="address">Liên hệ</a>
             </nav>
@@ -30,10 +31,20 @@
                 <a href="./lien-he.html" class="address-repo">Liên hệ</a>
                 <a href="./dang-nhap.html">Đăng nhập</a>
                 <a href="./Dang-ky.html">Đăng ký</a>
+                <a href="./Gio-hang.html" class="cart">
+                    <i class="fas fa-shopping-cart buy"></i>
+                </a>
             </div>
-            <div class="repo-account">
-                <i class="fas fa-user"></i>
+            <div class="repo-right"> 
+                <a href="./Gio-hang.html" class="repo-cart">
+                    <i class="fas fa-shopping-cart buy"></i>
+                </a>
+                <div class="repo-account">
+                    <i class="fas fa-user"></i>
+                </div>
+                
             </div>
+            
         </div>    
         <div class="logo">
             <img src="./logo-icon/logo.jpg" alt="cake shop logo">
@@ -45,9 +56,6 @@
             <a href="#"><i class="fab fa-pinterest"></i></a>
         </div>
     </header>
-    <a href="./Gio-hang.html" class="cart">
-        <i class="fas fa-shopping-cart buy"></i>
-    </a>
     <div class="showList">
         <i class="fas fa-list-ul"></i>
     </div>
@@ -543,9 +551,10 @@
             <p>@Copyright - 2019</p>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./fontawesome-free-5.11.2-web/js/all.js"></script>
     <script src="./script/header.js"></script>
-
+    
     <script>
         const showList = document.querySelector('.showList');
         const menu = document.querySelector('.stick');

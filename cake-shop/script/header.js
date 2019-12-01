@@ -16,3 +16,15 @@ iconAccount.addEventListener('click',function(){
     nav.classList.remove("toggle");
     burger.classList.remove("x");
 });
+
+const toTop = document.getElementById('to-top');
+$(window).scroll(function(){
+    ($(this).scrollTop() > 500) ? $(toTop).fadeIn() : $(toTop).fadeOut();
+});
+
+$(toTop).click(function(event){
+    event.preventDefault();
+    $('html').animate({
+        scrollTop: 0 }, 400
+        );
+});

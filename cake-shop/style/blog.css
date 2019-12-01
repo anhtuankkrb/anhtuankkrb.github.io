@@ -29,7 +29,7 @@
 .part{
     max-width: 1250px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 .part h2{
     font-family: "Lemonada-Bold", cursive;
@@ -50,13 +50,13 @@
 }
 .part .posts .image img{
     width: 100%;
+    transition: 0.7s;
 }
 .part .posts .image{
     overflow: hidden;
 }
-.part .posts .image:hover img{
-    transform: scale(1.1);
-    transition: 0.7s;
+.part .posts > a:hover img{
+    transform: scale(1.1);   
 }
 .part .posts .content{
     height: 126px;
@@ -66,7 +66,7 @@
     padding: 15px 20px 5px 20px;
     color: #dbdbdb;
 }
-.part .posts > div:hover .content{
+.part .posts > a:hover .content{
     text-shadow: 0 0 10px #dbdbdb;
     transition: 0.5s;
 }
