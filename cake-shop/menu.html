@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="./style/header-footer.css">
     <link rel="stylesheet" href="./style/menu.css">
 </head>
-<body>
+<body class="preloading">
+    <div class="load">
+        <img src="./logo-icon/Loading-cake.gif" alt="load">
+    </div>
         <a href="#" id="to-top"></a>
     <header>
         <div class="nav-bar">
@@ -46,9 +49,9 @@
             </div>
             
         </div>    
-        <div class="logo">
+        <a href="./index.html" class="logo">
             <img src="./logo-icon/logo.jpg" alt="cake shop logo">
-        </div>
+        </a>
         <div class="media">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -71,22 +74,22 @@
                             <i class="fas fa-times"></i>
                         </div>                       
                     </div>
-                    <h3>Danh mục <span style="white-space: nowrap;">sản phẩm</span></h3>
+                    <h3>Danh mục</h3>
                     <ul>
                         <li>
-                            <a href="#">Bánh sinh nhật</a>
+                            <a href="#sinh-nhat">Bánh sinh nhật</a>
                         </li>
                         <li>
-                            <a href="#">Kem</a>
+                            <a href="#kem">Kem</a>
                         </li>
                         <li>
-                            <a href="#">Bánh kem, sôcôla</a>
+                            <a href="#socola">Bánh kem, sôcôla</a>
                         </li>
                         <li>
-                            <a href="#">Bánh mỳ</a>
+                            <a href="#banh-my">Bánh mỳ</a>
                         </li>
                         <li>
-                            <a href="#">Đồ uống</a>
+                            <a href="#do-uong">Đồ uống</a>
                         </li>
                     </ul>
                 </div>
@@ -94,7 +97,7 @@
             </div>
             <div class="product">
                 <div class="section">
-                    <h2>Bánh sinh nhật</h2>
+                    <h2 id="sinh-nhat">Bánh sinh nhật</h2>
                     <div class="cake">
                         <div class="item">
                             <div class="image">
@@ -208,7 +211,7 @@
                 </div>  
                 
                 <div class="section">
-                    <h2>Kem</h2>
+                    <h2 id="kem">Kem</h2>
                     <div class="cake">
                         <div class="item">
                             <div class="image">
@@ -268,7 +271,7 @@
                 </div>
 
                 <div class="section">
-                    <h2>Bánh kem, sôcôla</h2>
+                    <h2 id="socola">Bánh kem, sôcôla</h2>
                     <div class="cake">
                         <div class="item">
                             <div class="image">
@@ -364,7 +367,7 @@
                 </div>
 
                 <div class="section">
-                    <h2>Bánh mì</h2>
+                    <h2 id="banh-my">Bánh mì</h2>
                     <div class="cake">
                         <div class="item">
                             <div class="image">
@@ -424,7 +427,7 @@
                 </div>
 
                 <div class="section">
-                    <h2>Đồ uống</h2>
+                    <h2 id="do-uong">Đồ uống</h2>
                     <div class="cake">
                         <div class="item">
                             <div class="image">
@@ -523,11 +526,11 @@
             </div>
             <div class="info">
                 <h3>Thông tin</h3>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Dịch vụ khách hàng</a>
-                <a href="#">Liên hệ</a>
-                <a href="#">Menu</a>
-                <a href="#">Chính sách giao hàng</a>
+                <a href="./Gioi-thieu.html">Về chúng tôi</a>
+                <a href="./Gioi-thieu.html#to-chuc">Dịch vụ khách hàng</a>
+                <a href="./lien-he.html">Liên hệ</a>
+                <a href="./menu.html">Menu</a>
+                <a href="./Gioi-thieu.html#dich-vu">Chính sách giao hàng</a>
             </div>
             <div class="help">
                 <div class="support">
@@ -563,6 +566,10 @@
             menu.classList.add('show');
         });
         hideList.addEventListener('click', function(){
+            menu.classList.remove('show');
+        });
+
+        $('.wrap .menu li a').click(function(){
             menu.classList.remove('show');
         });
     </script>

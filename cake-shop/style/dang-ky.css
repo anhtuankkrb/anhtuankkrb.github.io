@@ -49,8 +49,11 @@ form input[type="submit"]{
     border-radius: 5px;
     width: auto;
     cursor: pointer;
+    transition: 0.4s;
 }
-
+form input[type="submit"]:hover{
+    background: #3b4a03;
+}
 @media(max-width: 1030px){
     .main .image img{
         width: 100%;
@@ -68,6 +71,11 @@ form input[type="submit"]{
     .main form input{
         width: 100%;
     }
+    .main form{
+        padding: 10px 40px 40px 40px;
+    }
+}
+@media(max-width: 380px){
     .main form{
         padding: 10px 20px 40px 20px;
     }

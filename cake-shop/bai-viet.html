@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="./style/header-footer.css">
     <link rel="stylesheet" href="./style/bai-viet.css">
 </head>
-<body>
+<body class="preloading">
+    <div class="load">
+        <img src="./logo-icon/Loading-cake.gif" alt="load">
+    </div>
         <a href="#" id="to-top"></a>
     <header>
             <div class="nav-bar">
@@ -46,9 +49,9 @@
                 </div>
                 
             </div>    
-            <div class="logo">
+            <a href="./index.html" class="logo">
                 <img src="./logo-icon/logo.jpg" alt="cake shop logo">
-            </div>
+            </a>
             <div class="media">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -113,6 +116,69 @@
         </div>
     </div>
 
+    <div class="comment-part">
+        <h2>Bình luận</h2>
+        <div class="comment">
+            <div class="comment-member">
+                <div class="avata">
+                    <img src="./avata/avata6.jpg" alt="avata">
+                </div>
+                <div class="content">
+                    <div class="header">
+                    <p class="name">Nguyễn Thị Nụ</p> 
+                    <p class="time">1 tuần trước</p>
+                    </div>
+                    <p class="text">
+                        Cái này làm được đấy. 
+                    </p>   
+                    <div class="answer">
+                        Trả lời
+                    </div>
+
+                    <div class="comment-member">
+                        <div class="avata">
+                            <img src="./avata/avata5.jpg" alt="avata">
+                        </div>
+                        <div class="content">
+                            <div class="header">
+                                <p class="name">Đào Thị Mận</p> 
+                                <p class="time">2 ngày trước</p>
+                            </div>
+                            <p class="text">
+                                    Tôi cũng thấy vậy.
+                            </p>   
+                        </div>
+                    </div>
+                </div>                                        
+            </div>
+
+            <div class="comment-member">
+                <div class="avata">
+                    <img src="./avata/avata3.jpg" alt="avata">
+                </div>
+                <div class="content">
+                    <div class="header">
+                        <p class="name">Lý Mạc Sầu</p> 
+                        <p class="time">3 tuần trước</p>
+                    </div>
+                    <p class="text">
+                        Không biết có làm được không. Nhìn có vẻ dễ mà ngại làm quá.
+                    </p>   
+                    <div class="answer">
+                        Trả lời
+                    </div>
+                </div>
+            </div>
+
+            <form class="write">
+                <label for="write-commit">Bình luận:</label>
+                <textarea name="commit" id="write-commit" placeholder="Bình luận">                 
+                </textarea>
+                <button type="button">Gửi bình luận</button>
+            </form>
+        </div>
+    </div>
+    
 
 
 
@@ -134,11 +200,11 @@
             </div>
             <div class="info">
                 <h3>Thông tin</h3>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Dịch vụ khách hàng</a>
-                <a href="#">Liên hệ</a>
-                <a href="#">Menu</a>
-                <a href="#">Chính sách giao hàng</a>
+                <a href="./Gioi-thieu.html">Về chúng tôi</a>
+                <a href="./Gioi-thieu.html#to-chuc">Dịch vụ khách hàng</a>
+                <a href="./lien-he.html">Liên hệ</a>
+                <a href="./menu.html">Menu</a>
+                <a href="./Gioi-thieu.html#dich-vu">Chính sách giao hàng</a>
             </div>
             <div class="help">
                 <div class="support">

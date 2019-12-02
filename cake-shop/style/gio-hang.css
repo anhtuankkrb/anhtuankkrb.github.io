@@ -237,9 +237,17 @@
 .thanh-toan .mua-ngay{
     background: #F35106;
     margin-right: 70px;
+    transition: 0.4s;
+}
+.thanh-toan .mua-ngay:hover{
+    background: #8c3108;
 }
 .thanh-toan .mua-online{
     background: #748E0F;
+    transition: 0.4s;
+}
+.thanh-toan .mua-online:hover{
+    background: #3b4a03;
 }
 @media(max-width:570px){
     .thanh-toan{
@@ -292,6 +300,10 @@
     margin-top: 30px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.4s;
+}
+.pay form button:hover{
+    background: #8c3108; 
 }
 .pay form .radio{
     display: flex;

@@ -44,4 +44,13 @@ form input[type="submit"]{
     margin-top: 35px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.4s;
+}
+form input[type="submit"]:hover{
+    background: #3b4a03;
+}
+@media(max-width: 450px){
+    form .input{
+        padding: 0 30px 30px 30px;
+    }
 }

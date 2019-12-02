@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="./style/header-footer.css">
     <link rel="stylesheet" href="./style/san-pham.css">
 </head>
-<body>
+<body class="preloading">
+    <div class="load">
+        <img src="./logo-icon/Loading-cake.gif" alt="load">
+    </div>
         <a href="#" id="to-top"></a>
     <header>
             <div class="nav-bar">
@@ -46,9 +49,9 @@
                 </div>
                 
             </div>    
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <img src="./logo-icon/logo.jpg" alt="cake shop logo">
-            </div>
+            </a>
             <div class="media">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -66,12 +69,11 @@
             </div>
             <div class="content">
                 <h1>Bánh kem bắp</h1>
-                <p class="price">Giá bán: 200.000đ</p>
-                <p class="ma-so">Mã số: 0547</p>
+                <p class="price">Giá bán: 200.000đ</p>                
                 <p class="luot-thich">Số lượt yêu thích: 457</p>
                 <div class="line-gray"></div>
                 <p class="info">
-                    Bánh kem bắp  thơm ngon, độc đáo. Nhiều mẫu đẹp tha hồ lựa chọn.
+                    Bánh kem bắp thơm ngon, độc đáo. Với vị ngọt tự nhiên mang đến trải nghiệm vô cùng độc đáo.
                 </p>
                 <div class="so-luong">
                     <p class="text">Số lượng: </p>
@@ -81,19 +83,23 @@
                 </div>
                 <div class="buy">
                     <div class="them-vao-gio">Thêm vào giỏ hàng</div>
+                    <div class="love">
+                        <i class="fas fa-heart like"></i> 
+                        <span>like</span>
+                    </div>
                 </div>
+                 
             </div>
         </div>
         
         <div class="info-comment">
             <div class="tab">
-                <div class="mo-ta">Mô tả</div>
-                <div class="line"></div>
+                <div class="mo-ta active">Mô tả</div>
                 <div class="binh-luan">Bình luận</div>
             </div>
 
-            <div class="mo-ta-content">
-                Khác với các loại bánh kem thông thường, bánh kem bắp Farino được sáng tạo với lớp bắp có vị ngọt tự nhiên mang đến một trải nghiệm vô cùng thú vị. Không chỉ có sự mềm mịn, từng hạt bắp len lỏi trong miếng bánh có vị sần sật, ngọt thanh tạo sự khác lạ độc đáo so với các loại bánh kem truyền thống. Kem bánh có vị ngọt nhẹ, kích thích vị giác nhưng không quá béo khiến ai đã cắn một miếng sẽ muốn thưởng thức ngay đến miếng thứ hai. Hòa quyện với hương vị beo béo của kem, hương thơm vị bắp nhè nhẹ tạo nên một hương vị vô cùng tinh tế lại càng khiến bánh kem bắp Farino thêm hấp dẫn. Đây sẽ là món quà thú vị cho bạn dành tặng những người thân yêu, để cùng sẻ chia những hương vị mới lạ.
+            <div class="mo-ta-content" style="display: block;">
+                Khác với các loại bánh kem thông thường, bánh kem bắp được sáng tạo với lớp bắp có vị ngọt tự nhiên mang đến một trải nghiệm vô cùng thú vị. Không chỉ có sự mềm mịn, từng hạt bắp len lỏi trong miếng bánh có vị sần sật, ngọt thanh tạo sự khác lạ độc đáo so với các loại bánh kem truyền thống. Kem bánh có vị ngọt nhẹ, kích thích vị giác nhưng không quá béo khiến ai đã cắn một miếng sẽ muốn thưởng thức ngay đến miếng thứ hai. Hòa quyện với hương vị beo béo của kem, hương thơm vị bắp nhè nhẹ tạo nên một hương vị vô cùng tinh tế lại càng khiến bánh kem bắp Farino thêm hấp dẫn. Đây sẽ là món quà thú vị cho bạn dành tặng những người thân yêu, để cùng sẻ chia những hương vị mới lạ.
             </div>
 
             <div class="comment">
@@ -148,12 +154,12 @@
                         </div>
                     </div>
   
-   <form class="write">
-                <label for="write-commit">Bình luận:</label>
-                <textarea name="commit" id="write-commit" placeholder="Bình luận">                 
-                </textarea>
-                <button type="button">Gửi bình luận</button>
-            </form>
+                    <form class="write">
+                        <label for="write-commit">Bình luận:</label>
+                        <textarea name="commit" id="write-commit" placeholder="Bình luận">                 
+                        </textarea>
+                        <button type="button">Gửi bình luận</button>
+                    </form>
                 </div>
 
            
@@ -170,7 +176,15 @@
                         <p class="name">Bánh sôcôla</p>
                         <p class="price">Giá: 200.000đ</p>
                         <a href="#">Xem chi tiết</a>
-                    </div>                        
+                    </div> 
+                    <div class="icon">  
+                        <div>
+                            <i class="fas fa-heart like"></i> 
+                        </div>                    
+                        <div>
+                            <i class="fas fa-shopping-cart buy"></i> 
+                        </div>                           
+                    </div>                          
                 </div>
                 <div class="item">
                     <div class="image">
@@ -180,7 +194,15 @@
                         <p class="name">Mẫu hoa hồng</p>
                         <p class="price">Giá: 250.000đ</p>
                         <a href="#">Xem chi tiết</a>
-                    </div>                        
+                    </div> 
+                    <div class="icon">  
+                        <div>
+                            <i class="fas fa-heart like"></i> 
+                        </div>                    
+                        <div>
+                            <i class="fas fa-shopping-cart buy"></i> 
+                        </div>                           
+                    </div>                          
                 </div>
                 <div class="item">
                     <div class="image">
@@ -190,7 +212,15 @@
                         <p class="name">Mẫu đơn giản</p>
                         <p class="price">Giá: 150.000đ</p>
                         <a href="#">Xem chi tiết</a>
-                    </div>                        
+                    </div> 
+                    <div class="icon">  
+                        <div>
+                            <i class="fas fa-heart like"></i> 
+                        </div>                    
+                        <div>
+                            <i class="fas fa-shopping-cart buy"></i> 
+                        </div>                           
+                    </div>                          
                 </div>
             </div>
         </div>
@@ -214,11 +244,11 @@
             </div>
             <div class="info">
                 <h3>Thông tin</h3>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Dịch vụ khách hàng</a>
-                <a href="#">Liên hệ</a>
-                <a href="#">Menu</a>
-                <a href="#">Chính sách giao hàng</a>
+                <a href="./Gioi-thieu.html">Về chúng tôi</a>
+                <a href="./Gioi-thieu.html#to-chuc">Dịch vụ khách hàng</a>
+                <a href="./lien-he.html">Liên hệ</a>
+                <a href="./menu.html">Menu</a>
+                <a href="./Gioi-thieu.html#dich-vu">Chính sách giao hàng</a>
             </div>
             <div class="help">
                 <div class="support">
@@ -254,10 +284,16 @@
         $(mo_ta).click(function(){
             $(content).fadeIn();
             $(comment).hide();
+
+            $(binh_luan).removeClass('active');
+            $(mo_ta).addClass('active');
         });
         $(binh_luan).click(function(){
             $(content).hide();
             $(comment).fadeIn();
+
+            $(mo_ta).removeClass('active');
+            $(binh_luan).addClass('active');
         });
     </script>
 </body>

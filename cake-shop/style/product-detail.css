@@ -82,21 +82,22 @@
     font-family: "Roboto-Blod", sans-serif;
     font-size: 1.5rem;
     color: #575757;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
-    border: 1px solid #000;
+    border: 1px solid #575757;
+    cursor: pointer;
 }
 .main .content .so-luong .so{
     font-family: "Roboto-Blod", sans-serif;
     font-size: 1.4rem;
-    color: #FF0000;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
+    color: #575757;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
-    border: 1px solid #000;
+    border: 1px solid #575757;
     margin: 0 20px;
 }
 .main .content .buy{
@@ -111,10 +112,6 @@
     font-size: 1.35rem;
     color: #fff;
     border-radius: 10px;
-}
-.main .content .buy .mua-ngay{
-    background: #F35106;
-    margin-right: 40px;
 }
 .main .content .buy .them-vao-gio{
     background: #748E0F;

@@ -1,3 +1,9 @@
+$(window).on('load', function(){
+    $('body').removeClass('preloading');
+    $('.load').delay(500).fadeOut();
+});
+
+
 
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('nav')
@@ -28,3 +34,4 @@ $(toTop).click(function(event){
         scrollTop: 0 }, 400
         );
 });
+
