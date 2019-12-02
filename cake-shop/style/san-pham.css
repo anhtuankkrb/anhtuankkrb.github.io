@@ -47,6 +47,11 @@
     color: #280909;
     font-size: 1.82rem;
 }
+@media(max-width: 333px){
+    .main .content h1{
+        font-size: 1.5rem;
+    }
+}
 .main .content .price{
     font-family: "Roboto-Regular", sans-serif;
     font-size: 1.2rem;

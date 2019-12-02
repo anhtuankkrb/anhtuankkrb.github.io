@@ -80,3 +80,9 @@ form input[type="submit"]:hover{
         padding: 10px 20px 40px 20px;
     }
 }
+
+.alert{
+    font-family: "Roboto-Italic", sans-serif;
+    color: red;
+    font-size: 0.8rem;
+}
