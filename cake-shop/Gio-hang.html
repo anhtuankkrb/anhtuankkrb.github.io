@@ -204,15 +204,23 @@
     
     <div id="mua-ngay" style="display: none;" class="pay">
         <h3>Thanh toán trực tiếp</h3>
-        <form action="#">
+        <form action="#" id="form-1">
             <label for="name">Họ tên:</label>
-            <input type="text" id="name">
+            <input type="text" class="name">
+            <span class="alert-name alert"></span>
+
             <label for="phone">Điện thoại:</label>
-            <input type="text" id="phone">
+            <input type="text" class="phone">
+            <span class="alert-phone alert"></span>
+
             <label for="address">Địa chỉ nhận hàng:</label>
-            <input type="text" id="address">
+            <input type="text" class="address">
+            <span class="alert-address alert"></span>
+
             <label for="time">Thời gian nhận hàng:</label>
-            <input type="text" id="time" placeholder="Bây giờ">
+            <input type="text" class="time" placeholder="Bây giờ">
+
+
             <button type="submit">Đặt hàng</button>
         </form>
     </div>
@@ -221,7 +229,7 @@
 
     <div id="online" style="display: none;" class="pay">
         <h3>Thanh toán online</h3>
-        <form action="#">
+        <form action="#" id="form-2">
             <div class="radio">
                 <div>
                     <label for="viza"><img src="./logo-icon/visa-27-565046.png" alt="viza"></label>
@@ -234,25 +242,93 @@
                 <div>
                     <label for="jcb"><img src="./logo-icon/jcb.png" alt="jcb"></label>
                     <input type="radio" name="card" id="jcb">
-                </div>
-                
+                </div>                              
             </div>
+            <span class="alert-card alert"></span>
+
             <label for="name">Số tài khoản:</label>
-            <input type="text" id="account">
+            <input type="text" class="account">
+            <span class="alert-account alert"></span>
+
             <label for="name">Họ tên:</label>
-            <input type="text" id="name">
+            <input type="text" class="name">
+            <span class="alert-name alert"></span>
+
             <label for="phone">Điện thoại:</label>
-            <input type="text" id="phone">
+            <input type="text" class="phone">
+            <span class="alert-phone alert"></span>
+
             <label for="address">Địa chỉ nhận hàng:</label>
-            <input type="text" id="address">
+            <input type="text" class="address">
+            <span class="alert-address alert"></span>
+
             <label for="time">Thời gian nhận hàng:</label>
-            <input type="text" id="time" placeholder="Bây giờ">
+            <input type="text" class="time" placeholder="Bây giờ">
+
             <button type="submit">Đặt hàng</button>
         </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./fontawesome-free-5.11.2-web/js/all.js"></script>
     <script src="./script/header.js"></script>  
-	<script src="./fancybox-master/dist/jquery.fancybox.min.js"></script>
+    <script src="./fancybox-master/dist/jquery.fancybox.min.js"></script>
+    <script>
+         $("#form-1").on("submit", function(){
+            let tester = true;
+            if($("#form-1 .name").val().trim() == ""){
+                tester = false;
+                $("#form-1 .alert-name").text("Bạn chưa nhập tên").show();
+            }
+            if(!Number.isInteger(+$("#form-1 .phone").val()) || $("#form-1 .phone").val().indexOf(".") != -1 ){
+                tester = false;
+                $("#form-1 .alert-phone").text("Số điện thoại không hợp lệ").show();
+            }else if($("#form-1 .phone").val().length != 10){
+                tester = false;
+                $("#form-1 .alert-phone").text("Không đủ 10 chữ số").show();
+            }
+            if($("#form-1 .address").val().trim() == ""){
+                tester = false;
+                $("#form-1 .alert-address").text("Bạn chưa nhập địa chỉ").show();
+            }
+            
+            return tester;
+        });
+        $("#form-2").on("submit", function(){
+            let tester = true;
+            if($("#form-2 .account").val().trim() == ""){
+                tester = false;
+                $("#form-2 .alert-account").text("Bạn chưa nhập số tài khoản").show();
+            }
+            if($("#form-2 .name").val().trim() == ""){
+                tester = false;
+                $("#form-2 .alert-name").text("Bạn chưa nhập tên").show();
+            }
+            if(!Number.isInteger(+$("#form-2 .phone").val()) || $("#form-2 .phone").val().indexOf(".") != -1 ){
+                tester = false;
+                $("#form-2 .alert-phone").text("Số điện thoại không hợp lệ").show();
+            }else if($("#form-2 .phone").val().length != 10){
+                tester = false;
+                $("#form-2 .alert-phone").text("Không đủ 10 chữ số").show();
+            }
+            if($("#form-2 .address").val().trim() == ""){
+                tester = false;
+                $("#form-2 .alert-address").text("Bạn chưa nhập địa chỉ").show();
+            }
+            if($("#form-2 input:radio[name='card']:checked").length == 0){
+                tester = false;
+                $("#form-2 .alert-card").text("Bạn chưa chọn thẻ").show();
+            }
+
+            return tester;
+        });
+
+        $("#form-2 input:radio[name='card']").change(function(){
+            $("#form-2 .alert-card").hide();
+        });
+        $("input").on("focus", function(){
+            $(this).next(".alert").hide();
+        });
+    
+    </script>
 </body>
 </html>

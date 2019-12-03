@@ -272,20 +272,24 @@
     font-size: 1.1rem;
     color: #280909;
     text-align: center;
-    margin-bottom: 20px;
 }
 .pay form label{
     display: block;
     margin-bottom: 7px;
     font-family: "Roboto-Regular" , sans-serif;
-    font-size: 1.08rem;
+    font-size: 1.08rem; 
+    margin-top: 25px;
 }
 .pay form input{
-    display: block;
-    margin-bottom: 25px;
+    display: block;  
     font-size: 0.9rem;
     padding: 4px 12px;
     width: 300px;
+}
+.alert{
+    font-family: "Roboto-Italic", sans-serif;
+    color: red;
+    font-size: 0.8rem;
 }
 .pay form button{
     display: block;

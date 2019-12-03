@@ -34,8 +34,20 @@
     margin-top: 100px;
     display: flex;
 }
+.main .image{
+    perspective: 800px;
+}
 .main .image img{
     border-radius: 19px;
+    box-shadow: 0 0 10px #000;
+    outline: 11px double #fff;
+    outline-offset: -25px;
+    transition: 1s;
+    transform: translate(20px, -30px) rotateY(30deg);
+}
+.main .image img:hover{
+    transform: none;
+    
 }
 .main .content{
     width: 100%;
@@ -131,12 +143,13 @@
     background: #4f6303;
 }
 .main .content .buy .love{
-    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
     margin-left: 40px;
     color: #fff;
     transition: 0.3s;
     cursor: pointer;
-    width: 150px;
+    width: 120px;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -168,6 +181,7 @@
     }
     .main .image img{
         width: 100%;
+        transform: none;
     }
     .main .content{
         order: 1;
