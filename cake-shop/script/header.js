@@ -25,7 +25,7 @@ iconAccount.addEventListener('click',function(){
 
 const toTop = document.getElementById('to-top');
 $(window).scroll(function(){
-    ($(this).scrollTop() > 400) ? $(toTop).fadeIn() : $(toTop).fadeOut();
+    ($(this).scrollTop() > 100) ? $(toTop).fadeIn() : $(toTop).fadeOut();
 });
 
 $(toTop).click(function(event){

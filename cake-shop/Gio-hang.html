@@ -88,7 +88,7 @@
                     </div>
                     <div class="cell-4">60.000đ</div>
                     <div class="cell-5">
-                        <i class="far fa-trash-alt"></i>
+                        <i class="far fa-trash-alt delete"></i>
                     </div>
                 </div>
 
@@ -109,7 +109,7 @@
                     </div>
                     <div class="cell-4">150.000đ</div>
                     <div class="cell-5">
-                        <i class="far fa-trash-alt"></i>
+                        <i class="far fa-trash-alt delete"></i>
                     </div>
                 </div>
 
@@ -130,7 +130,7 @@
                     </div>
                     <div class="cell-4">210.000đ</div>
                     <div class="cell-5">
-                        <i class="far fa-trash-alt"></i>
+                        <i class="far fa-trash-alt delete"></i>
                     </div>
                 </div>
             </div>
@@ -204,21 +204,21 @@
     
     <div id="mua-ngay" style="display: none;" class="pay">
         <h3>Thanh toán trực tiếp</h3>
-        <form action="#" id="form-1">
+        <form action="./dat-hang-thanh-cong.html" method="POST" id="form-1">
             <label for="name">Họ tên:</label>
-            <input type="text" class="name">
+            <input type="text" class="name" name="name">
             <span class="alert-name alert"></span>
 
             <label for="phone">Điện thoại:</label>
-            <input type="text" class="phone">
+            <input type="text" class="phone" name="phone">
             <span class="alert-phone alert"></span>
 
             <label for="address">Địa chỉ nhận hàng:</label>
-            <input type="text" class="address">
+            <input type="text" class="address" name="address">
             <span class="alert-address alert"></span>
 
             <label for="time">Thời gian nhận hàng:</label>
-            <input type="text" class="time" placeholder="Bây giờ">
+            <input type="text" class="time" name="time">
 
 
             <button type="submit">Đặt hàng</button>
@@ -229,7 +229,7 @@
 
     <div id="online" style="display: none;" class="pay">
         <h3>Thanh toán online</h3>
-        <form action="#" id="form-2">
+        <form action="./dat-hang-thanh-cong.html" method="POST" id="form-2">
             <div class="radio">
                 <div>
                     <label for="viza"><img src="./logo-icon/visa-27-565046.png" alt="viza"></label>
@@ -247,23 +247,23 @@
             <span class="alert-card alert"></span>
 
             <label for="name">Số tài khoản:</label>
-            <input type="text" class="account">
+            <input type="text" class="account" name="account">
             <span class="alert-account alert"></span>
 
             <label for="name">Họ tên:</label>
-            <input type="text" class="name">
+            <input type="text" class="name" name="name">
             <span class="alert-name alert"></span>
 
             <label for="phone">Điện thoại:</label>
-            <input type="text" class="phone">
+            <input type="text" class="phone" name="phone">
             <span class="alert-phone alert"></span>
 
             <label for="address">Địa chỉ nhận hàng:</label>
-            <input type="text" class="address">
+            <input type="text" class="address" name="address">
             <span class="alert-address alert"></span>
 
             <label for="time">Thời gian nhận hàng:</label>
-            <input type="text" class="time" placeholder="Bây giờ">
+            <input type="text" class="time" name="time">
 
             <button type="submit">Đặt hàng</button>
         </form>

@@ -97,6 +97,9 @@
 .my-table .table-body .table-row .cell-3 .so-luong p{
     padding: 0 15px;
 }
+.tru, .cong, .delete{
+    cursor: pointer;
+}
 .my-table .table-body .table-row .cell-3 .so-luong .so{
     border-left: 1px solid #000;
     border-right: 1px solid #000;

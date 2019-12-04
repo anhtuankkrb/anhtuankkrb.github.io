@@ -142,11 +142,12 @@ header{
     width: 3.1rem;
 }
 .service .content div p{
-    padding-left: 48px;
+    padding-left: 30px;
     font-family: "Roboto-Italic", sans-serif;
     font-size: 1rem;
     line-height: 21px;
     color: #333333;
+    line-height: 1.5rem;
 }
 .service .content div p span{
     font-family: "Lemonada-SemiBold",  cursive;
@@ -196,7 +197,8 @@ header{
 }
 @media(max-width: 520px){
     .service .content div p{
-        padding-left: 28px;
+        padding-left: 15px;
+        line-height: 1rem;
     }
 }
 
