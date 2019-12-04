@@ -283,27 +283,28 @@ li{
     }
 }
 
-.add-like{
+.add-like, .exist{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
-    background: rgba(255, 255, 255, 0.8);
-    font-family: "Lemonada-Bold", cursive;
-    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
     color: #a0190f;
     padding: 10px 20px;
     border-radius: 10px;
     border: 2px solid;
     display: none;
     white-space: nowrap;
+    text-align: center;
 }
-.add-like{
-    color: #a0190f;
+.exist{
+    color: #748E0F;
 }
+
 @media(max-width: 400px){
-    .add-like{
+    .add-like, .exist{
          font-size: 0.9rem;  
     }
   
@@ -354,4 +355,18 @@ li{
 #big-cart:hover{
     opacity: 1;
     transition: 0.5s;
+}
+#big-cart p{
+    position: absolute;
+    top: -7px;
+    left: 62%;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    font-size: 0.9rem;
 }

@@ -116,7 +116,9 @@ h1{
 
 
 .comment-part{
-    margin-top: 80px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .comment-part h2{
     font-family: "Lemonada-Bold", cursive;

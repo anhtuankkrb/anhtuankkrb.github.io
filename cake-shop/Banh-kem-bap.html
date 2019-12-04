@@ -63,7 +63,7 @@
         <p>Chi tiết<br/>Sản phẩm</p>
     </div>
     <div class="body-page">
-        <div class="main">
+        <div class="main par">
             <div class="image">
                 <img src="./product/detail/kem-bap.jpg" alt="Bánh kem bắp">
             </div>
@@ -82,8 +82,8 @@
                     <p class="cong">+</p>
                 </div>
                 <div class="buy">
-                    <div class="them-vao-gio">Thêm vào giỏ hàng</div>
-                    <div class="love">
+                    <div class="them-vao-gio add-product">Thêm vào giỏ hàng</div>
+                    <div class="love like-product">
                         <i class="fas fa-heart like"></i> 
                         <span>like</span>
                     </div>
@@ -168,56 +168,56 @@
         <div class="lien-quan">
             <h3>Sản phẩm <span style="white-space: nowrap;">liên quan</span></h3>
             <div class="product">
-                <div class="item">
+                <div class="item par">
                     <div class="image">
                         <img src="./product/menu/socola.jpg" alt="Bánh sôcôla">
                     </div>
                     <div class="content">
                         <p class="name">Bánh sôcôla</p>
                         <p class="price">Giá: 200.000đ</p>
-                        <a href="#">Xem chi tiết</a>
+                        <a href="./Banh-kem-bap.html">Xem chi tiết</a>
                     </div> 
                     <div class="icon">  
-                        <div>
+                        <div class="like-product">
                             <i class="fas fa-heart like"></i> 
                         </div>                    
-                        <div>
+                        <div class="add-product">
                             <i class="fas fa-shopping-cart buy"></i> 
                         </div>                           
                     </div>                          
                 </div>
-                <div class="item">
+                <div class="item par">
                     <div class="image">
                         <img src="./product/menu/hoa-hong.jpg" alt="Mẫu hoa hồng">
                     </div>
                     <div class="content">
                         <p class="name">Mẫu hoa hồng</p>
                         <p class="price">Giá: 250.000đ</p>
-                        <a href="#">Xem chi tiết</a>
+                        <a href="./Banh-kem-bap.html">Xem chi tiết</a>
                     </div> 
                     <div class="icon">  
-                        <div>
+                        <div class="like-product">
                             <i class="fas fa-heart like"></i> 
                         </div>                    
-                        <div>
+                        <div class="add-product">
                             <i class="fas fa-shopping-cart buy"></i> 
                         </div>                           
                     </div>                          
                 </div>
-                <div class="item">
+                <div class="item par">
                     <div class="image">
                         <img src="./product/menu/don-gian.jpg" alt="Bánh sinh nhật đơn giản">
                     </div>
                     <div class="content">
                         <p class="name">Mẫu đơn giản</p>
                         <p class="price">Giá: 150.000đ</p>
-                        <a href="#">Xem chi tiết</a>
+                        <a href="./Banh-kem-bap.html">Xem chi tiết</a>
                     </div> 
                     <div class="icon">  
-                        <div>
+                        <div class="like-product">
                             <i class="fas fa-heart like"></i> 
                         </div>                    
-                        <div>
+                        <div class="add-product">
                             <i class="fas fa-shopping-cart buy"></i> 
                         </div>                           
                     </div>                          
@@ -272,6 +272,20 @@
             <p>@Copyright - 2019</p>
         </div>
     </footer>
+
+    <div class="exist">
+        Đã có <br /> trong giỏ hàng
+    </div>
+    <div class="add-like">
+            Cảm ơn bình trọn<br />của bạn
+    </div>
+
+    <a href="./Gio-hang.html" id="big-cart">
+        <i class="fas fa-shopping-cart buy"></i> 
+        <p>3</p>
+    </a>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./fontawesome-free-5.11.2-web/js/all.js"></script>
     <script src="./script/header.js"></script>
@@ -294,6 +308,69 @@
 
             $(mo_ta).removeClass('active');
             $(binh_luan).addClass('active');
+        });
+
+
+        $('.add-product').click(function(){           
+            $(this).css('color', 'green');
+
+            let parent = $(this).parents('.par');
+
+            if(parent.length == 0){
+                $('.exist').fadeIn().delay(700).fadeOut();
+                return;
+            }
+
+            let src = $(parent).find('img').attr('src');
+            let cart = $('#big-cart');
+            let parentTop = parent.offset().top;
+            let parentLeft = parent.offset().left;
+           
+           $('<img>', {
+               class: 'fly-img',
+               src: src,
+           }).appendTo('body').css({
+               'top': parentTop,
+               'left': +(parentLeft + parent.width() - 30)
+           }).addClass('fly');
+
+           setTimeout(function(){
+                $('.fly-img').css({
+                    'top': cart.offset().top,
+                    'left': cart.offset().left 
+                })
+
+                setTimeout(function(){
+                    $('.fly-img').remove(); 
+                    let num = +($('#big-cart p').text()); 
+                    $('#big-cart p').text(`${num + 1}`);
+                    $(parent).removeClass('par');
+                },1000);
+           }, 500);
+        });
+        
+        
+        $('.like-product').click(function(){
+            $('.add-like').fadeIn().delay(700).fadeOut();
+            $(this).css('color', 'red');
+        });
+
+        const bigCart = $('#big-cart');
+        $(window).scroll(function(){
+            ($(this).scrollTop() > 100) ? $(bigCart).fadeIn() : $(bigCart).fadeOut();
+        });
+
+        const number = $('.so');
+        $('.cong').click(function(){
+            let num = +($(number).text());
+            $(number).text(num + 1);
+        });
+        $('.tru').click(function(){
+            let num = +($(number).text());
+            if(num == 1){
+                return;
+            }
+            $(number).text(num - 1);
         });
     </script>
 </body>

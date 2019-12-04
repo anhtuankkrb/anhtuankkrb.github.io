@@ -133,7 +133,7 @@
     line-height: 50px;
     text-align: center;
     font-size: 1.25rem;
-    color: #fff;
+    color: #fff !important;
     border-radius: 10px;
     background: #748E0F;
     transition: 0.4s;
@@ -146,7 +146,7 @@
     letter-spacing: 1px;
     font-size: 1.3rem;
     margin-left: 40px;
-    color: #fff;
+    color: #fff !important;
     transition: 0.3s;
     cursor: pointer;
     width: 120px;
@@ -508,4 +508,92 @@
     .lien-quan .product .item{
         width: calc(100% - 30px);
     }
+}
+
+.add-like, .exist{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
+    color: #a0190f;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid;
+    display: none;
+    white-space: nowrap;
+    text-align: center;
+}
+.exist{
+    color: #748E0F;
+}
+
+@media(max-width: 400px){
+    .add-like, .exist{
+         font-size: 0.9rem;  
+    }
+  
+}
+
+.fly-img{
+    position: absolute;
+    width: 30px;
+    border-radius: 5px;
+    opacity: 0;
+    transform-origin: top right;
+    transition: 1s;
+}
+.fly{
+    animation: fly 1.5s linear  1;
+}
+@keyframes fly{
+    0%{
+        transform: scale(6);
+    }
+    40%{
+        transform: scale(6);
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+        
+    }
+    100%{
+        opacity: 0;
+       transform: scale(1);
+    }
+}
+#big-cart{
+    position: fixed;
+    font-size: 1.5rem;
+    color: #748E0F;
+    z-index: 999;
+    bottom: 140px;
+    right: 40px;
+    display: none;
+    opacity: 0.7;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 8px;
+}
+#big-cart:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+#big-cart p{
+    position: absolute;
+    top: -7px;
+    left: 62%;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    font-size: 0.9rem;
 }

@@ -19,14 +19,15 @@ h1{
 .main form{
     display: flex;
     flex-direction: column;
-    padding: 10px 60px 40px 60px;
+    padding: 30px 60px 40px 60px;
     border: 1px solid #280909;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
 }
 .main form label{
     font-family: "Roboto-Bold", sans-serif;
     font-size: 1.1rem;
+    color: #280909;
     margin-bottom: 7px;
     margin-top: 22px;
 }

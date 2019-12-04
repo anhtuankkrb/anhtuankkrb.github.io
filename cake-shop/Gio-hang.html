@@ -204,7 +204,7 @@
     
     <div id="mua-ngay" style="display: none;" class="pay">
         <h3>Thanh toán trực tiếp</h3>
-        <form action="./dat-hang-thanh-cong.html" method="POST" id="form-1">
+        <form action="./dat-hang-thanh-cong.html" method="get" id="form-1">
             <label for="name">Họ tên:</label>
             <input type="text" class="name" name="name">
             <span class="alert-name alert"></span>
@@ -217,8 +217,10 @@
             <input type="text" class="address" name="address">
             <span class="alert-address alert"></span>
 
-            <label for="time">Thời gian nhận hàng:</label>
-            <input type="text" class="time" name="time">
+            <label for="note">Ghi chú:</label>
+            <textarea name="note" id="note">
+
+            </textarea>
 
 
             <button type="submit">Đặt hàng</button>
@@ -229,7 +231,7 @@
 
     <div id="online" style="display: none;" class="pay">
         <h3>Thanh toán online</h3>
-        <form action="./dat-hang-thanh-cong.html" method="POST" id="form-2">
+        <form action="./dat-hang-thanh-cong.html" method="get" id="form-2">
             <div class="radio">
                 <div>
                     <label for="viza"><img src="./logo-icon/visa-27-565046.png" alt="viza"></label>
@@ -262,9 +264,10 @@
             <input type="text" class="address" name="address">
             <span class="alert-address alert"></span>
 
-            <label for="time">Thời gian nhận hàng:</label>
-            <input type="text" class="time" name="time">
+            <label for="note">Ghi chú:</label>
+            <textarea name="note" id="note">
 
+            </textarea>
             <button type="submit">Đặt hàng</button>
         </form>
     </div>

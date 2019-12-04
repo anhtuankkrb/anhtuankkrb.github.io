@@ -283,7 +283,7 @@
     font-size: 1.08rem; 
     margin-top: 25px;
 }
-.pay form input{
+.pay form input, .pay form textarea{
     display: block;  
     font-size: 0.9rem;
     padding: 4px 12px;
@@ -330,7 +330,7 @@
     .pay{
         padding: 30px;
     }
-    .pay form input{
+    .pay form input, .pay form textarea{
         width: 240px;
     }
 }
