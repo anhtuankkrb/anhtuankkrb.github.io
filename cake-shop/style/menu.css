@@ -343,7 +343,7 @@ li{
     }
 }
 
-@media(max-height: 686px){
+@media(max-height: 686px) and (min-width: 570px){
     .wrap .menu .stick {
         margin-top: 0;
         top: 10px;
