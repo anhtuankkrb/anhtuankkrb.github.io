@@ -50,20 +50,7 @@ form input[type="submit"]{
 form input[type="submit"]:hover{
     background: #3b4a03;
 }
-form a{
-    display: block;
-    width: 100px;
-    text-align: center;
-    margin: auto;
-    color: #333333;
-    font-style: italic;
-    text-decoration: underline;
-    font-size: 1.2rem;
-    margin-top: 15px;
-}
-form a:hover{
-    color:#F35106;
-}
+
 @media(max-width: 450px){
     form .input{
         padding: 0 30px 30px 30px;
