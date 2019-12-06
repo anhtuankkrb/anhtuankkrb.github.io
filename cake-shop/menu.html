@@ -66,7 +66,7 @@
         <h1>Menu</h1>
     </div>
     <div class="body-web">
-        <div class="wrap">
+        <div class="wrap">           
             <div class="menu">
                 <div class="stick">
                     <div class="hide">
@@ -74,25 +74,33 @@
                             <i class="fas fa-times"></i>
                         </div>                       
                     </div>
-                    <h3>Danh mục</h3>
-                    <ul>
-                        <li>
-                            <a href="#sinh-nhat">Bánh sinh nhật</a>
-                        </li>
-                        <li>
-                            <a href="#kem">Kem</a>
-                        </li>
-                        <li>
-                            <a href="#socola">Bánh kem, sôcôla</a>
-                        </li>
-                        <li>
-                            <a href="#banh-my">Bánh mỳ</a>
-                        </li>
-                        <li>
-                            <a href="#do-uong">Đồ uống</a>
-                        </li>
-                    </ul>
+                    <div class="search">
+                        <input type="text" placeholder="Tìm kiếm">
+                       <button type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="category">
+                        
+                        <h3>Danh mục</h3>
+                        <ul>
+                            <li>
+                                <a href="#sinh-nhat">Bánh sinh nhật</a>
+                            </li>
+                            <li>
+                                <a href="#kem">Kem</a>
+                            </li>
+                            <li>
+                                <a href="#socola">Bánh kem, sôcôla</a>
+                            </li>
+                            <li>
+                                <a href="#banh-my">Bánh mỳ</a>
+                            </li>
+                            <li>
+                                <a href="#do-uong">Đồ uống</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                    
                 
             </div>
             <div class="product">
@@ -207,8 +215,68 @@
                                 </div>                           
                             </div>                       
                         </div>
-                                            
+
+                        <div class="item par hidden">
+                            <div class="image">
+                                <img src="./product/menu/hoa-tim.jpg" alt="Mẫu hoa tím">
+                            </div>
+                            <div class="content">
+                                <p class="name">Mẫu hoa tím</p>
+                                <p class="price">Giá: 250.000đ</p>
+                                <a href="./Banh-kem-bap.html">Xem chi tiết</a>
+                            </div> 
+                            <div class="icon">  
+                                <div class="like-product">
+                                    <i class="fas fa-heart like"></i> 
+                                </div>                    
+                                <div class="add-product">
+                                    <i class="fas fa-shopping-cart buy"></i> 
+                                </div>                           
+                            </div>                       
+                        </div>
+
+                        <div class="item par hidden">
+                            <div class="image">
+                                <img src="./product/menu/hoa-hong-den.jpg" alt="Bánh hoa hồng đen">
+                            </div>
+                            <div class="content">
+                                <p class="name">Hoa hồng đen</p>
+                                <p class="price">Giá: 300.000đ</p>
+                                <a href="./Banh-kem-bap.html">Xem chi tiết</a>
+                            </div> 
+                            <div class="icon">  
+                                <div class="like-product">
+                                    <i class="fas fa-heart like"></i> 
+                                </div>                    
+                                <div class="add-product">
+                                    <i class="fas fa-shopping-cart buy"></i> 
+                                </div>                           
+                            </div>                       
+                        </div>
+
+                        <div class="item par hidden">
+                            <div class="image">
+                                <img src="./product/menu/Lang-mang.jpg" alt="Mẫu lãng mạng">
+                            </div>
+                            <div class="content">
+                                <p class="name">Mẫu lãng mạng</p>
+                                <p class="price">Giá: 350.000đ</p>
+                                <a href="./Banh-kem-bap.html">Xem chi tiết</a>
+                            </div> 
+                            <div class="icon">  
+                                <div class="like-product">
+                                    <i class="fas fa-heart like"></i> 
+                                </div>                    
+                                <div class="add-product">
+                                    <i class="fas fa-shopping-cart buy"></i> 
+                                </div>                           
+                            </div>                       
+                        </div>
+                                       
                     </div>
+                    <div class="add">
+                        <button type="button">Xem thêm</button>
+                    </div>   
                 </div>  
                 
                 <div class="section">
@@ -435,7 +503,7 @@
                                 <img src="./product/menu/tra-sua.jpg" alt="Trà sữa">
                             </div>
                             <div class="content">
-                                <p class="name">Trà sữa</p>
+                                <p class="name">Trà đỗ</p>
                                 <p class="price">Giá: 30.000đ</p>
                                 <a href="./Banh-kem-bap.html">Xem chi tiết</a>
                             </div> 
@@ -489,8 +557,8 @@
                                 <img src="./product/menu/vi-moi.jpg" alt="Hương vị mới">
                             </div>
                             <div class="content">
-                                <p class="name">Hương vị mới</p>
-                                <p class="price">Giá: 40.000đ</p>
+                                <p class="name">Trà sữa</p>
+                                <p class="price">Giá: 50.000đ</p>
                                 <a href="./Banh-kem-bap.html">Xem chi tiết</a>
                             </div>
                             <div class="icon">  
@@ -635,6 +703,11 @@
         const bigCart = $('#big-cart');
         $(window).scroll(function(){
             ($(this).scrollTop() > 100) ? $(bigCart).fadeIn() : $(bigCart).fadeOut();
+        });
+
+        $('.add').click(function(){
+            $(this).parent().find('.hidden').fadeIn();
+            $(this).hide();
         });
     </script>
 </body>

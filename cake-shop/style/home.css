@@ -154,9 +154,11 @@ header{
 }
 .service .content div p a{
     color: #F35106;
-    text-decoration: underline;
     white-space: nowrap;
     transition: 0.2s;
+}
+.service .content div p a:hover{
+    text-decoration: underline;
 }
 .service .wrap-carousel{
     float: right; 
@@ -198,7 +200,6 @@ header{
 @media(max-width: 520px){
     .service .content div p{
         padding-left: 15px;
-        line-height: 1rem;
     }
 }
 
@@ -380,6 +381,8 @@ header{
         flex-direction: column;
         align-items: center;
         margin-bottom: 0;
+        width: 100%;
+        margin: auto;
     }
     .product .row > div{
         margin-bottom: 30px;
@@ -433,6 +436,7 @@ header{
 .member > div > img{
     margin-top: 25px;
     width: 100%;
+    border-radius: 20px;
 }
 .member .content .sign-in{
     justify-content: center;
@@ -532,8 +536,14 @@ header{
     color: #fff;
     font-weight: bold;
     font-size: 1.7rem;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     
+}
+.gallery .product-image .col > div .info .price{
+    color: #fff;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
 }
 .gallery .product-image .col > div .info a.detail{
     font-weight: bold;
@@ -542,7 +552,7 @@ header{
     border-radius: 5px;
     font-size: 0.9rem;
     padding: 8px 14px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .gallery .product-image .col > div:hover .info{
    opacity: 1;
@@ -587,6 +597,9 @@ header{
         height: 35px;
         line-height: 35px;
     } 
+    .gallery .product-image .col > div .info a.detail{
+        margin-bottom: 30px;
+    }
 }
 @media(max-width: 800px){
     .gallery .product-image{

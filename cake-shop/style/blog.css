@@ -26,6 +26,52 @@
 .body-page{
     padding: 0 30px;
 }
+.wrap-search{
+    max-width: 1250px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: -80px;
+    display: flex;
+    justify-content: flex-end;
+}
+.wrap-search .search{   
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid #2d0000;
+    overflow: hidden;
+    width: 300px;
+}
+.wrap-search .search input{
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+}
+.wrap-search .search input:focus{
+    outline: none;
+}
+.wrap-search .search button{
+    font-size: 1rem;
+    padding: 8px 12px;
+    color: #2d0000;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    transition: 0.3s;
+}
+.wrap-search .search button:hover{
+    transform: scale(1.2);
+}
+@media(max-width: 400px){
+    .wrap-search .search{
+        width: 100%;
+    }
+}
+@media(max-width: 369px){
+    .wrap-search .search input{
+        width: 150px;
+    }
+}
 .part{
     max-width: 1250px;
     margin: auto;
@@ -54,7 +100,10 @@
 }
 .part .posts .image{
     overflow: hidden;
+  
 }
+
+
 .part .posts > a:hover img{
     transform: scale(1.1);   
 }

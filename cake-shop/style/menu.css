@@ -45,12 +45,46 @@ li{
 }
 .wrap .menu .stick{
     position: sticky;
-    padding: 24px 20px;
+    
     margin-top: 50px;
     top: 100px;
-    background:  #2d0000;
+   
+}
+.wrap .menu .stick .search{
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid #2d0000;
+    overflow: hidden;
+}
+.wrap .menu .stick .search input{
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+}
+.wrap .menu .stick .search input:focus{
+    outline: none;
+}
+.wrap .menu .stick .search button{
+    font-size: 1rem;
+    padding: 8px 12px;
+    color: #2d0000;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    transition: 0.3s;
+}
+.wrap .menu .stick .search button:hover{
+    transform: scale(1.2);
+}
+
+.wrap .menu .stick .category{
+     background:  #2d0000;
+     padding: 24px 20px;
     border-radius: 8px;
 }
+
 .wrap .menu h3{
     font-family: "Lemonada-Bold", cursive;
     font-size: 1.1rem;
@@ -90,6 +124,34 @@ li{
 .wrap .product .section:last-child{
     margin-bottom: 0;
 }
+
+.wrap .product .section .add{
+    text-align: center;
+    
+}
+.hidden{
+    display: none;
+}
+.wrap .product .section .add button{
+    font-family: serif;
+    color: #0b0806;
+    background: #ffb18d;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 9px 30px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transform: translateY(-10px);
+}
+.wrap .product .section .add button:hover{
+    transition: 0.3s;
+    color: #fff;
+    background: #481115;
+}
+
+
 .wrap .product h2{
     font-family: "Lemonada-Bold", cursive;
     font-size: 1.5555rem;
@@ -210,6 +272,7 @@ li{
         opacity: 1 !important;        
     }
 }
+
 .showList{
     position: fixed;
     top: 50%;
@@ -242,6 +305,12 @@ li{
     font-size: 19px;
 }
 @media(max-width: 570px){
+    .wrap .menu .stick .search{
+        margin: 10px 30px 0 30px;
+    }
+    .wrap .menu .stick .category{
+        padding: 12px 20px;
+    }
     .showList{
         display: block;
     }
@@ -268,13 +337,19 @@ li{
         left: 0 !important;
     }
 }
+@media(max-width: 369px){
+    .wrap .menu .stick .search input{
+        width: 150px;
+    }
+}
 
-@media(max-height: 600px){
+@media(max-height: 686px){
+    .wrap .menu .stick {
+        margin-top: 0;
+        top: 10px;
+    }
     .wrap .menu h3{
         margin-bottom: 5px;
-    }
-    .wrap .menu li{
-        padding: 10px 0;
     }
 }
 @media(max-height: 470px){
