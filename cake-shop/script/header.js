@@ -31,7 +31,7 @@ $(window).scroll(function(){
 $(toTop).click(function(event){
     event.preventDefault();
     $('html').animate({
-        scrollTop: 0 }, 700
+        scrollTop: 0 }, 1000
         );
 });
 
