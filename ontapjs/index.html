@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    
+        function secondOrderEquation(a, b, c){
+            let x1 = 0;
+            let x2 = 0;
+            let delta = b * b - 4 * a * c;
+            if(delta < 0){
+                return 'Vô nghiệm';
+            }
+            else if(delta == 0){
+                return 0 - (b / (2 * a));
+            }
+            else{
+                x1 = ((0 - b) - Math.sqrt(delta)) / (2 * a);
+                x2 = ((0 - b) + Math.sqrt(delta)) / (2 * a);
+                return `x1 = ${x1}, x2 = ${x2}`;
+            } 
+        }
+        
+        function increaseTime(timeString, s){
+            let d = new Date("1, 1, 2000 " + timeString); 
+            let t = +(d.getTime()) +  (s * 1000);
+            let newd = new Date(t);
+            let result = `${newd.getHours()}:${newd.getMinutes()}:${newd.getSeconds()}`      
+            return result;
+        }
+
+        function snail(h, x, y){
+            if(x >= h){
+                return 1;
+            }
+            if(x <= y){
+                return 'Không lên được';
+            }
+            let day = 0;
+            let m = 0;
+            while(true){
+                m += x;
+                day++;
+                if(m >= h){                   
+                    break;
+                }
+                m -= y;               
+            }
+            return day;
+        }
+
+        
+        function test(number) {
+            arraySplit = Array.from(String(number), Number);
+            arraySplit.sort();
+            
+            let firtNum = arraySplit.lastIndexOf(0);
+
+            arraySplit[0] = arraySplit[firtNum + 1];
+            arraySplit[firtNum + 1] = 0;
+
+            return parseInt(arraySplit.join(""));
+        } 
+    
+    </script>
+    
+</body>
+</html>
