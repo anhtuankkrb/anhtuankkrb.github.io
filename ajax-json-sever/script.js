@@ -206,13 +206,8 @@ function search(){
     method: 'get'
   }).done(function(result) {
     let content = ``;
-    let respon = [];
-    for(let student of result){
-      if(student['name'].includes(str) || student['email'].includes(str) || student['phone'].includes(str)){
-        respon.push(student);
-      }
-    }
-    for (let student of respon) {
+  
+    for (let student of result) {
       content += creatUserRow(student.name || '', student.email || '', student.bio || '', student.phone || '', student.id);
     }
 
