@@ -2,9 +2,11 @@ const API = 'https://firt-app.herokuapp.com/users';
 
 let userId = 0; 
 let rowId ;
-
+let pageCurrent = 1;
 let sortBy = "id";
 let sortWay = 'desc';
+
+let totalCount ;
 
 // Load xong HTML mới chạy
 $(function() {
@@ -20,6 +22,7 @@ function creatUserRow(name,email,bio,phone,id){
           class="checkboxStudent"
           name="options[]"
           data-idStudent=${id}
+        
         />
         <label for="checkbox1"></label>
       </span>
@@ -118,8 +121,10 @@ function getUsers(page = 1) {
     }
 
     $('#table-content').html(content);
-    creatPageList(request.getResponseHeader('x-Total-Count'), page);
+    totalCount = request.getResponseHeader('x-Total-Count')
+    creatPageList(totalCount, page);
   });
+  pageCurrent = page;
 }
 
 function addUser() {
@@ -133,14 +138,17 @@ function addUser() {
       bio: $('#bio').val()
     }
   }).done(function(result) {
+    
     $('#table-content').prepend(creatUserRow(result.name || '', result.email || '', result.bio || '', result.phone || '', result.id));
     $('#addEmployeeModal').modal('hide');
     $('#name').val('');
     $('#email').val('');
     $('#bio').val('');
     $('#phone').val('');
-    $('#addUserSuccess').toast('show');
-    // TODO: Thông báo thêm mới thành công dùng Toast
+    totalCount++;
+    creatPageList(totalCount, pageCurrent);
+    $('.toast').toast('show');
+  
   });
 }
 
@@ -156,7 +164,10 @@ function deleteUser() {
   }).done(function(){
     $(rowId).parents('tr').remove();
     $('#deleteEmployeeModal').modal('hide');
-    // TODO: Thông báo thêm mới thành công dùng Toast
+    totalCount--;
+    creatPageList(totalCount, pageCurrent);
+    $('.toast').toast('show');
+ 
   });
 }
 
@@ -186,18 +197,43 @@ function editUser(){
         $(rowId).parents('tr').after(creatUserRow(result.name || '', result.email || '', result.bio || '', result.phone || '', result.id));
         $(rowId).parents('tr').remove();
         $('#editEmployeeModal').modal('hide');
+        $('.toast').toast('show');
     });
 }
 
 function sortByName(){
   if(sortWay == 'desc'){
     sortWay = 'asc';
+    $('#sort').hide();
+    $('#up').hide();
+    $('#down').show();
   }else{
     sortWay = 'desc';
+    $('#sort').hide();
+    $('#up').show();
+    $('#down').hide();
   }
     sortBy = 'name';
     getUsers();
+    
 }
+
+function deleteStudents(){
+  $('.checkboxStudent:checked').each(function(){
+    $.ajax({
+          url: API + '/' + $(this).attr('data-idStudent'),
+          method: 'delete'
+        }).done((request) => {
+          $(this).parents('tr').remove();
+          totalCount--;
+          creatPageList(totalCount, pageCurrent);
+          $('.toast').toast('show');
+        });
+  });
+  $('#multipleDelete').modal('hide');
+  $('#selectAll').attr('checked', false)
+}
+
 
 function search(){
   let str = $('#search').val();
@@ -210,25 +246,13 @@ function search(){
     for (let student of result) {
       content += creatUserRow(student.name || '', student.email || '', student.bio || '', student.phone || '', student.id);
     }
-
+    $('#addPages').empty();
     $('#table-content').html(content);
   });
   
 }
 
-function deleteStudents(){
-  $('.checkboxStudent:checked').each(function(){
-    $.ajax({
-          url: API + '/' + $(this).attr('data-idStudent'),
-          method: 'delete'
-        }).done(() => {
-          $(this).parents('tr').remove();
-          
-        });
-  });
-  $('#multipleDelete').modal('hide');
-  $('#selectAll').attr('checked', false)
-}
+
 
 $('#selectAll').change(function() {
     let isChecked = this.checked;
@@ -236,3 +260,10 @@ $('#selectAll').change(function() {
       this.checked = isChecked;
     });
 });
+
+
+$('#search').keypress(function(event) {
+  if (event.keyCode == 13 || event.which == 13) {         
+       search();           
+     }
+ });

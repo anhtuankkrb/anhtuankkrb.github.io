@@ -226,3 +226,7 @@ table.table .avatar {
 	background: #bdd6f6;
 	cursor: pointer;
 }
+.toast{
+	left: 50%;
+	transform: translateX(-50%);
+}
